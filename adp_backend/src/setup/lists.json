@@ -1,0 +1,138 @@
+{
+
+  "frontendmenu": [
+    {
+      "section": "DISCOVER",
+      "menus": [
+        [
+          { "name": "What is ADP?", "link": "/discover/what_is_adp" },
+          { "name": "Benefits of using ADP", "link": "/discover/adp_benefits" },
+          { "name": "Cloud Native", "link": "http://cloudnative.ericsson.se" }
+        ],
+        [
+          { "name": "The ADP Framework", "link": "" },
+          { "name": "Architecture", "link": "/discover/adp_architecture" },
+          { "name": "Roadmaps", "link": "/discover/adp_roadmaps" },
+          { "name": "Product Management", "link": "https://confluence.lmera.ericsson.se/display/APM/ADP+Product+Management+Home" },
+          { "name": "ECCD", "link": "https://confluence.lmera.ericsson.se/pages/viewpage.action?pageId=61548534" }
+        ],
+        [
+          { "name": "Discover ADP", "img": "/assets/img/model-hand.png" }
+        ]
+      ]
+    },
+    {
+      "section": "GET STARTED",
+      "menus": [
+        [
+          { "name": "Using the ADP Dev Environment", "link": "/getstarted/development_environment" },
+          { "name": "Re-using Services", "link": "/getstarted/service_reuse" },
+          { "name": "ADP CI/CD", "link": "/getstarted/adp_ci" }
+        ],
+        [
+          { "name": "Accessing an ADP Dev Environment", "link": "https://confluence.lmera.ericsson.se/display/AD/ADP+Development+Environment" },
+          { "name": "Microservices MarketPlace", "link": "/marketplace" }
+        ],
+        [
+          { "name": "Get Started", "img": "/assets/img/get-started.png" }
+        ]
+      ]
+    },
+    {
+      "section": "CONTRIBUTE",
+      "menus": [
+        [
+          { "name": "Contribute a Microservice", "link": "/contribute" },
+          { "name": "InnerSource Contributions", "link": "/contribute/contribute_innersource" }
+        ],
+        [],
+        [
+          { "name": "Contribute to ADP", "img": "/assets/img/contribute.png" }
+        ]
+      ]
+    },
+    {
+      "section": "COMMUNITY",
+      "menus": [
+        [
+          { "name": "Meet the team", "link": "/community/meettheteam" },
+          { "name": "Raise a Trouble Ticket", "link": "/community/raiseaticket" }
+        ],
+        [
+          { "name": "Latest News", "link": "/community/latestnews" },
+          { "name": "Get Help", "link": "/community/gethelp" }
+        ],
+        [
+          { "name": "Community", "img": "/assets/img/community.png" }
+        ]
+      ]
+    }
+  ],
+
+  "documentationCategories": [
+    { "id": 1, "category": "General" },
+    { "id": 2, "category": "Developer" }
+  ],
+
+  "documentationTitles": [
+    { "id": 1,  "categoryId": 1, "titlePosition": 0,  "title": "Service Overview" },
+    { "id": 2,  "categoryId": 1, "titlePosition": 1,  "title": "Service Deployment Guide" },
+    { "id": 3,  "categoryId": 1, "titlePosition": 2,  "title": "Troubleshooting Guide" },
+    { "id": 4,  "categoryId": 1, "titlePosition": 3,  "title": "Functional Area Description" },
+    { "id": 5,  "categoryId": 1, "titlePosition": 4,  "title": "Component Description" },
+    { "id": 6,  "categoryId": 1, "titlePosition": 5,  "title": "Released Documentation" },
+    { "id": 11, "categoryId": 1, "titlePosition": 99, "title": "Other Documents" },
+    { "id": 7,  "categoryId": 2, "titlePosition": 0,  "title": "Application Developers Guide" },
+    { "id": 8,  "categoryId": 2, "titlePosition": 1,  "title": "API Information" },
+    { "id": 9,  "categoryId": 2, "titlePosition": 2,  "title": "Inner Source Readme" },
+    { "id": 10, "categoryId": 2, "titlePosition": 3,  "title": "Inner Source Contribute" },
+    { "id": 11, "categoryId": 2, "titlePosition": 99, "title": "Other Documents" }
+  ],
+
+  "documentationTitlesAndCategories": [
+    { "titleId": 1,  "categoryId": 1 },
+    { "titleId": 2,  "categoryId": 1 },
+    { "titleId": 3,  "categoryId": 1 },
+    { "titleId": 4,  "categoryId": 1 },
+    { "titleId": 5,  "categoryId": 1 },
+    { "titleId": 6,  "categoryId": 1 },
+    { "titleId": 11, "categoryId": 1 },
+    { "titleId": 7,  "categoryId": 2 },
+    { "titleId": 8,  "categoryId": 2 },
+    { "titleId": 9,  "categoryId": 2 },
+    { "titleId": 10, "categoryId": 2 },
+    { "titleId": 11, "categoryId": 2 }
+    ],
+
+  "teamMemberRole": [
+    { "id": 1 , "role": "PO" },
+    { "id": 2 , "role": "SPM"},
+    { "id": 3 , "role": "Other" }
+  ],
+
+  "categories": [
+    { "ideaBox": "Idea Box" },
+    { "fully": "Fully supported for reuse" },
+    { "checkBefore": "Check before reuse" }
+  ],
+
+  "alignment": [
+    { "core": "ADP Core" },
+    { "otherGeneric": "ADP Other Generic" },
+    { "other": "Other" }
+  ],
+
+  "userTypes": [
+    { "admin": "admin" },
+    { "author": "author" }
+  ],
+
+  "service_maturities": [
+    { "idea": "1" },
+    { "developmentStarted": "8" },
+    { "readyForIntegration": "5" },
+    { "readyForNonCommercialUse": "6" },
+    { "readyForCommercialUse": "7" }
+  ]
+
+}

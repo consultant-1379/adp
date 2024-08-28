@@ -1,0 +1,32 @@
+{
+  "name": "asciidoctorservice",
+  "version": "1.0.0",
+  "description": "Asciidoctor self container service, which will generate html from given ascii text.",
+  "main": "src/index.js",
+  "dependencies": {
+    "asciidoctor": "^2.2.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "5.12.1",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "eslint-plugin-jasmine": "2.10.1",
+    "jasmine": "^3.6.3",
+    "jasmine-pretty-html-reporter": "^0.2.5",
+    "jasmine-spec-reporter": "^6.0.0",
+    "jasmine-xml-reporter": "^1.2.1",
+    "nyc": "^15.1.0",
+    "proxyquire": "^2.1.3"
+  },
+  "scripts": {
+    "start": "node --expose-gc src/index.js",
+    "test": "NODE_ENV=test nyc --report-dir=reports/ --reporter=cobertura --reporter=html --reporter=lcov ./node_modules/jasmine-xml-reporter/bin/jasmine.js --junitreport --output=reports/",
+    "lint": "eslint -c .eslintrc.json -f compact src/**/*.js > reports/lint_checkstyle.txt; exit 0",
+    "showlint": "eslint -c .eslintrc.json -f table src/**/*.js > reports/lint_table.txt; head -100 reports/lint_table.txt; exit 0;",
+    "eslint": "eslint src/**/*.js; exit 0;"
+  },
+  "author": "Team Heimdall",
+  "license": "ISC",
+  "repository": "https://gerrit-gamma.gic.ericsson.se/#/admin/projects/AIA/api/adp"
+}

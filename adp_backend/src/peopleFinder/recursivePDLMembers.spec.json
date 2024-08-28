@@ -1,0 +1,182 @@
+{
+    "recursiveTestData": {
+        "group1": {
+            "totalNoOfResults": 2,
+            "elements": [
+                {
+                    "objectCategory": "CN=Group,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "group2@pdl.internal.ericsson.com",
+                    "distinguishedName": "CN=Group,OU=PDL,OU=Distribution,OU=0000,OU=GRP,OU=Data,DC=ericsson,DC=te",
+                    "owner": "group2",
+                    "mailNickname": "group2",
+                    "displayName": "Group 2",
+                    "ownerDisplayname": null,
+                    "ownerSignum": null,
+                    "authMembers": false
+                },
+                {
+                    "objectCategory": "CN=Group,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "group3@pdl.internal.ericsson.com",
+                    "distinguishedName": "CN=Group,OU=PDL,OU=Distribution,OU=0000,OU=GRP,OU=Data,DC=ericsson,DC=te",
+                    "owner": "group3",
+                    "mailNickname": "group3",
+                    "displayName": "Group 3",
+                    "ownerDisplayname": null,
+                    "ownerSignum": null,
+                    "authMembers": false
+                }
+            ]
+        },
+        "group2": {
+            "totalNoOfResults": 2,
+            "elements": [
+                {
+                    "objectCategory": "CN=Group,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "group4@pdl.internal.ericsson.com",
+                    "distinguishedName": "CN=Group,OU=PDL,OU=Distribution,OU=0000,OU=GRP,OU=Data,DC=ericsson,DC=te",
+                    "owner": "group4",
+                    "mailNickname": "group4",
+                    "displayName": "Group 4",
+                    "ownerDisplayname": null,
+                    "ownerSignum": null,
+                    "authMembers": false
+                },
+                {
+                    "objectCategory": "CN=Group,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "group5@pdl.internal.ericsson.com",
+                    "distinguishedName": "CN=Group,OU=PDL,OU=Distribution,OU=0000,OU=GRP,OU=Data,DC=ericsson,DC=te",
+                    "owner": "group5",
+                    "mailNickname": "group5",
+                    "displayName": "Group 5",
+                    "ownerDisplayname": null,
+                    "ownerSignum": null,
+                    "authMembers": false
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum1@ericsson.com",
+                    "distinguishedName": "CN=signum1,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum1",
+                    "mailNickname": "signum1",
+                    "displayName": "Name Surname"
+                }
+            ]
+        },
+        "group3": {
+            "totalNoOfResults": 2,
+            "elements": [
+                {
+                    "objectCategory": "CN=Group,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "group6@pdl.internal.ericsson.com",
+                    "distinguishedName": "CN=Group,OU=PDL,OU=Distribution,OU=0000,OU=GRP,OU=Data,DC=ericsson,DC=te",
+                    "owner": "group6",
+                    "mailNickname": "group6",
+                    "displayName": "Group 6",
+                    "ownerDisplayname": null,
+                    "ownerSignum": null,
+                    "authMembers": false
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum1@ericsson.com",
+                    "distinguishedName": "CN=signum1,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum1",
+                    "mailNickname": "signum1",
+                    "displayName": "Name Surname"
+                }
+            ]
+        },
+        "group4": {
+            "totalNoOfResults": 2,
+            "elements": [
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum2@ericsson.com",
+                    "distinguishedName": "CN=signum2,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum2",
+                    "mailNickname": "signum2",
+                    "displayName": "Name Surname"
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum3@ericsson.com",
+                    "distinguishedName": "CN=signum3,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum3",
+                    "mailNickname": "signum3",
+                    "displayName": "Name Surname"
+                }
+            ]
+        },
+        "group5": {
+            "totalNoOfResults": 4,
+            "elements": [
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum2@ericsson.com",
+                    "distinguishedName": "CN=signum2,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum2",
+                    "mailNickname": "signum2",
+                    "displayName": "Name Surname"
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum3@ericsson.com",
+                    "distinguishedName": "CN=signum3,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum3",
+                    "mailNickname": "signum3",
+                    "displayName": "Name Surname"
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum4@ericsson.com",
+                    "distinguishedName": "CN=signum4,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum4",
+                    "mailNickname": "signum4",
+                    "displayName": "Name Surname"
+                },
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum5@ericsson.com",
+                    "distinguishedName": "CN=signum5,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum5",
+                    "mailNickname": "signum5",
+                    "displayName": "Name Surname"
+                }
+            ]
+        },
+        "group6": {
+            "totalNoOfResults": 0,
+            "elements": []
+        },
+        "group7": {
+            "hasNext":true,
+            "totalNoOfResults": 1,
+            "elements": [
+                {
+                    "department": "test department",
+                    "objectCategory": "CN=Person,CN=Schema,CN=Configuration,DC=ericsson,DC=te",
+                    "email": "signum1@ericsson.com",
+                    "distinguishedName": "CN=signum1,OU=CA,OU=User,OU=0001,OU=ID,OU=Data,DC=ericsson,DC=te",
+                    "owner": "signum1",
+                    "mailNickname": "signum1",
+                    "displayName": "Name Surname"
+                }
+            ]
+        }
+    },
+    "userData": {
+        "signum1": { "signum": "signum1" },
+        "signum2": { "signum": "signum2" },
+        "signum3": { "signum": "signum3" },
+        "signum4": { "signum": "signum4" },
+        "signum5": { "signum": "signum5" }
+    }
+}

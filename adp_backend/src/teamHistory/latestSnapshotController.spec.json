@@ -1,0 +1,259 @@
+{
+  "teamDetailChangeTest" : {
+    "msListData": [
+      {
+        "_id": "asset1Id",
+        "slug": "asset1Slug",
+        "team": [
+          {
+            "_id": "etest",
+            "signum": "etest",
+            "serviceOwner": true
+          }
+        ],
+        "team_mailers": [
+          "test@ericsson.com"
+        ]
+      }
+    ],
+    "searchByMailerData": {
+        "members": [
+          {
+            "peopleFinder": 
+            {
+                "mailNickname": "etest",
+                "displayName": "New Name"
+            }
+          }
+        ],
+        "errors": []
+    }
+    ,
+    "fetchLastSnapshotByMsIdData": [
+        {
+            "_id": "snapshotId",
+            "_rev": "snapshotRev",
+            "asset_id": "asset1Id",
+            "team": [
+                {
+                    "peopleFinder": {
+                        "mailNickname": "etest",
+                        "displayName": "Test User"
+                    },
+                    "portal": {
+                      "_id": "etest",
+                      "signum": "etest",
+                      "serviceOwner": false
+                    }
+                }
+            ]
+        }
+    ],
+    "getSnapshotsByIdData": {
+      "docs": [
+        {
+          "_id": "snapshotId",
+          "_rev": "snapshotRev",
+          "asset_id": "asset1Id",
+          "team": [
+              {
+                  "peopleFinder": {
+                      "mailNickname": "etest",
+                      "displayName": "New Name"
+                  },
+                  "portal": {
+                    "_id": "etest",
+                    "signum": "etest",
+                    "serviceOwner": false
+                  }
+              }
+          ],
+          "date_created": "2020-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "noTeamChangesTest" : {
+    "msListData": [
+      {
+        "_id": "asset1Id",
+        "slug": "asset1Slug",
+        "team": [
+          {
+            "_id": "etest",
+            "signum": "etest",
+            "serviceOwner": true
+          }
+        ],
+        "team_mailers": [
+          "test@ericsson.com"
+        ]
+      }
+    ],
+    "searchByMailerData": {
+        "members": [
+          {
+            "peopleFinder": 
+            {
+                "mailNickname": "etest",
+                "displayName": "Test User"
+            }
+          }
+        ],
+        "errors": []
+    }
+    ,
+    "fetchLastSnapshotByMsIdData": [
+        {
+            "_id": "snapshotId",
+            "_rev": "snapshotRev",
+            "asset_id": "asset1Id",
+            "team": [
+                {
+                    "peopleFinder": {
+                        "mailNickname": "etest",
+                        "displayName": "Test User"
+                    },
+                    "portal": {
+                      "_id": "etest",
+                      "signum": "etest",
+                      "serviceOwner": true
+                    }
+                }
+            ]
+        }
+    ],
+    "getSnapshotsByIdData": {
+      "docs": [
+        {
+          "_id": "snapshotId",
+          "_rev": "snapshotRev",
+          "asset_id": "asset1Id",
+          "team": [
+              {
+                  "peopleFinder": {
+                      "mailNickname": "etest",
+                      "displayName": "Test User"
+                  },
+                  "portal": {
+                    "_id": "etest",
+                    "signum": "etest",
+                    "serviceOwner": true
+                  }
+              },
+              {
+                "peopleFinder": {
+                    "mailNickname": "etest 3",
+                    "displayName": "Test User 3"
+                },
+                "portal": {
+                  "_id": "etest3",
+                  "signum": "etest3",
+                  "serviceOwner": true
+                }
+            }
+          ],
+          "date_created": "2020-01-01T00:00:00.000Z"
+        }
+      ]
+    }
+  },
+  "teamChangedTest" : {
+    "msListData": [
+      {
+        "_id": "asset1Id",
+        "slug": "asset1Slug",
+        "team": [
+          {
+            "_id": "etest",
+            "signum": "etest",
+            "serviceOwner": true
+          },
+          {
+            "_id": "etest2",
+            "signum": "etest2",
+            "serviceOwner": true
+          }
+        ],
+        "team_mailers": [
+          "test@ericsson.com",
+          "test@ericsson.com",
+          "test2@ericsson.com"
+        ]
+      }
+    ],
+    "searchByMailerData": {
+        "members": [
+          {
+            "peopleFinder": 
+            {
+                "mailNickname": "etest",
+                "displayName": "Test User"
+            }
+          },
+          {
+            "peopleFinder": 
+            {
+                "mailNickname": "etest2",
+                "displayName": "Test User 2"
+            }
+          }
+        ],
+        "errors": []
+    },
+    "fetchLastSnapshotByMsIdData": [
+        {
+            "_id": "snapshotId",
+            "_rev": "snapshotRev",
+            "asset_id": "asset1Id",
+            "team": [
+                {
+                    "peopleFinder": {
+                        "mailNickname": "etest",
+                        "displayName": "Test User"
+                    },
+                    "portal": {
+                      "_id": "etest",
+                      "signum": "etest",
+                      "serviceOwner": true
+                    }
+                }
+            ]
+        }
+    ],
+    "getSnapshotsByIdData": {
+      "docs": [
+          {
+            "_id": "snapshotId",
+            "_rev": "snapshotRev",
+            "asset_id": "asset1Id",
+            "team": [
+                {
+                    "peopleFinder": {
+                        "mailNickname": "etest",
+                        "displayName": "Test User"
+                    },
+                    "portal": {
+                      "_id": "etest",
+                      "signum": "etest",
+                      "serviceOwner": true
+                    }
+                },
+                {
+                  "peopleFinder": {
+                      "mailNickname": "etest2",
+                      "displayName": "Test User 2"
+                  },
+                  "portal": {
+                    "_id": "etest2",
+                    "signum": "etest2",
+                    "serviceOwner": true
+                  }
+              }
+            ],
+            "date_created": "2020-01-01T00:00:00.000Z"
+          }
+      ]
+    }
+  }
+}

@@ -1,0 +1,711 @@
+{
+    "preparation": {
+        "group1": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID1",
+                    "type": "group",
+                    "name": "allow All Assets",
+                    "permission": [
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "asset",
+                            "name": "Allow all assets perm",
+                            "dynamic": [],
+                            "exception": [],
+                            "static": null
+                        }
+                    ]
+                }
+            ],
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "group2": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID1",
+                    "type": "group",
+                    "name": "allow All Assets",
+                    "permission": [
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "asset",
+                            "name": "Allow all assets perm",
+                            "dynamic": [],
+                            "exception": [],
+                            "static": null
+                        }
+                    ]
+                }
+            ],
+            "rbacTarget": ["45e7f4f992afe7bbb62a3391e5010c3b"],
+            "rbac": {}
+        },
+        "group3": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID2"
+                }
+            ],
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "group4": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID1",
+                    "type": "group",
+                    "name": "allow All Assets",
+                    "permission": [
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "asset",
+                            "name": "Allow all assets perm",
+                            "dynamic": [
+                                {
+                                  "group-id": 3,
+                                  "group": "Domain",
+                                  "slug": "domain",
+                                  "items": [
+                                    {
+                                      "select-id": 3,
+                                      "group-id": 3,
+                                      "name": "BSS",
+                                      "slug": "bss"
+                                    },
+                                    {
+                                      "select-id": 6,
+                                      "group-id": 6,
+                                      "name": "Packet Core",
+                                      "slug": "packet-core"
+                                    }
+                                  ],
+                                  "order": 4,
+                                  "showAsFilter": true
+                                }
+                              ],
+                            "exception": [],
+                            "static": null
+                        }
+                    ]
+                }
+            ],
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "group5": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID1",
+                    "type": "group",
+                    "name": "allow All Assets",
+                    "permission": [
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "asset",
+                            "name": "Allow all assets perm",
+                            "dynamic": [],
+                            "exception": [],
+                            "static": null
+                        },
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "content",
+                            "name": "Allow all content perm",
+                            "dynamic": [],
+                            "exception": [],
+                            "static": null
+                        }
+                    ]
+                }
+            ],
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "group6": {
+            "users": null,
+            "rbacGroup": [
+                {
+                    "_id": "mockGroupID1",
+                    "type": "group",
+                    "name": "allow All Assets",
+                    "permission": [
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "asset",
+                            "name": "Allow all assets perm",
+                            "dynamic": [],
+                            "exception": [],
+                            "static": null
+                        },
+                        {
+                            "_id": "mockPermissionID",
+                            "type": "content",
+                            "name": "Allow all content perm",
+                            "dynamic": [],
+                            "exception": ["/footer", "/main"],
+                            "static": ["95", "105", "91"]
+                        }
+                    ]
+                }
+            ],
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "emesuse": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "emesuse",
+                        "type": "user",
+                        "signum": "emesuse",
+                        "name": "Messy User",
+                        "marketInformationActive": true,
+                        "email": "messy-user@adp-test.com",
+                        "role": "author",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": [
+                            {
+                                "_id": "MOCK_GROUP_ID",
+                                "type": "group",
+                                "name": "Mock Group",
+                                "permission": [
+                                    {
+                                    "_id": "MOCK_PERMISSION_ID",
+                                    "type": "asset",
+                                    "name": "Dynamic Permission Friendly Name",
+                                    "dynamic": [],
+                                    "exception": [],
+                                    "static": null
+                                    }
+                                ],
+                                "undeletable": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "esupuse": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "esupuse",
+                        "type": "user",
+                        "signum": "esupuse",
+                        "name": "Super User",
+                        "marketInformationActive": true,
+                        "email": "messy-user@adp-test.com",
+                        "role": "admin",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": []
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "emockdomainadmin": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "emockdomainadmin",
+                        "type": "user",
+                        "signum": "emockdomainadmin",
+                        "name": "Domain Admin",
+                        "marketInformationActive": true,
+                        "email": "messy-user@adp-test.com",
+                        "role": "author",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": []
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "eserviceonwer": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "eserviceonwer",
+                        "type": "user",
+                        "signum": "eserviceonwer",
+                        "name": "Service Owner",
+                        "marketInformationActive": true,
+                        "email": "messy-user@adp-test.com",
+                        "role": "author",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": []
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "emockuser1": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "emockuser1",
+                        "type": "user",
+                        "signum": "emockuser1",
+                        "name": "Mock User 1",
+                        "marketInformationActive": true,
+                        "email": "mock-user-1@adp-test.com",
+                        "role": "author",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": [
+                            {
+                                "_id": "MOCK_GROUP_ID",
+                                "type": "group",
+                                "name": "Mock Group",
+                                "permission": [
+                                    {
+                                    "_id": "MOCK_PERMISSION_ID",
+                                    "type": "asset",
+                                    "name": "Static Permission Friendly Name",
+                                    "dynamic": null,
+                                    "exception": null,
+                                    "static": ["419b7f75c7ab2427937eec161d0ea844", "45e7f4f992afe7bbb62a3391e50171e2"]
+                                    }
+                                ],
+                                "undeletable": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        },
+        "emockuser2": {
+            "users": {
+                "docs": [
+                    {
+                        "_id": "emockuser2",
+                        "type": "user",
+                        "signum": "emockuser2",
+                        "name": "Mock User 2",
+                        "marketInformationActive": true,
+                        "email": "mock-user-1@adp-test.com",
+                        "role": "author",
+                        "modified": "2019-08-14T15:09:10.292Z",
+                        "rbac": [
+                            {
+                                "_id": "MOCK_GROUP_ID",
+                                "type": "group",
+                                "name": "Mock Group",
+                                "permission": [
+                                    {
+                                    "_id": "MOCK_PERMISSION_ID",
+                                    "type": "asset",
+                                    "name": "Static Permission Friendly Name",
+                                    "dynamic": null,
+                                    "exception": null,
+                                    "static": ["419b7f75c7ab2427937eec161d0ea844"]
+                                    }
+                                ],
+                                "undeletable": false
+                            },
+                            {
+                                "_id": "MOCK_GROUP_ID2",
+                                "type": "group",
+                                "name": "Mock Group 2",
+                                "permission": [
+                                    {
+                                    "_id": "MOCK_PERMISSION_ID2",
+                                    "type": "asset",
+                                    "name": "Another Static Permission Friendly Name",
+                                    "dynamic": null,
+                                    "exception": null,
+                                    "static": ["45e7f4f992afe7bbb62a3391e50171e2"]
+                                    }
+                                ],
+                                "undeletable": false
+                            }
+                        ]
+                    }
+                ]
+            },
+            "rbacGroup": null,
+            "rbacTarget": [],
+            "rbac": {}
+        }
+    },
+    "permission": {
+        "nope": {
+            "resultsReturned": 0,
+            "limitOfThisResult": 999999,
+            "offsetOfThisResult": 0,
+            "message": "Search Successful",
+            "time": "3 ms",
+            "docs": []
+        },
+        "emockdomainadmin": {
+            "resultsReturned": 2,
+            "limitOfThisResult": 999999,
+            "offsetOfThisResult": 0,
+            "message": "Search Successful",
+            "time": "3 ms",
+            "docs": [
+            {
+                "_id": "6c6efb2164a594e91486e8c15d000ff4",
+                "group-id": 3,
+                "item-id": 1,
+                "admin": {
+                "emockdomainadmin": {
+                    "notification": [
+                    "update",
+                    "delete"
+                    ]
+                },
+                "etesase": {
+                    "notification": [
+                    "create",
+                    "update",
+                    "delete"
+                    ]
+                }
+                }
+            },
+            {
+                "_id": "6c6efb2164a594e91486e8c15d0021ca",
+                "group-id": 3,
+                "item-id": 2,
+                "admin": {
+                "eterase": {
+                    "notification": [
+                    "delete"
+                    ]
+                }
+                }
+            }
+            ]
+        }
+    },
+    "adp": {
+        "resultsReturned": 29,
+        "limitOfThisResult": 999999,
+        "offsetOfThisResult": 0,
+        "message": "Search Successful",
+        "time": "17 ms",
+        "docs": [
+            {
+                "_id": "17e57f6cea1b5a673f8775e6cf023344",
+                "domain": 1,
+                "slug": "document-refresh-warnings-test"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e500f84a",
+                "domain": 1,
+                "slug": "auto-ms-with-tags"
+            },
+            {
+                "_id": "46980f0340cc9c9217dea0abbf008f3e",
+                "domain": 1,
+                "slug": "auto-ms-with-1-compliance"
+            },
+            {
+                "_id": "46980f0340cc9c9217dea0abbf00c094",
+                "domain": 1,
+                "slug": "auto-ms-with-multiple-compliance"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5011e0d",
+                "domain": 1,
+                "slug": "auto-ms-restricted"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e50171e2",
+                "domain": 1,
+                "slug": "auto-ms-test-4"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5019b57",
+                "domain": 1,
+                "slug": "auto-ms-test-5"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5013c25",
+                "domain": 2,
+                "slug": "auto-ms-test-1"
+            },
+            {
+                "_id": "4dfd104ffa9896c0a2cda54ae000476d",
+                "domain": 2,
+                "slug": "document-refresh-errors-test"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5014a41",
+                "domain": 3,
+                "slug": "auto-ms-test-2"
+            },
+            {
+                "_id": "419b7f75c7ab2427937eec161d0ea844",
+                "domain": 3,
+                "slug": "auto-ms-test-innersource"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e500ffb1",
+                "domain": 4,
+                "slug": "auto-ms-max"
+            },
+            {
+                "_id": "5e73aca053e6f18355ebd74b11028818",
+                "domain": 4,
+                "slug": "auto-ms-max-for-report"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5011ff8",
+                "domain": 4,
+                "slug": "auto-ms-with-team"
+            },
+            {
+                "_id": "4befcc82eebf81c3e1b5242b49001092",
+                "domain": 4,
+                "slug": "auto-ms-with-mock-artifactory"
+            },
+            {
+                "_id": "c54641834093c6b359577c670d009a88",
+                "domain": 4,
+                "slug": "auto-ms-with-real-artifactory"
+            },
+            {
+                "_id": "ceb54fdc6969a28152cad144b32d39f8",
+                "domain": 4,
+                "slug": "auto-ms-real-artifactory-notification"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e500e71b",
+                "domain": 6,
+                "slug": "auto-ms-min"
+            },
+            {
+                "_id": "94a350e9562037d0611a54963300353d",
+                "domain": 6,
+                "slug": "auto-ms-with-multiple-doc-types-automode"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e5010c3b",
+                "domain": 7,
+                "slug": "auto-ms-with-docs"
+            },
+            {
+                "_id": "45e7f4f992afe7bbb62a3391e50160e5",
+                "domain": 7,
+                "slug": "auto-ms-test-3"
+            },
+            {
+                "_id": "1a319091a57a0586ea219976100a1065",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-1"
+            },
+            {
+                "_id": "1a319091a57a0586ea21997610402790",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-4"
+            },
+            {
+                "_id": "1a319091a57a0586ea21997610401144",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-5"
+            },
+            {
+                "_id": "1a319091a57a0586ea21997610405678",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-6"
+            },
+            {
+                "_id": "1a319091a57a0586ea21997610116e78",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-2"
+            },
+            {
+                "_id": "1a319091a57a0586ea2199761011f968",
+                "domain": 7,
+                "slug": "auto-ms-test-innersource-3"
+            },
+            {
+                "_id": "7b85da102a5232fe77c717a48e006a0c",
+                "domain": 7,
+                "slug": "auto-ms-with-multiple-doc-types"
+            },
+            {
+                "_id": "bc997cfa3d699fb03b7561c9c1002df3",
+                "domain": 7,
+                "slug": "adp-manual-doc-menu-with-versions"
+            }
+        ]
+    },
+    "serviceOnwerAssets": [
+        {
+            "_id": "mockAssetID1",
+            "name": "Asset with Service Owner",
+            "slug": "asset-with-service-owner",
+            "team": [
+              {
+                "team_role": 1,
+                "serviceOwner": true,
+                "signum": "eserviceonwer"
+              }
+            ]
+        },
+        {
+            "_id": "mockAssetID2",
+            "name": "Asset with Service Owner-2",
+            "slug": "asset-with-service-owner-2",
+            "team": [
+              {
+                "team_role": 2,
+                "serviceOwner": false,
+                "signum": "mockUser"
+              },
+              {
+                "team_role": 1,
+                "serviceOwner": true,
+                "signum": "eserviceonwer"
+              }
+            ]
+        }
+    ],
+    "methodTestREQUESTTemplate1": {
+        "userRequest": {
+          "docs": [
+            {
+              "_id": "esupuse",
+              "signum": "esupuse",
+              "role": "admin",
+              "name": "Super User",
+              "marketInformationActive": true,
+              "type": "user",
+              "email": "super-user@adp-test.com",
+              "modified": "2018-11-02T16:14:53.780Z"
+            }
+          ]
+        },
+        "users": null,
+        "rbacGroup": [
+          {
+            "_id": "603e4fb4369e66969a7c00a5",
+            "type": "group",
+            "name": "Dynamic Assets with exceptions",
+            "permission": [
+              {
+                "_id": "603e5038369e66969a7c00da",
+                "type": "asset",
+                "name": "Dynamic Assets with exceptions perm",
+                "dynamic": [
+                  {
+                    "_id": "49bfab89e2ab4b291d84b4dd7c058f1f",
+                    "group-id": 2,
+                    "group": "Service Category",
+                    "slug": "service_category",
+                    "type": "group",
+                    "test-id": "group-service-category",
+                    "order": 1,
+                    "show-as-filter": true,
+                    "items": [
+                      {
+                        "_id": "49bfab89e2ab4b291d84b4dd7c031078",
+                        "select-id": 2,
+                        "type": "item",
+                        "name": "ADP Reusable Services",
+                        "desc": "Microservices providing complementary functions that different applications could benefit from. They are NOT directly developed and maintained by the ADP Program.",
+                        "group-id": 2,
+                        "test-id": "filter-adp-reusable-services",
+                        "order": 2
+                      },
+                      {
+                        "_id": "49bfab89e2ab4b291d84b4dd7c03256c",
+                        "select-id": 3,
+                        "type": "item",
+                        "name": "ADP Domain Specific Services",
+                        "desc": "Microservices providing functions that are considered common in a specific application domain. They can be used by multiple applications within the same domain.",
+                        "group-id": 2,
+                        "test-id": "filter-adp-domain-specific-services",
+                        "order": 3
+                      }
+                    ]
+                  },
+                  {
+                    "_id": "49bfab89e2ab4b291d84b4dd7c05a61f",
+                    "group-id": 3,
+                    "group": "Domain",
+                    "slug": "domain",
+                    "type": "group",
+                    "test-id": "group-domain",
+                    "order": 4,
+                    "show-as-filter": true,
+                    "items": [
+                      {
+                        "_id": "49bfab89e2ab4b291d84b4dd7c0392d3",
+                        "select-id": 4,
+                        "type": "item",
+                        "name": "COS",
+                        "group-id": 3,
+                        "test-id": "filter-cos",
+                        "order": 5
+                      }
+                    ]
+                  }
+                ],
+                "exception": [
+                  "5e73aca053e6f18355ebd74b11028818",
+                  "45e7f4f992afe7bbb62a3391e500ffb1"
+                ],
+                "static": null
+              }
+            ]
+          }
+        ],
+        "rbacTarget": ["5e73aca053e6f18355ebd74b11021111"],
+        "rbac": {}
+    },
+    "methodTestREQUESTTemplate2": {
+        "userRequest": {
+          "docs": [
+            {
+              "_id": "esupuse",
+              "signum": "esupuse",
+              "role": "admin",
+              "name": "Super User",
+              "marketInformationActive": true,
+              "type": "user",
+              "email": "super-user@adp-test.com",
+              "modified": "2018-11-02T16:14:53.780Z"
+            }
+          ]
+        },
+        "users": {
+          "docs": [
+            {
+              "_id": "emesuse",
+              "type": "user",
+              "signum": "emesuse",
+              "name": "Messy User",
+              "marketInformationActive": true,
+              "email": "messy-user@adp-test.com",
+              "role": "author",
+              "modified": "2019-08-14T15:09:10.292Z"
+            }
+          ]
+        },
+        "rbacGroup": null,
+        "rbacTarget": null,
+        "rbac": {}
+    }      
+}

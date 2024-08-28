@@ -1,0 +1,1350 @@
+[
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3365",
+        "_score": 2.616283,
+        "_source": {
+        "post_title": "ADP CI/CD",
+        "post_type": "page",
+        "post_id": 3365,
+        "post_name": "adp_ci",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Get Started",
+                "term_taxonomy_id": 94,
+                "term_order": 0,
+                "term_id": 94,
+                "facet": "{\"term_id\":94,\"slug\":\"getstarted\",\"name\":\"Get Started\",\"parent\":90,\"term_taxonomy_id\":94,\"term_order\":0}",
+                "slug": "getstarted"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> CI/CD"
+        ],
+        "post_content_filtered": [
+            "<h2>CI/CD Flow</h2>\n\n\n\n<p>The <em>ADP</em> CI/CD flow  and philosophy, originally created by <em>ADP</em> together with lead applications, and now evolved by the <em>ADP</em> CI/CD governance group, is based on four driving forces:</p>\n\n\n\n<ul><li>A key enabler for BDGS-wide reuse <ul><li><em>“As easy to use services from other"
+        ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 0,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [ ]
+            }
+          }
+        }
+    },
+    {
+      
+      "_index" : "microservice-documentation",
+      "_type" : "_doc",
+      "_id" : "VBZsan8BHWdqdxNnd8i-",
+      "_score" : 0.29564,
+      "_source" : {
+        "asset_name" : "Auto MS Test 3",
+        "post_new_tab" : false,
+        "post_name" : "45e7f4f992afe7bbb62a3391e50160e5_sample-2",
+        "restricted" : false,
+        "post_type" : "ms_documentation",
+        "asset_id" : "45e7f4f992afe7bbb62a3391e50160e5",
+        "asset_slug" : "auto-ms-test-3",
+        "title" : "Sample 2",
+        "version" : "development",
+        "title_slug" : "sample-2",
+        "category" : "Additional Documents",
+        "category_slug" : "additional-documents",
+        "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+      },
+      "fields" : {
+        "post_name.keyword" : [
+          "45e7f4f992afe7bbb62a3391e50160e5_sample-2"
+        ]
+      },
+      "highlight" : {
+        "raw_text" : [
+          "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+        ],
+        "title" : [
+          "Sample 2"
+        ]
+      },
+      "inner_hits" : {
+        "versions" : {
+          "hits" : {
+            "total" : {
+              "value" : 2,
+              "relation" : "eq"
+            },
+            "max_score" : null,
+            "hits" : [
+              {
+                "_index" : "microservice-documentation",
+                "_type" : "_doc",
+                "_id" : "VBZsan8BHWdqdxNnd8i-",
+                "_score" : null,
+                "_source" : {
+                  "version" : "development"
+                },
+                "fields" : {
+                  "version.keyword" : [
+                    "development"
+                  ]
+                },
+                "sort" : [
+                  1
+                ]
+              },
+              {
+                "_index" : "microservice-documentation",
+                "_type" : "_doc",
+                "_id" : "VxZsan8BHWdqdxNnd8i-",
+                "_score" : null,
+                "_source" : {
+                  "version" : "1.0.1"
+                },
+                "fields" : {
+                  "version.keyword" : [
+                    "1.0.1"
+                  ]
+                },
+                "sort" : [
+                  0
+                ]
+              }
+            ]
+          }
+        }
+      }
+    
+    },
+    {
+      "_index" : "microservices",
+      "_type" : "_doc",
+      "_id" : "ChZsan8BHWdqdxNncch9",
+      "_score" : 3.277855,
+      "_source" : {
+        "based_on" : "Ericsson Internal",
+        "post_name" : "bc997cfa3d699fb03b7561c9c1002df3",
+        "name" : "ADP Manual Doc Menu with Versions",
+        "description" : "ADP Manual Doc Menu with Versions Description",
+        "denorm" : {
+          "asset_fullurl" : "/marketplace/adp-manual-doc-menu-with-versions",
+          "asset_document_fullurl" : "/marketplace/adp-manual-doc-menu-with-versions/documentation/2.0.1/dpi/service-overview"
+        },
+        "type" : "microservice",
+        "slug" : "adp-manual-doc-menu-with-versions"
+      },
+      "fields" : {
+        "post_name.keyword" : [
+          "bc997cfa3d699fb03b7561c9c1002df3"
+        ]
+      },
+      "highlight" : {
+        "name" : [
+          "<strong>ADP</strong> Manual Doc Menu with Versions"
+        ]
+      },
+      "inner_hits" : {
+        "by_version" : {
+          "hits" : {
+            "total" : {
+              "value" : 0,
+              "relation" : "eq"
+            },
+            "max_score" : null,
+            "hits" : [ ]
+          }
+        }
+      }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "XD4vo3wBGfN7xFX-zfDB",
+        "_score" : 0.13010338,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Restricted",
+          "description" : "Microservice with restricted Other Reason ",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-restricted",
+            "asset_document_fullurl" : "/marketplace/auto-ms-restricted/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-restricted"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Restricted"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "SD4vo3wBGfN7xFX-qfCC",
+        "_score" : 0.13010338,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Min",
+          "description" : "Min Microservice, to test just mandatory fields",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-min",
+            "asset_document_fullurl" : "/marketplace/auto-ms-min/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-min"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Min"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Sj4vo3wBGfN7xFX-rfA_",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with Tags",
+          "description" : "Microservice containing several tags",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-tags",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-tags/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-tags"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Tags"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Wj4vo3wBGfN7xFX-yPCs",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test Deleted",
+          "description" : "Auto MS Test Deleted MS",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-deleted",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-deleted/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-deleted"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Deleted"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Vz4vo3wBGfN7xFX-wvDh",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with Docs",
+          "description" : "Test Microservice with several gerrit documents with includes",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-docs",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-docs/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-docs"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Docs"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Zz4vo3wBGfN7xFX-1PDI",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test 3",
+          "description" : "Test MS",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-3",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-3/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-3"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test 3"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "YD4vo3wBGfN7xFX-0PBB",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with Team",
+          "description" : "Description",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-team",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-team/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-team"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Team"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Yj4vo3wBGfN7xFX-0fCd",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test 1",
+          "description" : "test MS",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-1",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-1/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-1"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test 1"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "ZT4vo3wBGfN7xFX-0vAs",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test 2",
+          "description" : "Test MS",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-2",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-2/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-2"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test 2"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "dT4vo3wBGfN7xFX-2_Aq",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test 4",
+          "description" : "Description",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-4",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-4/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-4"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test 4"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "dz4vo3wBGfN7xFX-3PDF",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Party",
+          "name" : "Auto MS test 5",
+          "description" : "Test MS",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-5",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-5/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-5"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS test 5"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "hz4vo3wBGfN7xFX-7_Bb",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test Innersource",
+          "description" : "Test MS to test Innersource",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "jD4vo3wBGfN7xFX-9vDI",
+        "_score" : 0.11776562,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Permission Test",
+          "description" : "Auto MS Permission Test Microservice, to test just mandatory fields",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-permission-test",
+            "asset_document_fullurl" : "/marketplace/auto-ms-permission-test/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-permission-test"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Permission Test"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "VT4vo3wBGfN7xFX-wfBh",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Test 3PP",
+          "name" : "Auto MS max for Report",
+          "description" : "This is a service containing maximum data for the report",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-max-for-report",
+            "asset_document_fullurl" : "/marketplace/auto-ms-max-for-report/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-max-for-report"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS max for Report"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "UD4vo3wBGfN7xFX-tvB3",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with multiple Compliance",
+          "description" : "Microservice with multiple compliance options",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-multiple-compliance",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-compliance/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-multiple-compliance"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with multiple Compliance"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Tj4vo3wBGfN7xFX-svDS",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with 1 Compliance",
+          "description" : "Microservice with compliance options",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-1-compliance",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-1-compliance/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-1-compliance"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with 1 Compliance"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "Xj4vo3wBGfN7xFX-z_AS",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS Test Change Cetegory",
+          "description" : "Auto MS testChange Cetegory",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-change-cetegory",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-change-cetegory/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-change-cetegory"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Change Cetegory"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "aT4vo3wBGfN7xFX-1vDU",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 1",
+          "description" : "Test MS to test Innersource logic 1",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-1",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-1/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-1"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 1"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "cT4vo3wBGfN7xFX-2fDQ",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 2",
+          "description" : "Test MS to test Innersource logic 2",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-2",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-2/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-2"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 2"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "az4vo3wBGfN7xFX-1_B6",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 4",
+          "description" : "Test MS to test Innersource logic 4 etesuse only on the team",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-4",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-4/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-4"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 4"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "bT4vo3wBGfN7xFX-2PBa",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 5",
+          "description" : "Test MS to test Innersource logic 5 etesuse only on the team without updates for microservice",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-5",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-5/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-5"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 5"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "bz4vo3wBGfN7xFX-2fBS",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 6",
+          "description" : "Test MS to test Innersource logic 6 etesuse was removed on some date, snapshot was generated",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-6",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-6/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-6"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 6"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "ej4vo3wBGfN7xFX-3fDH",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Test 3PP",
+          "name" : "Auto MS with Mock Artifactory",
+          "description" : "This is a service containing Mock Artifactory Links for Integration Tests. Be careful with changes!",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-mock-artifactory",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-mock-artifactory/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-mock-artifactory"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Mock Artifactory"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "hT4vo3wBGfN7xFX-7vCb",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Test 3PP",
+          "name" : "Auto MS with Real Artifactory",
+          "description" : "This is a service containing Real Artifactory Links for Integration Tests. Be careful with changes!",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-real-artifactory",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-real-artifactory/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-real-artifactory"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Real Artifactory"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "cz4vo3wBGfN7xFX-2vBX",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "3PP",
+          "name" : "Auto MS Test Innersource 3",
+          "description" : "Test MS to test Innersource logic 3",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-test-innersource-3",
+            "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-3/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-test-innersource-3"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Test Innersource 3"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "iT4vo3wBGfN7xFX-9PDL",
+        "_score" : 0.107565165,
+        "_source" : {
+          "based_on" : "Test 3PP",
+          "name" : "Auto MS Real Artifactory Notification",
+          "description" : "This is a service containing Real Artifactory Links for E2E tests. Be careful with changes!",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-real-artifactory-notification",
+            "asset_document_fullurl" : "/marketplace/auto-ms-real-artifactory-notification/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-real-artifactory-notification"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS Real Artifactory Notification"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "fj4vo3wBGfN7xFX-3_Cw",
+        "_score" : 0.0989909,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with Multiple Doc Types",
+          "description" : "Test Microservice with several documents of different types",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-multiple-doc-types"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Multiple Doc Types"
+          ]
+        }
+      },
+      {
+        "_index" : "microservices",
+        "_type" : "_doc",
+        "_id" : "gD4vo3wBGfN7xFX-5_Du",
+        "_score" : 0.09168269,
+        "_source" : {
+          "based_on" : "Ericsson Internal",
+          "name" : "Auto MS with Multiple Doc Types AutoMode",
+          "description" : "Microservice to test document auto mode with multiple file formats and locations",
+          "denorm" : {
+            "asset_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types-automode",
+            "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types-automode/documentation"
+          },
+          "type" : "microservice",
+          "slug" : "auto-ms-with-multiple-doc-types-automode"
+        },
+        "highlight" : {
+          "name" : [
+            "<strong>Auto</strong> MS with Multiple Doc Types AutoMode"
+          ]
+        }
+      },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3570",
+        "_score": 2.3493893,
+        "_source": {
+        "post_title": "ADP Architecture",
+        "post_id": 3570,
+        "post_name": "adp-architecture",
+        "post_type": "page",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Discover",
+                "term_taxonomy_id": 93,
+                "term_order": 0,
+                "term_id": 93,
+                "facet": "{\"term_id\":93,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":90,\"term_taxonomy_id\":93,\"term_order\":0}",
+                "slug": "discover"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> Architecture"
+        ],
+        "post_content_filtered": [
+            "</p>\n\n\n\n<h1>Stack view</h1>\n\n\n\n<p>Figure 1 depicts the stack view of <em>ADP</em> entities. This view describes, on very high level, the entire <em>ADP</em> ecosystem and how different layers are positioned in the stack."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3630",
+        "_score": 2.074225,
+        "_source": {
+        "post_title": "ADP meeting the applications",
+        "post_id": 3630,
+        "post_name": "adp-meeting-the-applications",
+        "post_type": "page",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> meeting the applications"
+        ],
+        "post_content_filtered": [
+            "<p>Over the last couple of months the <em>ADP</em> program team have visited most of the major application sites.</p>\n<p>We continue to work to explain what <em>ADP</em> is and what our ambition is.</p>\n<p>There is a video of one of these sessions with the UDM developers which might be of interest."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9463",
+        "_score": 1.8419158,
+        "_source": {
+        "post_title": "Editing a ADP Portal page",
+        "post_id": 9463,
+        "post_name": "editing-a-adp-portal-page",
+        "post_type": "page",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Editing a <em>ADP</em> Portal page"
+        ],
+        "post_content_filtered": [
+            "</li><li>Click <strong>Update</strong> button to publish the changes on the live <em>ADP</em> Portal.</li></ul>"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9915",
+        "_score": 1.6432192,
+        "_source": {
+        "post_title": "Editing the ADP Portal Footer",
+        "post_id": 9915,
+        "post_name": "editing-the-adp-portal-footer",
+        "post_type": "page",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Editing the <em>ADP</em> Portal Footer"
+        ],
+        "post_content_filtered": [
+            "</li></ul></li><li>The Save Menu button will update the live <em>ADP</em> Portal with the newly structured menu.</li></ul>\n\n\n\n<p><strong>Note:</strong> The Footer only supports a maximum of four columns and eight rows per column.</p>"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9457",
+        "_score": 1.5656482,
+        "_source": {
+        "post_title": "Accessing ADP Portal's WordPress instance",
+        "post_id": 9457,
+        "post_name": "accessing-adp-portals-wordpress-instance",
+        "post_type": "page",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Accessing <em>ADP</em> Portal's WordPress instance"
+        ],
+        "post_content_filtered": [
+            "<ul><li><a href=\"https://adp.ericsson.se:23307/wp-admin\">Login to WordPress</a>(Please note this links directly to the live <em>ADP</em> Portal).</li><li>If you need login access, please contact <a href=\"mailto:PDLDPPORTA@pdl.internal.ericsson.com\"><em>ADP</em> Portal team.</a></li></ul>"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9623",
+        "_score": 1.5514202,
+        "_source": {
+        "post_title": "ADP Enablers",
+        "post_id": 9623,
+        "post_name": "adp-enablers",
+        "post_type": "page",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> Enablers"
+        ],
+        "post_content_filtered": [
+            "</li></ul></li></ul>\n\n\n\n<h3>Other Support</h3>\n\n\n\n<ul><li><em>ADP</em> Booster: A team provided by <em>ADP</em> program to help people outside the program to start develop their first microservice with <em>ADP</em> standard!"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3483",
+        "_score": 1.5510815,
+        "_source": {
+        "post_title": "ADP Roamaps",
+        "post_id": 3483,
+        "post_name": "adp_roadmaps",
+        "post_type": "page",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Discover",
+                "term_taxonomy_id": 93,
+                "term_order": 0,
+                "term_id": 93,
+                "facet": "{\"term_id\":93,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":90,\"term_taxonomy_id\":93,\"term_order\":0}",
+                "slug": "discover"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> Roamaps"
+        ],
+        "post_content_filtered": [
+            "<h1><em>ADP</em> Roadmaps</h1>\n<p><em>ADP</em> has roadmaps for the three main areas of the framework, Generic Services, Cloud Orchestration Platform and Application Manager.   Details of each can be found from the information below."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3346",
+        "_score": 1.5424633,
+        "_source": {
+        "post_title": "What is ADP?",
+        "post_id": 3346,
+        "post_name": "what_is_adp",
+        "post_type": "page",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Discover",
+                "term_taxonomy_id": 93,
+                "term_order": 0,
+                "term_id": 93,
+                "facet": "{\"term_id\":93,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":90,\"term_taxonomy_id\":93,\"term_order\":0}",
+                "slug": "discover"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "What is <em>ADP</em>?"
+        ],
+        "post_content_filtered": [
+            "<p><em>ADP</em> is the Application Development\nPlatform which provides support to develop cloud native applications."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3501",
+        "_score": 1.3652754,
+        "_source": {
+        "post_title": "ADP Meet the team",
+        "post_id": 3501,
+        "post_name": "meettheteam",
+        "post_type": "page",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Community",
+                "term_taxonomy_id": 91,
+                "term_order": 0,
+                "term_id": 91,
+                "facet": "{\"term_id\":91,\"slug\":\"community\",\"name\":\"Community\",\"parent\":90,\"term_taxonomy_id\":91,\"term_order\":0}",
+                "slug": "community"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> Meet the team"
+        ],
+        "post_content_filtered": [
+            "Hub Leads</h2>\n<p>Several <em>ADP</em> hubs are established to do <em>ADP</em> Generic Service development."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9800",
+        "_score": 1.224957,
+        "_source": {
+        "post_title": "Connect to ADP CI/CD",
+        "post_id": 9800,
+        "post_name": "ci-cd-connection",
+        "post_type": "tutorials",
+        "terms": {
+            "category": [
+            {
+                "parent": 106,
+                "name": "Share a Microservice",
+                "term_taxonomy_id": 117,
+                "term_order": 0,
+                "term_id": 117,
+                "facet": "{\"term_id\":117,\"slug\":\"share-a-microservice\",\"name\":\"Share a Microservice\",\"parent\":106,\"term_taxonomy_id\":117,\"term_order\":0}",
+                "slug": "share-a-microservice"
+            },
+            {
+                "parent": 90,
+                "name": "Working in ADP Framework",
+                "term_taxonomy_id": 106,
+                "term_order": 0,
+                "term_id": 106,
+                "facet": "{\"term_id\":106,\"slug\":\"workinginadpframework\",\"name\":\"Working in ADP Framework\",\"parent\":90,\"term_taxonomy_id\":106,\"term_order\":0}",
+                "slug": "workinginadpframework"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "Connect to <em>ADP</em> CI/CD"
+        ],
+        "post_content_filtered": [
+            "<p>To share a microservice for any application to pick up and reuse, the microservice&#8217;s CI pipeline needs to be connected to the <a href=\"https://adp.ericsson.se/overview/adp_ci\"><em>ADP</em> CI/CD</a> flow."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3506",
+        "_score": 1.2238976,
+        "_source": {
+        "post_title": "ADP Raise a trouble ticket",
+        "post_id": 3506,
+        "post_name": "raiseaticket",
+        "post_type": "tutorials",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "<em>ADP</em> Raise a trouble ticket"
+        ],
+        "post_content_filtered": [
+            "<h1><em>ADP</em> Trouble tickets</h1>\n<p>All TRs on <em>ADP</em> needs to be filled in JIRA, below is a short step-by-step instruction on how to Report a JIRA ticket in <em>ADP</em></p>\n<ol>\n<li>Create a JIRA bug issue in the <em>ADP</em> JIRA project <a href=\"https://cc-jira.rnd.ki.sw.ericsson.se/projects/ADPPRG\">https://cc-jira.rnd.ki.sw.ericsson.se"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "8722",
+        "_score": 1.1880405,
+        "_source": {
+        "post_title": "My First ADP Service",
+        "post_id": 8722,
+        "post_name": "overview-my-first-adp-service",
+        "post_type": "tutorials",
+        "terms": {
+            "category": [
+            {
+                "parent": 95,
+                "name": "My First Microservice",
+                "term_taxonomy_id": 96,
+                "term_order": 0,
+                "term_id": 96,
+                "facet": "{\"term_id\":96,\"slug\":\"my-first-adp-service\",\"name\":\"My First Microservice\",\"parent\":95,\"term_taxonomy_id\":96,\"term_order\":0}",
+                "slug": "my-first-adp-service"
+            },
+            {
+                "parent": 0,
+                "name": "Tutorials",
+                "term_taxonomy_id": 95,
+                "term_order": 0,
+                "term_id": 95,
+                "facet": "{\"term_id\":95,\"slug\":\"tutorials\",\"name\":\"Tutorials\",\"parent\":0,\"term_taxonomy_id\":95,\"term_order\":0}",
+                "slug": "tutorials"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "My First <em>ADP</em> Service"
+        ],
+        "post_content_filtered": [
+            "<p> To get familiar with the basics of <em>ADP</em>, you are now going to work with your first <em>ADP</em> microservice. You will use a pre-defined microservice called FactFinder. This is a very simple microservice providing facts about cats."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9909",
+        "_score": 1.0479017,
+        "_source": {
+        "post_title": "Wordpress Footer Guide",
+        "post_id": 9909,
+        "post_name": "wordpress-footer-guide",
+        "post_type": "tutorials",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Wordpress Footer Guide"
+        ],
+        "post_content_filtered": [
+            "<p><em>ADP</em> Portal content is managed using WordPress. This is a guide on how to edit the existing <em>ADP</em> Portal footer.</p>"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9461",
+        "_score": 0.9903867,
+        "_source": {
+        "post_title": "Create a page on the portal",
+        "post_id": 9461,
+        "post_name": "create-a-page-on-the-portal",
+        "post_type": "tutorials",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Create a page on the portal"
+        ],
+        "post_content_filtered": [
+            "This field is related to <em>ADP</em> Portal’s menu title."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9632",
+        "_score": 0.9661932,
+        "_source": {
+        "post_title": "Test Formatting",
+        "post_id": 9632,
+        "post_name": "test-formatting",
+        "post_type": "post",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Test Formatting"
+        ],
+        "post_content_filtered": [
+            "__filename);\n// ============================================================================================= //\nmodule.exports = REQ => new Promise(async (RESOLVE) => {\n  const startedAt = new Date();\n  const returnClass = new global.<em>adp</em>.Answers();\n  const packageName = 'global.<em>adp</em>.auditlogs.read';"
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9151",
+        "_score": 0.9516021,
+        "_source": {
+        "post_title": "Glossary",
+        "post_id": 9151,
+        "post_name": "glossary",
+        "post_type": "post",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Glossary"
+        ],
+        "post_content_filtered": [
+            "</p>\n\n\n\n<p><strong>Non-<em>ADP</em>&nbsp;Services:</strong> Microservices&nbsp;which&nbsp;provide&nbsp;common&nbsp;functions&nbsp;but&nbsp;do&nbsp;NOT&nbsp;adhere&nbsp;to&nbsp;<em>ADP</em>&nbsp;architecture&nbsp;and&nbsp;framework."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "3485",
+        "_score": 0.9366884,
+        "_source": {
+        "post_title": "Configuration Management Developers Guide for ADP Generic Services",
+        "post_id": 3485,
+        "post_name": "configuration-management-developers-guide-for-adp-generic-services",
+        "post_type": "post",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "Configuration Management Developers Guide for <em>ADP</em> Generic Services"
+        ],
+        "post_content_filtered": [
+            "You need to be added to Gerrit group <em>adp</em>-gs-developer<br />\nin order to be able to clone the <em>adp</em>-gs/<em>adp</em>-gs-cm project.<br />\nAsk a team member to add you.<br />\nhttps://gerrit-gamma.gic.ericsson.se/#/admin/groups/17385,members<br />\n2."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "9471",
+        "_score": 0.85276884,
+        "_source": {
+        "post_title": "WordPress Updating the Tutorial Side Menu",
+        "post_id": 9471,
+        "post_name": "wordpress-updating-the-tutorial-side-menu",
+        "post_type": "post",
+        "terms": []
+        },
+        "highlight": {
+        "post_title": [
+            "WordPress Updating the Tutorial Side Menu"
+        ],
+        "post_content_filtered": [
+            "<p> <em>ADP</em> Portal Tutorial content is managed using&nbsp;WordPress. This is a guide on how to add tutorial pages to the <em>ADP</em> Portal Tutorial side menu."
+        ]
+        }
+    },
+    {
+        "_index": "1921685610223309-post-1",
+        "_type": "_doc",
+        "_id": "8990",
+        "_score": 0.8388834,
+        "_source": {
+        "post_title": "Generic Services",
+        "post_id": 8990,
+        "post_name": "adp-generic-services",
+        "post_type": "tutorials",
+        "terms": {
+            "category": [
+            {
+                "parent": 90,
+                "name": "Discover",
+                "term_taxonomy_id": 93,
+                "term_order": 0,
+                "term_id": 93,
+                "facet": "{\"term_id\":93,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":90,\"term_taxonomy_id\":93,\"term_order\":0}",
+                "slug": "discover"
+            },
+            {
+                "parent": 0,
+                "name": "Articles",
+                "term_taxonomy_id": 90,
+                "term_order": 0,
+                "term_id": 90,
+                "facet": "{\"term_id\":90,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":90,\"term_order\":0}",
+                "slug": "articles"
+            }
+            ]
+        }
+        },
+        "highlight": {
+        "post_title": [
+            "Generic Services"
+        ],
+        "post_content_filtered": [
+            "<p>The <em>ADP</em> architecture is based on a set of microservices using network-based, technology independent interfaces between them."
+        ]
+        }
+    }
+]

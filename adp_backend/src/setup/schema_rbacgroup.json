@@ -1,0 +1,147 @@
+{
+    "rbacGroupSchema": {
+        "id": "/group",
+        "type": "object",
+        "properties": {
+            "_id": {
+                "description": "Unique id for the Group",
+                "type": "string"
+            },
+            "type": {
+                "description": "Type of this register",
+                "type": "string"
+            },
+            "name": {
+                "description": "The Name of the Group",
+                "type": "string",
+                "maxLength": "50"
+            },
+            "description": {
+                "description": "The Description of the Group",
+                "type": "string",
+                "maxLength": "200"
+            },
+            "permission": {
+                "description": "The Permissions of this Group",
+                "type": "array",
+                "minItems" : "1",
+                "items": {
+                    "type":"object",
+                    "properties": {
+                        "_id": {
+                            "description": "Unique id for the permission",
+                            "type": "string"
+                        },
+                        "type": {
+                            "description": "The permission type",
+                            "type": "string"
+                        },
+                        "name": {
+                            "description": "Unique permission name to this group",
+                            "type": "string"
+                        },
+                        "dynamic": {
+                            "description": "Dynamic permission settings",
+                            "type":"array|null",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "_id": {
+                                        "description": "Unique Listoption Id for a group items",
+                                        "type": "string"
+                                    },
+                                    "group-id": {
+                                        "description": "Unique Listoptions Group select id",
+                                        "type": "integer"
+                                    },
+                                    "group": {
+                                        "description": "Name of the Listoptoption Group",
+                                        "type": "string"
+                                    },
+                                    "slug": {
+                                        "description": "Slug of the Listoptions Group",
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "description": "Listoptions item type",
+                                        "type": "string"
+                                    },
+                                    "test-id": {
+                                        "description": "Unique Listoptions item test id",
+                                        "type": "string"
+                                    },
+                                    "order": {
+                                        "description": "Listoption group order",
+                                        "type": "integer"
+                                    },
+                                    "show-as-filter": {
+                                        "description": "Show this item as a marketplace filter group",
+                                        "type": "boolean"
+                                    },
+                                    "items": {
+                                        "description": "List of group related group items",
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "_id": {
+                                                    "description": "Unique Listoption Id for a group item",
+                                                    "type": "string"
+                                                },
+                                                "select-id": {
+                                                    "description": "Unique Listoptions group item select id",
+                                                    "type": "integer"
+                                                },
+                                                "type": {
+                                                    "description": "Listoptions item type",
+                                                    "type": "string"
+                                                },
+                                                "name": {
+                                                    "description": "Listoption group item name",
+                                                    "type": "string"
+                                                },
+                                                "desc": {
+                                                    "description": "Listoption group item description",
+                                                    "type": "string"
+                                                },
+                                                "group-id": {
+                                                    "description": "Listoptions group select id that this item belongs to",
+                                                    "type": "integer"
+                                                },
+                                                "test-id": {
+                                                    "description": "Unique Listoptions item test id",
+                                                    "type": "string"
+                                                },
+                                                "order": {
+                                                    "description": "Listoption item order",
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "exception": {
+                            "description": "Exception permission settings",
+                            "type":"array|null",
+                            "items": {
+                                "description": "The id of an asset to add to the exception settings",
+                                "type": "string"
+                            }
+                        },
+                        "static": {
+                            "description": "Static permission settings",
+                            "type":"array|null",
+                            "items": {
+                                "description": "The id of an asset to add to the static settings",
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "required":["type","name", "permission"]
+    }
+}

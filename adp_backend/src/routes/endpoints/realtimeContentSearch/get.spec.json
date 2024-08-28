@@ -1,0 +1,273 @@
+[
+  {
+      "post_type": "page",
+      "filteredArray": [
+          {
+              "object_id": 3365,
+              "title": "ADP CI/CDD",
+              "slug": "adp_ci",
+              "category": [
+                  {
+                      "category_id": 92,
+                      "category_name": "Get Started",
+                      "category_slug": "getstarted"
+                  },
+                  {
+                      "category_id": 1,
+                      "category_name": "Articles",
+                      "category_slug": "articles"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "<strong>ADP</strong> CI/CDD"
+                  ]
+              },
+              "url": [
+                  "/overview/adp_ci",
+                  "/getstarted/adp_ci",
+                  "/adp_architecture",
+                  "/overview/adp_architecture",
+                  "/discover/adp_architecture",
+                  "/test-page0/test-page1/adp-meeting-the-applications",
+                  "/adp_architecture/adp-meeting-the-applications",
+                  "/discover/what_is_adp/adp_benefits",
+                  "/contribute/learning-path-my-first-adp-service"
+              ]
+          },
+          {
+              "object_id": 3570,
+              "title": "ADP Architecture",
+              "slug": "adp_architecture",
+              "category": [
+                  {
+                      "category_id": 91,
+                      "category_name": "Discover",
+                      "category_slug": "discover"
+                  },
+                  {
+                      "category_id": 1,
+                      "category_name": "Articles",
+                      "category_slug": "articles"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "<strong>ADP</strong> Architecture"
+                  ]
+              },
+              "url": [
+                  "/overview/adp_ci",
+                  "/getstarted/adp_ci",
+                  "/adp_architecture",
+                  "/overview/adp_architecture",
+                  "/discover/adp_architecture",
+                  "/test-page0/test-page1/adp-meeting-the-applications",
+                  "/adp_architecture/adp-meeting-the-applications",
+                  "/discover/what_is_adp/adp_benefits",
+                  "/contribute/learning-path-my-first-adp-service"
+              ]
+          },
+          {
+              "object_id": 3630,
+              "title": "ADP meeting the applications",
+              "slug": "adp-meeting-the-applications",
+              "category": [],
+              "highlight": {
+                  "post_title": [
+                      "<strong>ADP</strong> meeting the applications"
+                  ]
+              },
+              "url": [
+                  "/overview/adp_ci",
+                  "/getstarted/adp_ci",
+                  "/adp_architecture",
+                  "/overview/adp_architecture",
+                  "/discover/adp_architecture",
+                  "/test-page0/test-page1/adp-meeting-the-applications",
+                  "/adp_architecture/adp-meeting-the-applications",
+                  "/discover/what_is_adp/adp_benefits",
+                  "/contribute/learning-path-my-first-adp-service"
+              ]
+          },
+          {
+              "object_id": 3344,
+              "title": "Benefits of ADP",
+              "slug": "adp_benefits",
+              "category": [
+                  {
+                      "category_id": 91,
+                      "category_name": "Discover",
+                      "category_slug": "discover"
+                  },
+                  {
+                      "category_id": 1,
+                      "category_name": "Articles",
+                      "category_slug": "articles"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "Benefits of <strong>ADP</strong>"
+                  ]
+              },
+              "url": [
+                  "/overview/adp_ci",
+                  "/getstarted/adp_ci",
+                  "/adp_architecture",
+                  "/overview/adp_architecture",
+                  "/discover/adp_architecture",
+                  "/test-page0/test-page1/adp-meeting-the-applications",
+                  "/adp_architecture/adp-meeting-the-applications",
+                  "/discover/what_is_adp/adp_benefits",
+                  "/contribute/learning-path-my-first-adp-service"
+              ]
+          },
+          {
+              "object_id": 8863,
+              "title": "My First ADP Service",
+              "slug": "learning-path-my-first-adp-service",
+              "category": [],
+              "highlight": {
+                  "post_title": [
+                      "My First <strong>ADP</strong> Service"
+                  ]
+              },
+              "url": [
+                  "/overview/adp_ci",
+                  "/getstarted/adp_ci",
+                  "/adp_architecture",
+                  "/overview/adp_architecture",
+                  "/discover/adp_architecture",
+                  "/test-page0/test-page1/adp-meeting-the-applications",
+                  "/adp_architecture/adp-meeting-the-applications",
+                  "/discover/what_is_adp/adp_benefits",
+                  "/contribute/learning-path-my-first-adp-service"
+              ]
+          }
+      ]
+  },
+  {
+      "post_type": "tutorials",
+      "filteredArray": [
+          {
+              "object_id": 8971,
+              "title": "My First ADP Service",
+              "slug": "overview-my-first-adp-service",
+              "category": [
+                  {
+                      "category_id": 90,
+                      "category_name": "My First ADP Service",
+                      "category_slug": "my-first-adp-service"
+                  },
+                  {
+                      "category_id": 95,
+                      "category_name": "Tutorials",
+                      "category_slug": "tutorials"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "My First <strong>ADP</strong> Service"
+                  ]
+              },
+              "url": [
+                  "/overview-my-first-adp-service",
+                  "/introduction",
+                  "/short-code-test-parent/the-factfinder-micro-service",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial-3"
+              ]
+          },
+          {
+              "object_id": 8986,
+              "title": "Introduction <sup>new</sup>And<sub>sub</sub>",
+              "slug": "introduction",
+              "category": [
+                  {
+                      "category_id": 95,
+                      "category_name": "Tutorials",
+                      "category_slug": "tutorials"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "Introduction <sup>new</sup>And<sub>sub</sub>"
+                  ]
+              },
+              "url": [
+                  "/overview-my-first-adp-service",
+                  "/introduction",
+                  "/short-code-test-parent/the-factfinder-micro-service",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial-3"
+              ]
+          },
+          {
+              "object_id": 8973,
+              "title": "The FactFinder micro service",
+              "slug": "the-factfinder-micro-service",
+              "category": [
+                  {
+                      "category_id": 90,
+                      "category_name": "My First ADP Service",
+                      "category_slug": "my-first-adp-service"
+                  },
+                  {
+                      "category_id": 95,
+                      "category_name": "Tutorials",
+                      "category_slug": "tutorials"
+                  }
+              ],
+              "highlight": {
+                  "post_title": [
+                      "The FactFinder micro service"
+                  ]
+              },
+              "url": [
+                  "/overview-my-first-adp-service",
+                  "/introduction",
+                  "/short-code-test-parent/the-factfinder-micro-service",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial-3"
+              ]
+          },
+          {
+              "object_id": 9269,
+              "title": "E2E TESTS Tutorial",
+              "slug": "e2e-tests-tutorial",
+              "category": [],
+              "highlight": {
+                  "post_title": [
+                      "E2E TESTS Tutorial"
+                  ]
+              },
+              "url": [
+                  "/overview-my-first-adp-service",
+                  "/introduction",
+                  "/short-code-test-parent/the-factfinder-micro-service",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial-3"
+              ]
+          },
+          {
+              "object_id": 9909,
+              "title": "E2E TESTS Tutorial 3",
+              "slug": "e2e-tests-tutorial-3",
+              "category": [],
+              "highlight": {
+                  "post_title": [
+                      "E2E TESTS Tutorial 3"
+                  ]
+              },
+              "url": [
+                  "/overview-my-first-adp-service",
+                  "/introduction",
+                  "/short-code-test-parent/the-factfinder-micro-service",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial",
+                  "/do-not-remove-uitest-tutorial/e2e-tests-tutorial-3"
+              ]
+          }
+      ]
+  }
+]

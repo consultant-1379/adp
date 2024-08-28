@@ -1,0 +1,78 @@
+// ============================================================================================= //
+/**
+* Unit test for [ global.adp.document.solveHTMLImagePath ]
+* @author Armando Schiavon Dias [escharm]
+*/
+// ============================================================================================= //
+describe('Testing [ global.adp.document.solveHTMLImagePath ] if he change the relative for the absolute image path.', () => {
+  beforeEach(() => {
+    global.adp = {};
+    global.adp.echoLog = () => true;
+    global.adp.timeStamp = () => '201901031415000000';
+    global.adp.docs = {};
+    global.adp.docs.list = [];
+    global.adp.document = {};
+    global.adp.document.solveHTMLImagePath = require('./solveHTMLImagePath'); // eslint-disable-line global-require
+  });
+
+  afterEach(() => {
+    global.adp = null;
+  });
+
+  const paramOne = `<h1>This is a Test</h1><br/>
+                    <img src="image1.png" alt="Alternate Text One" width="100" height="100"/><br/>
+                    <img src="folder/image2.png" alt="Alternate Text Two" width="100" height="100"/><br/>
+                    <br/>`;
+
+  const paramTwo = 'http://test.link.se/?p=Test.git;f=testFolder/fakeText.txt;hb=IUVBHJLK';
+
+  const expectedAnswerOne = `<h1>This is a Test</h1><br/>
+                    <img src="http://test.link.se/?p=Test.git;f=testFolder/image1.png;" alt="Alternate Text One" width="100" height="100"/><br/>
+                    <img src="http://test.link.se/?p=Test.git;f=testFolder/folder/image2.png;" alt="Alternate Text Two" width="100" height="100"/><br/>
+                    <br/>`;
+
+  it('[ global.adp.document.solveHTMLImagePath ] should return an HTML with the absolute image(s) path(s).', (done) => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath(paramOne, paramTwo) === expectedAnswerOne;
+
+    expect(theResult).toBeTruthy();
+    done();
+  });
+/*
+  it('[ global.adp.document.solveHTMLImagePath ] with a NULL parameter. Should return NULL.', () => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath(null, null) === null;
+
+    expect(theResult).toBeTruthy();
+  });
+
+  it('[ global.adp.document.solveHTMLImagePath ] with an Undefined parameter. Should return NULL.', () => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath(undefined, undefined) === null;
+
+    expect(theResult).toBeTruthy();
+  });
+
+  it('[ global.adp.document.solveHTMLImagePath ] with a Number parameter. Should return NULL.', () => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath(25, 25) === null;
+
+    expect(theResult).toBeTruthy();
+  });
+
+  it('[ global.adp.document.solveHTMLImagePath ] with a Array parameter. Should return NULL.', () => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath([], []) === null;
+
+    expect(theResult).toBeTruthy();
+  });
+
+  it('[ global.adp.document.solveHTMLImagePath ] with a Object parameter. Should return NULL.', () => {
+    const theResult = global.adp.document
+      .solveHTMLImagePath({}, {}) === null;
+
+    expect(theResult).toBeTruthy();
+  });
+  */
+});
+// ============================================================================================= //

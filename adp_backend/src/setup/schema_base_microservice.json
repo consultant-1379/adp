@@ -1,0 +1,115 @@
+{
+    "assetSchema": {
+        "id": "/microservice",
+        "type": "object",
+        "properties": {
+            "service_category": {
+                "description": "The ID of the Service Category of the MicroService",
+                "type": "integer",
+                "mail_name": "Service Category",
+                "mail_order": 2,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.service_category"],
+                "sortableKey": "service_category_order",
+                "groupable": true
+            },
+            "serviceArea": {
+                "description": "The ID of the Service Type of the MicroService",
+                "type": "integer",
+                "mail_name": "Service Area",
+                "mail_order": 6,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.serviceArea"],
+                "sortableKey": "serviceArea_order",
+                "groupable": true
+            },
+            "based_on": {
+                "description": "Field for 'Based On' information (Optional)",
+                "type": "string",
+                "maxLength": "25",
+                "mail_name": "Based On 3PP",
+                "mail_order": 7,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "reusability_level": {
+                "description": "The ID of the Reusability Level of the MicroService.",
+                "type": "integer",
+                "mail_name": "Reusability Level",
+                "mail_order": 13,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.reusability_level"],
+                "sortableKey": "reusability_level_order",
+                "groupable": true
+            },
+            "service_maturity": {
+                "description": "The ID of a MicroService's Service Maturity",
+                "type": "integer",
+                "mail_name": "Service Maturity",
+                "mail_order": 14,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.service_maturity"],
+                "sortableKey": "service_maturity_order"
+            },
+            "compliance": {
+                "description": "Array of Compliance Items",
+                "type": "array",
+                "mail_name": "Compliance",
+                "mail_order": 27,
+                "report": "compliance",
+                "items": {
+                    "type": "object",
+                    "properties" : {
+                        "group": {
+                            "description": "Compliance Group ID",
+                            "type": "integer",
+                            "mail_name": "Group",
+                            "mail_order": 1
+                        },
+                        "fields": {
+                            "description": "List of compliant fields for the group",
+                            "type": "array",
+                            "mail_name": "Fields",
+                            "mail_order": 2,
+                            "minItems": 1,
+                            "items": {
+                                "type": "object",
+                                "properties" : {
+                                    "field": {
+                                        "description": "Compliance Field ID",
+                                        "type": "integer",
+                                        "mail_name": "Field",
+                                        "mail_order": 1
+                                    },
+                                    "answer": {
+                                        "description": "Answer ID",
+                                        "type": "integer",
+                                        "mail_name": "Answer",
+                                        "mail_order": 2
+                                    },
+                                    "comment": {
+                                        "description": "Comment",
+                                        "type": "string",
+                                        "mail_name": "Comment",
+                                        "mail_order": 3,
+                                        "maxLength": 300
+                                    }
+                                },
+                                "required": [
+                                    "field", "answer"
+                                ]
+                            }
+                        }
+                    },
+                    "required": [
+                        "group", "fields"
+                    ]
+                }
+            }
+        },
+        "required":["reusability_level", "service_category", "serviceArea", "service_maturity"]
+    }
+}

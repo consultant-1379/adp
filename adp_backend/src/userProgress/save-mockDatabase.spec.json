@@ -1,0 +1,59 @@
+{
+  "find_success_1": {
+    "resultsReturned": 0,
+    "limitOfThisResult": 1,
+    "offsetOfThisResult": 0,
+    "message": "Mock Search Successful",
+    "time": "24.305 ms",
+    "docs": []
+  },
+  "create_success_1": {
+    "ok": true,
+    "id": "020369d99e8d62a35a8d6a6f241fc0df",
+    "rev": "13-93cd57c5847ac8deafb53648fbd15b08"
+  },
+  "find_success_2": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 1,
+    "offsetOfThisResult": 0,
+    "message": "Mock Search Successful",
+    "time": "24.305 ms",
+    "docs": [{
+      "wid": "8722",
+      "date_progress": "2020-05-29 09:00:00.0000"
+    }]
+  },
+  "find_successwithreturn_1": {
+    "resultsReturned": 0,
+    "limitOfThisResult": 1,
+    "offsetOfThisResult": 0,
+    "message": "Mock Search Successful",
+    "time": "24.305 ms",
+    "docs": [{
+      "wid": "8722",
+      "date_progress": "2020-05-28 09:00:00.0000"
+    }]
+  },
+  "update_successwithreturn_1": {
+    "ok": true,
+    "id": "020369d99e8d62a35a8d6a6f241fc0df",
+    "rev": "13-93cd57c5847ac8deafb53648fbd15b08"
+  },
+  "find_successwithreturn_2": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 1,
+    "offsetOfThisResult": 0,
+    "message": "Mock Search Successful",
+    "time": "24.305 ms",
+    "docs": [{
+      "wid": "8722",
+      "date_progress": "2020-05-29 09:00:00.0000"
+    }]
+  },
+  "create_notok_1": {
+    "ok": false
+  },
+  "update_notok_1": {
+    "ok": false
+  }
+}

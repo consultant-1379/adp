@@ -1,0 +1,9 @@
+version: 1.0.1
+documents:
+ - ame: Sample 1
+   filepath: '1.0.1/sample1.zip'
+   default: true
+ - name: Sample 2
+   ilepath: '1.0.1/sample2.zip'
+ - name: An External
+   external-link: https://www.ericsson.se

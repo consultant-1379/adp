@@ -1,0 +1,10 @@
+{
+  "fromEmailAddress": "neal.parikh@ericsson.com",
+  "emailAddressListToAppend": [
+    "mari.koskinen@ericsson.com",
+    "neal.parikh@ericsson.com",
+    "michael.seidel@ericsson.com",
+    "monica.hatlen@ericsson.com",
+    "magnus.harnesk@ericsson.com"
+  ]
+}

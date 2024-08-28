@@ -1,0 +1,442 @@
+{
+    "body": {
+      "took": 12,
+      "timed_out": false,
+      "_shards": {
+        "total": 6,
+        "successful": 6,
+        "skipped": 0,
+        "failed": 0
+      },
+      "hits": {
+        "total": {
+          "value": 69,
+          "relation": "eq"
+        },
+        "max_score": 2.523921,
+        "hits": [
+            {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9867",
+                "_score" : 2.523921,
+                "_source" : {
+                  "post_title" : "e2e Test level 3",
+                  "post_id" : 9867,
+                  "post_name" : "e2e-test-level-3",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e <strong>Test</strong> level 3"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "10141",
+                "_score" : 2.4807353,
+                "_source" : {
+                  "post_title" : "Test",
+                  "post_id" : 10141,
+                  "post_name" : "test",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "<strong>Test</strong>"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9223",
+                "_score" : 2.0074072,
+                "_source" : {
+                  "post_title" : "E2E TESTS Questionnaire",
+                  "post_id" : 9223,
+                  "post_name" : "uitest-questionnaire",
+                  "post_type" : "tutorials"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "E2E <strong>TESTS</strong> Questionnaire"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9526",
+                "_score" : 1.9961172,
+                "_source" : {
+                  "post_title" : "Test Page1",
+                  "post_id" : 9526,
+                  "post_name" : "test-page1",
+                  "terms" : {
+                    "category" : [
+                      {
+                        "parent" : 0,
+                        "name" : "test_l",
+                        "term_taxonomy_id" : 112,
+                        "term_order" : 0,
+                        "term_id" : 112,
+                        "slug" : "test_l"
+                      }
+                    ]
+                  },
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "<strong>Test</strong> Page1"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9377",
+                "_score" : 1.8558987,
+                "_source" : {
+                  "post_title" : "e2e Test page 2",
+                  "post_id" : 9377,
+                  "post_name" : "e2e-test-page-2",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e <strong>Test</strong> page 2"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9375",
+                "_score" : 1.8558987,
+                "_source" : {
+                  "post_title" : "e2e Test page 1",
+                  "post_id" : 9375,
+                  "post_name" : "e2e-test-page-1",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e <strong>Test</strong> page 1"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9858",
+                "_score" : 1.8487285,
+                "_source" : {
+                  "post_title" : "e2e Test level 1",
+                  "post_id" : 9858,
+                  "post_name" : "e2e-testing-level-3",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e <strong>Test</strong> level 1"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9861",
+                "_score" : 1.8297646,
+                "_source" : {
+                  "post_title" : "e2e Test level 2",
+                  "post_id" : 9861,
+                  "post_name" : "e2e-test-level-2",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e <strong>Test</strong> level 2"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "10149",
+                "_score" : 1.817042,
+                "_source" : {
+                  "post_title" : "0 Test",
+                  "post_id" : 10149,
+                  "post_name" : "0-test",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "0 <strong>Test</strong>"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9197",
+                "_score" : 1.790809,
+                "_source" : {
+                  "post_title" : "Questionnaire Shortcode testing",
+                  "post_id" : 9197,
+                  "post_name" : "questionnaire-shortcode-testing",
+                  "post_type" : "tutorials"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "Questionnaire Shortcode <strong>testing</strong>"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9207",
+                "_score" : 1.6934906,
+                "_source" : {
+                  "post_title" : "Dev QA tests",
+                  "post_id" : 9207,
+                  "post_name" : "q-test-small",
+                  "post_type" : "tutorials"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "Dev QA <strong>tests</strong>"
+                  ]
+                }
+              },
+              {
+                "_index" : "microservices",
+                "_type" : "_doc",
+                "_id" : "VT4vo3wBGfN7xFX-wfBh",
+                "_score" : 1.6268499,
+                "_source" : {
+                  "based_on" : "Test 3PP",
+                  "name" : "Auto MS max for Report",
+                  "description" : "This is a service containing maximum data for the report",
+                  "denorm" : {
+                    "asset_fullurl" : "/marketplace/auto-ms-max-for-report",
+                    "asset_document_fullurl" : "/marketplace/auto-ms-max-for-report/documentation"
+                  },
+                  "type" : "microservice",
+                  "slug" : "auto-ms-max-for-report"
+                },
+                "highlight" : {
+                  "name" : [
+                    "Auto MS max for Report"
+                  ]
+                }
+              },
+              {
+                "_index" : "microservices",
+                "_type" : "_doc",
+                "_id" : "Uj4vo3wBGfN7xFX-ufBJ",
+                "_score" : 1.6268499,
+                "_source" : {
+                  "based_on" : "Test 3PP",
+                  "name" : "Auto MS max",
+                  "description" : "This is a service containing maximum data",
+                  "denorm" : {
+                    "asset_fullurl" : "/marketplace/auto-ms-max",
+                    "asset_document_fullurl" : "/marketplace/auto-ms-max/documentation"
+                  },
+                  "type" : "microservice",
+                  "slug" : "auto-ms-max"
+                },
+                "highlight" : {
+                  "name" : [
+                    "Auto MS max"
+                  ]
+                }
+              },
+              {
+                "_index" : "microservices",
+                "_type" : "_doc",
+                "_id" : "ej4vo3wBGfN7xFX-3fDH",
+                "_score" : 1.6268499,
+                "_source" : {
+                  "based_on" : "Test 3PP",
+                  "name" : "Auto MS with Mock Artifactory",
+                  "description" : "This is a service containing Mock Artifactory Links for Integration Tests. Be careful with changes!",
+                  "denorm" : {
+                    "asset_fullurl" : "/marketplace/auto-ms-with-mock-artifactory",
+                    "asset_document_fullurl" : "/marketplace/auto-ms-with-mock-artifactory/documentation"
+                  },
+                  "type" : "microservice",
+                  "slug" : "auto-ms-with-mock-artifactory"
+                },
+                "highlight" : {
+                  "name" : [
+                    "Auto MS with Mock Artifactory"
+                  ]
+                }
+              },
+              {
+                "_index" : "microservices",
+                "_type" : "_doc",
+                "_id" : "hT4vo3wBGfN7xFX-7vCb",
+                "_score" : 1.6268499,
+                "_source" : {
+                  "based_on" : "Test 3PP",
+                  "name" : "Auto MS with Real Artifactory",
+                  "description" : "This is a service containing Real Artifactory Links for Integration Tests. Be careful with changes!",
+                  "denorm" : {
+                    "asset_fullurl" : "/marketplace/auto-ms-with-real-artifactory",
+                    "asset_document_fullurl" : "/marketplace/auto-ms-with-real-artifactory/documentation"
+                  },
+                  "type" : "microservice",
+                  "slug" : "auto-ms-with-real-artifactory"
+                },
+                "highlight" : {
+                  "name" : [
+                    "Auto MS with Real Artifactory"
+                  ]
+                }
+              },
+              {
+                "_index" : "microservices",
+                "_type" : "_doc",
+                "_id" : "iT4vo3wBGfN7xFX-9PDL",
+                "_score" : 1.6268499,
+                "_source" : {
+                  "based_on" : "Test 3PP",
+                  "name" : "Auto MS Real Artifactory Notification",
+                  "description" : "This is a service containing Real Artifactory Links for E2E tests. Be careful with changes!",
+                  "denorm" : {
+                    "asset_fullurl" : "/marketplace/auto-ms-real-artifactory-notification",
+                    "asset_document_fullurl" : "/marketplace/auto-ms-real-artifactory-notification/documentation"
+                  },
+                  "type" : "microservice",
+                  "slug" : "auto-ms-real-artifactory-notification"
+                },
+                "highlight" : {
+                  "name" : [
+                    "Auto MS Real Artifactory Notification"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9221",
+                "_score" : 1.5587205,
+                "_source" : {
+                  "post_title" : "Do Not Remove - UITEST",
+                  "post_id" : 9221,
+                  "post_name" : "do-not-remove-uitest",
+                  "post_type" : "tutorials"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "Do Not Remove - UITEST"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "10078",
+                "_score" : 1.5178739,
+                "_source" : {
+                  "post_title" : "Test Page 08/2020",
+                  "post_id" : 10078,
+                  "post_name" : "test-page-08-2020",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "<strong>Test</strong> Page 08/2020"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "3414",
+                "_score" : 1.5066601,
+                "_source" : {
+                  "post_title" : "kafka_Deployment Guide",
+                  "post_id" : 3414,
+                  "post_name" : "63bf76b5760147bef051c63feb011ef5_deployment_guide",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "kafka_Deployment Guide"
+                  ]
+                }
+              },
+              {
+                "_index" : "1921685610223309-post-1",
+                "_type" : "_doc",
+                "_id" : "9385",
+                "_score" : 1.4934424,
+                "_source" : {
+                  "post_title" : "e2e main menu",
+                  "post_id" : 9385,
+                  "post_name" : "e2e-main-menu",
+                  "post_type" : "page"
+                },
+                "highlight" : {
+                  "post_title" : [
+                    "e2e main menu"
+                  ]
+                }
+              }
+        ]
+      }
+    },
+    "statusCode": 200,
+    "headers": {
+      "content-type": "application/json; charset=UTF-8",
+      "content-length": "14367"
+    },
+    "meta": {
+      "context": null,
+      "request": {
+        "params": {
+          "method": "POST",
+          "path": "/1921685610223309-post-1,microservices/_search",
+          "body": "{\"query\":{\"bool\":{\"must\":[{\"multi_match\":{\"query\":\"test\",\"type\":\"best_fields\",\"fields\":[\"name\",\"based_on\",\"post_title\",\"post_content_filtered\"],\"tie_breaker\":0.3,},},{\"bool\":{\"must_not\":{\"match\":{\"post_type.raw\":\"post\"},},},},],\"filter\":{\"ids\":{\"values\":[\"9048\",\"9118\",\"9230\",\"9377\",\"108\",\"9040\",\"3346\",\"3365\",\"9075\",\"107\",\"8990\",\"5946\",\"9007\",\"105\",\"9949\",\"9950\",\"9951\",\"6136\",\"109\",\"9151\",\"8720\",\"9021\",\"9023\",\"10028\",\"3570\",\"106\",\"3374\",\"9623\",\"115\",\"117\",\"95\",\"8748\",\"91\",\"3501\",\"8590\",\"3509\",\"8970\",\"8733\",\"10019\",\"9979\",\"3435\",\"3470\",\"3517\",\"9457\",\"9459\",\"9461\",\"9463\",\"9744\",\"9564\",\"9465\",\"9467\",\"9469\",\"9471\",\"9475\",\"9477\",\"9616\",\"9626\",\"9800\",\"125\",\"126\",\"127\",\"128\",\"8966\",\"8706\",\"8716\",\"8714\",\"8722\",\"9966\",\"9025\",\"10022\",\"10024\",\"10045\",\"3630\",\"3506\",\"3483\",\"9863\",\"3485\",\"3488\",\"9112\",\"9915\",\"8610\",\"9126\",\"3414\",\"3426\",\"9856\",\"6138\",\"3491\",\"3553\",\"9750\",\"9755\",\"9178\",\"9974\",\"9632\",\"9180\",\"9909\",\"9473\",\"9481\",\"9479\",\"3421\",\"3399\",\"Uj4vo3wBGfN7xFX-ufBJ\",\"XD4vo3wBGfN7xFX-zfDB\",\"SD4vo3wBGfN7xFX-qfCC\",\"Sj4vo3wBGfN7xFX-rfA_\",\"Wj4vo3wBGfN7xFX-yPCs\",\"Vz4vo3wBGfN7xFX-wvDh\",\"Zz4vo3wBGfN7xFX-1PDI\",\"YD4vo3wBGfN7xFX-0PBB\",\"Yj4vo3wBGfN7xFX-0fCd\",\"ZT4vo3wBGfN7xFX-0vAs\",\"dT4vo3wBGfN7xFX-2_Aq\",\"dz4vo3wBGfN7xFX-3PDF\",\"hz4vo3wBGfN7xFX-7_Bb\",\"jD4vo3wBGfN7xFX-9vDI\",\"VT4vo3wBGfN7xFX-wfBh\",\"UD4vo3wBGfN7xFX-tvB3\",\"Tj4vo3wBGfN7xFX-svDS\",\"Xj4vo3wBGfN7xFX-z_AS\",\"aT4vo3wBGfN7xFX-1vDU\",\"cT4vo3wBGfN7xFX-2fDQ\",\"az4vo3wBGfN7xFX-1_B6\",\"bT4vo3wBGfN7xFX-2PBa\",\"bz4vo3wBGfN7xFX-2fBS\",\"ej4vo3wBGfN7xFX-3fDH\",\"hT4vo3wBGfN7xFX-7vCb\",\"cz4vo3wBGfN7xFX-2vBX\",\"iT4vo3wBGfN7xFX-9PDL\",\"fj4vo3wBGfN7xFX-3_Cw\",\"gD4vo3wBGfN7xFX-5_Du\"],},},},},\"_source\":[\"name\",\"type\",\"description\",\"slug\",\"denorm.asset_document_full\",\"denorm.asset_fullurl\",\"based_on\",\"post_id\",\"post_title\",\"post_name\",\"terms\",\"post_type\"],\"highlight\":{\"type\":\"unified\",\"number_of_fragments\":1,\"fragment_size\":300,\"no_match_size\":300,\"fields\":{\"post_title\":{},\"name\":{},},},\"from\":0,\"size\":\"20\"}",
+          "querystring": "",
+          "headers": {
+            "user-agent": "elasticsearch-js/7.13.0 (linux 5.11.0-25-generic-x64; Node.js v14.17.4)",
+            "x-elastic-client-meta": "es=7.13.0,js=14.17.4,t=7.13.0,hc=14.17.4",
+            "content-type": "application/json",
+            "content-length": "1091"
+          },
+          "timeout": 30000
+        },
+        "options": {},
+        "id": 1
+      },
+      "name": "elasticsearch-js",
+      "connection": {
+        "url": "http://localhost:48200/",
+        "id": "http://localhost:48200/",
+        "headers": {},
+        "deadCount": 0,
+        "resurrectTimeout": 0,
+        "_openRequests": 0,
+        "status": "alive",
+        "roles": {
+          "master": true,
+          "data": true,
+          "ingest": true,
+          "ml": false
+        }
+      },
+      "attempts": 0,
+      "aborted": false
+    }
+  }
+  

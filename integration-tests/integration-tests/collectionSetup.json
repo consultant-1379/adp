@@ -1,0 +1,11 @@
+{
+  "spec_dir": "integration-tests",
+  "spec_files": [
+    "**/collectionSetup.js"
+  ],
+  "helpers": [
+    "helpers/**/*.js"
+  ],
+  "stopSpecOnExpectationFailure": false,
+  "random": false
+}

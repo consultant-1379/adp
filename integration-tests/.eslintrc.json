@@ -1,0 +1,17 @@
+{
+    "plugins": ["jasmine"],
+    "env": { "jasmine": true },
+    "extends": ["airbnb-base", "plugin:jasmine/recommended"],
+    "rules": {
+        "no-underscore-dangle": "off",
+        "global-require": "off"
+    },
+    "globals": {
+        "adp": "writable",
+        "cs": "writable"
+    },
+    "overrides": [{
+        "files": ["**/*.spec.js"],
+        "rules": { "class-methods-use-this": "off" }
+    }]
+}

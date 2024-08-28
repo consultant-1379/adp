@@ -1,0 +1,71 @@
+#%RAML 1.0
+title: Portal Update
+version: v2
+baseUri: https://adp.ericsson.se/api/integration/{version}/
+mediaType: [ application/json ]
+types:
+  RefreshFeedback:
+    description: |
+             Indicates a service that has been refreshed by this call.
+    properties:
+      id: string
+      name: string
+      queueStatusLink: string
+      message: string
+      errors:
+        description: |
+          Errors that occurred during the refresh. 
+          Errors number will be 0, real errors provided following queueStatusLink. 
+          Errors won't block the refresh and the HTTP Status Code will be 200.
+        properties:
+          development: string[]
+          release: string[]
+      quant_errors: number
+      warnings:
+        description: |
+          Warnings that occurred during the refresh.
+          Warnings number will be 0, real warnings provided following queueStatusLink. 
+          Warnings won't block the refresh and the HTTP Status Code will be 200.
+        properties:
+          development: string[]
+          release: string[]
+      quant_warnings: number
+
+securitySchemes:
+  jwt:
+    description: |
+      The JWT token generated in the ADP portal for each service is used to authenticate calls to this api.
+    type: x-jwt
+    describedBy:
+      headers:
+        Authorization:
+          description: |
+             Used to send a valid JWT access token. Do not use
+             with the "access_token" query string parameter.
+          type: string
+      queryParameters:
+        access_token:
+          description: |
+             Used to send a valid JWT access token. Do not use with
+             the "Authorization" header.
+          type: string
+      responses:
+        401:
+          description: |
+              Bad or expired token. This can happen if the user or Portal
+              revoked or expired an access token. To fix, re-authenticate
+              the user.
+/microservice/documentrefresh:
+  description: |
+    Notify the portal that your release documentation has been updated and
+    should be refreshed.
+  post:
+    securedBy:
+      jwt  
+    body:
+      application/json:
+    responses:
+      200:
+        body: 
+          application/json:
+            RefreshFeedback[]

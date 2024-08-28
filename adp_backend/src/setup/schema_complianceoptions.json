@@ -1,0 +1,186 @@
+{
+    "complianceOptionsSchema": {
+        "group": {
+            "id": "/complianceOptionsGroup",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "id is the ID of this item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "group": {
+                    "description": "name of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "slug": {
+                    "description": "slug of this item",
+                    "type": "string",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": ""
+                },
+                "testID": {
+                    "description": "testID of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "order": {
+                    "description": "order of the item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDBFromDB": true
+                },
+                "default": {
+                    "description": "True if is default item",
+                    "type": "boolean",
+                    "readOnly": true,
+                    "requiredFromDB": false,
+                    "default": false  
+                },
+                "fields": {
+                    "description": "List of items for this group",
+                    "type": "array",
+                    "readOnly": true,
+                    "requiredFromDB": true,
+                    "items": {
+                        "$ref": "#/field"
+                    }
+                }
+            }
+        },
+        "field": {
+            "id": "/complianceOptionsField",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "id is the ID of this item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "name": {
+                    "description": "name of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "slug": {
+                    "description": "slug of this item",
+                    "type": "string",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": ""
+                },
+                "desc": {
+                    "description": "description of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true,
+                    "default": ""
+                },
+                "testID": {
+                    "description": "testID of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "order": {
+                    "description": "order of the item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDBFromDB": true
+                },
+                "default": {
+                    "description": "True if is default item",
+                    "type": "boolean",
+                    "readOnly": true,
+                    "requiredFromDB": false,
+                    "default": false  
+                }
+            }
+        },
+        "answer": {
+            "id": "/complianceOptionsAnswer",
+            "type": "object",
+            "properties": {
+                "id": {
+                    "description": "id is the ID of this item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "name": {
+                    "description": "name of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "slug": {
+                    "description": "slug of this item",
+                    "type": "string",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": ""
+                },
+                "testID": {
+                    "description": "testID of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "order": {
+                    "description": "order of the item",
+                    "type": "integer",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "default": {
+                    "description": "True if is default item",
+                    "type": "boolean",
+                    "readOnly": true,
+                    "requiredFromDB": false,
+                    "default": false  
+                },
+                "commentRequired": {
+                    "description": "True if is comment is required for this item",
+                    "type": "boolean",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": false  
+                }
+            }
+        },
+        "setting": {
+            "id": "/complianceOptionsSettings",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "description": "name of this item",
+                    "type": "string",
+                    "readOnly": true,
+                    "requiredFromDB": true
+                },
+                "slug": {
+                    "description": "slug of this item",
+                    "type": "string",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": ""
+                },
+                "value": {
+                    "description": "value for the setting",
+                    "type": "boolean",
+                    "readOnly": false,
+                    "requiredFromDB": false,
+                    "default": false  
+                }
+            }
+
+        }
+    }
+}

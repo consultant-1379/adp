@@ -1,0 +1,53 @@
+{
+    "body": {
+        "took" : 5,
+        "timed_out" : false,
+        "_shards" : {
+          "total" : 1,
+          "successful" : 1,
+          "skipped" : 0,
+          "failed" : 0
+        },
+        "hits" : {
+          "total" : {
+            "value" : 1,
+            "relation" : "eq"
+          },
+          "max_score" : 6.9503136,
+          "hits" : [
+            {
+              "_index" : "microservice-documentation",
+              "_type" : "_doc",
+              "_id" : "X6IvRX8BfihzUQDtbrKL",
+              "_score" : 6.9503136,
+              "_source" : {
+                "asset_name" : "Log Shipper",
+                "restricted" : false,
+                "post_type" : "ms_documentation",
+                "asset_id" : "279f58f7-4af4-486c-b968-8c917b2b65d8",
+                "asset_slug" : "log-shipper",
+                "title" : "User Guide",
+                "category" : "Additional Documents",
+                "version" : "4.0.0",
+                "title_slug" : "user-guide",
+                "category_slug" : "additional-documents",
+                "document_url" : "https://arm.seli.gic.ericsson.se/artifactory/proj-adp-log-docs-released-generic-local/eric-log-shipper/documents/4.0.0/user_guide.zip"
+              },
+              "highlight" : {
+                "raw_text" : [
+                  "Log Shipper <strong>User</strong> Guide Overview Description of the Service Purpose of the Log Shipper Features Main Concept",
+                  "Procedures Reference Configuration Log Shipper to Search Engine Configuration Autodiscover Feature <strong>User</strong>-Provided",
+                  "Optional Helm Chart Parameters Security Guidelines Operative Tasks External Ports Internal Ports Privacy <strong>User</strong>",
+                  "<strong>User</strong>-Provided Configuration A filebeat.conf file needs to be provided by the <strong>user</strong>.",
+                  "Privacy <strong>User</strong> Guidelines The service does not collect, store or process personal data on its own."
+                ],
+                "title" : [
+                  "<strong>User</strong> Guide"
+                ]
+              }
+            }
+          ]
+        }
+      }
+      
+}

@@ -1,0 +1,130 @@
+{
+  "dataBaseSetup": [
+    {
+      "collection": "adp",
+      "type": ["microservice", "user"],
+      "description": "Used for Assets and Users"
+    },
+    { 
+      "collection": "adplog", 
+      "type": ["microservice", "permission", "server"],
+      "description": "Log of actions inside of ADP Portal"
+    },
+    { 
+      "collection": "echoLog",
+      "type": [],
+      "description": "Log of errors got by echoLog command"
+    },
+    {
+      "collection": "tag",
+      "type": ["tag", "group"],
+      "description": "Tags for Assets"
+    },
+    {
+      "collection": "migrationscripts",
+      "type": [],
+      "description": "Authorisation to run Migration Scripts"
+    },
+    {
+      "collection": "listoption",
+      "type": ["item", "group"],
+      "description": "List of Options, usually used in dropdowns"
+    },
+    {
+      "collection": "permission",
+      "type": [],
+      "description": "Permissions, like Domain Admin"
+    },
+    {
+      "collection": "userprogress",
+      "type": ["progress"],
+      "description": "User Progress on Tutorials"
+    },
+    { 
+      "collection": "complianceoption",
+      "type": ["setting", "group", "field", "answer"],
+      "description": "List of Options of Assets`Compliances"
+    },
+    {
+      "collection": "gitstatus",
+      "type": [],
+      "description": "Results of commits from Assets` Repositories"
+    },
+    {
+      "collection": "gitstatusbytag",
+      "type": [],
+      "description": "Results of commits from Assets` Repositories using specific word from commit subject"
+    },
+    {
+      "collection": "gitstatuslog",
+      "type": [],
+      "description": "Logs of Contributors Statistics Script"
+    },
+    {
+      "collection": "teamhistory",
+      "type": [],
+      "description": "Snapshots of the team`s members"
+    },
+    {
+      "collection": "rbacgroups",
+      "type": ["group"],
+      "description": "Groups for RBAC System",
+      "useObjectID": true,
+      "indexFields": ["name"]
+    },
+    {
+      "collection": "innersourceuserhistory",
+      "type": [],
+      "description": "Snapshots of innersource user history"
+    },
+    {
+      "collection": "releasesettings",
+      "type": [],
+      "description": "Flags for enable/disable features"
+    },
+    {
+      "collection": "primeDDTable",
+      "type": [],
+      "description": "Mimer document name translation using PrimeDD decimalClass table"
+    },
+    {
+      "collection": "masterQueue",
+      "type": ["queueItem"],
+      "useObjectID": true,
+      "description": "Queue control items"
+    },
+    {
+      "collection": "comments",
+      "type": [],
+      "useObjectID": true,
+      "description": "Inline Comments"
+    },
+    {
+      "collection": "commentsDL",
+      "type": [],
+      "useObjectID": true,
+      "description": "Inline Comments Mail DL configuration"
+    },
+    {
+      "collection": "assetDocuments",
+      "type": ["raw", "mimer", "merged"],
+      "useObjectID": true,
+      "description": "Asset Documents per version"
+    },
+    {
+      "collection": "adpSetup",
+      "type": [],
+      "description": "Setup parameters that can be changed in real-time"
+    },
+    {
+      "collection": "egsControl",
+      "type": [],
+      "description": "Documents for control what was updated and when was updated"
+    },
+    {
+      "collection": "egsPayload",
+      "type": [],
+      "description": "Payload which should be send to external servers"
+    }
+  ]
+}

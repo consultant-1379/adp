@@ -1,0 +1,147 @@
+{
+  "path": {
+    "10306": {
+      "path_url": "/cm",
+      "chapter_completed": 2,
+      "chapter_total": 2,
+      "chapter_percentage": 100,
+      "lesson_completed": 3,
+      "lesson_total": 3,
+      "lesson_percentage": 100
+    },
+    "10307": {
+      "path_url": "/getting-started",
+      "chapter_completed": 1,
+      "chapter_total": 3,
+      "chapter_percentage": 33,
+      "lesson_completed": 9,
+      "lesson_total": 11,
+      "lesson_percentage": 81
+    },
+    "10308": {
+      "path_url": "/observability",
+      "chapter_completed": 0,
+      "chapter_total": 2,
+      "chapter_percentage": 0,
+      "lesson_completed": 0,
+      "lesson_total": 6,
+      "lesson_percentage": 0
+    },
+    "10309": {
+      "path_url": "/security",
+      "chapter_completed": 0,
+      "chapter_total": 2,
+      "chapter_percentage": 0,
+      "lesson_completed": 0,
+      "lesson_total": 6,
+      "lesson_percentage": 0
+    },
+    "10541": {
+      "path_url": "/e2etutorial",
+      "chapter_completed": 0,
+      "chapter_total": 2,
+      "chapter_percentage": 0,
+      "lesson_completed": 0,
+      "lesson_total": 5,
+      "lesson_percentage": 0
+    },
+    "all": {
+      "chapter_completed": 0,
+      "chapter_total": 0,
+      "chapter_percentage": 0,
+      "lesson_completed": 0,
+      "lesson_total": 0,
+      "lesson_percentage": 0
+    }
+  },
+  "tutorial": {
+    "10374": {
+      "path_id": "10307",
+      "path_url": "/getting-started",
+      "tutorial_url": "/getting-started/overview-my-first-adp-service",
+      "lesson_completed": 2,
+      "lesson_total": 3,
+      "lesson_percentage": 67
+    },
+    "10395": {
+      "path_id": "10307",
+      "path_url": "/getting-started",
+      "tutorial_url": "/getting-started/kubernetes-basic-tutorial",
+      "lesson_completed": 3,
+      "lesson_total": 4,
+      "lesson_percentage": 75
+    },
+    "10407": {
+      "path_id": "10307",
+      "path_url": "/getting-started",
+      "tutorial_url": "/getting-started/helm-basics-tutorial",
+      "lesson_completed": 4,
+      "lesson_total": 4,
+      "lesson_percentage": 100
+    },
+    "10423": {
+      "path_id": "10306",
+      "path_url": "/cm",
+      "tutorial_url": "/cm/cm-basics-tutorial",
+      "lesson_completed": 1,
+      "lesson_total": 1,
+      "lesson_percentage": 100
+    },
+    "10426": {
+      "path_id": "10306",
+      "path_url": "/cm",
+      "tutorial_url": "/cm/cm-advanced-tutorials",
+      "lesson_completed": 2,
+      "lesson_total": 2,
+      "lesson_percentage": 100
+    },
+    "10443": {
+      "path_id": "10308",
+      "path_url": "/observability",
+      "tutorial_url": "/observability/observability-tutorials",
+      "lesson_completed": 0,
+      "lesson_total": 5,
+      "lesson_percentage": 0
+    },
+    "10450": {
+      "path_id": "10308",
+      "path_url": "/observability",
+      "tutorial_url": "/observability/observability-advanced-tutorials",
+      "lesson_completed": 0,
+      "lesson_total": 1,
+      "lesson_percentage": 0
+    },
+    "10459": {
+      "path_id": "10309",
+      "path_url": "/security",
+      "tutorial_url": "/security/security-basic-tutorial",
+      "lesson_completed": 0,
+      "lesson_total": 2,
+      "lesson_percentage": 0
+    },
+    "10474": {
+      "path_id": "10309",
+      "path_url": "/security",
+      "tutorial_url": "/security/security-advanced-tutorial",
+      "lesson_completed": 0,
+      "lesson_total": 4,
+      "lesson_percentage": 0
+    },
+    "10545": {
+      "path_id": "10541",
+      "path_url": "/e2etutorial",
+      "tutorial_url": "/e2etutorial/uitests-tutorial-2",
+      "lesson_completed": 0,
+      "lesson_total": 3,
+      "lesson_percentage": 0
+    },
+    "10548": {
+      "path_id": "10541",
+      "path_url": "/e2etutorial",
+      "tutorial_url": "/e2etutorial/uitests-tutorial-1",
+      "lesson_completed": 0,
+      "lesson_total": 2,
+      "lesson_percentage": 0
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Id,Name,CategoryId,Category,AlignmentId,Alignment,StatusId,Status,DomainId,Domain,ServiceAreaId,Service Area,RestrictionStatusId,Restriction Status,Service Category  - Final ,Reusability Level ,Domain,Doubt?
+45e7f4f992afe7bbb62a3391e500e71b,Diameter Proxy gRPC,1,Fully supported for reuse,3,Other,2,In Development,6,Other,7,Other,0,Unrestricted,ADP Generic Services,Open for reuse,Common Asset,
+45e7f4f992afe7bbb62a3391e500f84a,Distributed Coordinator ED,2,Check before reuse,2,ADP Other Generic,3,PRA,1,Common Asset,1,Data,2,Temporary Delivery Restriction,ADP Generic Service,Reused,Common Asset,
+45e7f4f992afe7bbb62a3391e500ffb1,Distributed Service Linker,2,Check before reuse,3,Other,3,PRA,6,Other,7,Other,0,Unrestricted,ADP Generic Services,Open for reuse,Common Asset,
+45e7f4f992afe7bbb62a3391e5010c3b,Distributed Trace Agent,1,Fully supported for reuse,1,ADP Core,3,PRA,1,Common Asset,7,Other,2,Temporary Delivery Restriction,ADP Generic Services,Open for reuse,Common Asset,
+45e7f4f992afe7bbb62a3391e5011e0d,Distributed Trace Collector,1,Fully supported for reuse,1,ADP Core,3,PRA,1,Common Asset,7,Other,2,Temporary Delivery Restriction,ADP Generic Services,Open for reuse,Common Asset,
+45e7f4f992afe7bbb62a3391e5011ff8,Distributed Trace Query,1,Fully supported for reuse,1,ADP Core,3,PRA,1,Common Asset,7,Other,2,Temporary Delivery Restriction,ADP Generic Services,Open for reuse,Common Asset,
+45e7f4f992afe7bbb62a3391e5013c25,DNS 64,1,Fully supported for reuse,1,ADP Core,3,PRA,1,Common Asset,3,Networking,0,Unrestricted,ADP Generic Services,Reused,Common Asset,
+55e7f4f992afe7bbb62a3391e5014a41,Document Database PG,1,Fully supported for reuse,2,ADP Other Generic,3,PRA,1,Common Asset,1,Data,2,Temporary Delivery Restriction,ADP Generic Services,Reused,Common Asset,
+45e7f4f992afe7bbb62a3391e50160e5,External Connectivity FrontEnd,1,Fully supported for reuse,2,ADP Other Generic,3,PRA,1,Common Asset,3,Networking,0,Unrestricted,ADP Generic Services,Reused,Common Asset,
+45e7f4f992afe7bbb62a3391e50171e2,Helm Chart Registry,1,Fully supported for reuse,2,ADP Other Generic,3,PRA,1,Common Asset,7,Other,0,Unrestricted,ADP Generic Services,Reused,Common Asset,
+45e7f4f992afe7bbb62a3391e5019b57,Identity and Access Management,1,Fully supported for reuse,1,ADP Core,3,PRA,1,Common Asset,6,Security,0,Unrestricted,ADP Generic Services,Reused,Common Asset,

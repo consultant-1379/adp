@@ -1,0 +1,702 @@
+{
+    "body": {
+        "took": 7,
+        "timed_out": false,
+        "_shards": {
+            "total": 1,
+            "successful": 1,
+            "skipped": 0,
+            "failed": 0
+        },
+        "hits": {
+            "total": {
+                "value": 29,
+                "relation": "eq"
+            },
+            "max_score": 0.13010338,
+            "hits": [
+                {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Uj4vo3wBGfN7xFX-ufBJ",
+                    "_score" : 0.13010338,
+                    "_source" : {
+                      "based_on" : "Test 3PP",
+                      "name" : "Auto MS max",
+                      "description" : "This is a service containing maximum data",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-max",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-max/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-max"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS max"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "XD4vo3wBGfN7xFX-zfDB",
+                    "_score" : 0.13010338,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Restricted",
+                      "description" : "Microservice with restricted Other Reason ",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-restricted",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-restricted/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-restricted"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Restricted"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "SD4vo3wBGfN7xFX-qfCC",
+                    "_score" : 0.13010338,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Min",
+                      "description" : "Min Microservice, to test just mandatory fields",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-min",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-min/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-min"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Min"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Sj4vo3wBGfN7xFX-rfA_",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with Tags",
+                      "description" : "Microservice containing several tags",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-tags",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-tags/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-tags"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Tags"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Wj4vo3wBGfN7xFX-yPCs",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test Deleted",
+                      "description" : "Auto MS Test Deleted MS",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-deleted",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-deleted/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-deleted"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Deleted"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Vz4vo3wBGfN7xFX-wvDh",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with Docs",
+                      "description" : "Test Microservice with several gerrit documents with includes",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-docs",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-docs/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-docs"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Docs"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Zz4vo3wBGfN7xFX-1PDI",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test 3",
+                      "description" : "Test MS",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-3",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-3/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-3"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test 3"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "YD4vo3wBGfN7xFX-0PBB",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with Team",
+                      "description" : "Description",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-team",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-team/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-team"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Team"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Yj4vo3wBGfN7xFX-0fCd",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test 1",
+                      "description" : "test MS",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-1",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-1/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-1"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test 1"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "ZT4vo3wBGfN7xFX-0vAs",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test 2",
+                      "description" : "Test MS",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-2",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-2/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-2"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test 2"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "dT4vo3wBGfN7xFX-2_Aq",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test 4",
+                      "description" : "Description",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-4",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-4/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-4"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test 4"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "dz4vo3wBGfN7xFX-3PDF",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Party",
+                      "name" : "Auto MS test 5",
+                      "description" : "Test MS",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-5",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-5/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-5"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS test 5"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "hz4vo3wBGfN7xFX-7_Bb",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test Innersource",
+                      "description" : "Test MS to test Innersource",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "jD4vo3wBGfN7xFX-9vDI",
+                    "_score" : 0.11776562,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Permission Test",
+                      "description" : "Auto MS Permission Test Microservice, to test just mandatory fields",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-permission-test",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-permission-test/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-permission-test"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Permission Test"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "VT4vo3wBGfN7xFX-wfBh",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Test 3PP",
+                      "name" : "Auto MS max for Report",
+                      "description" : "This is a service containing maximum data for the report",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-max-for-report",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-max-for-report/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-max-for-report"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS max for Report"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "UD4vo3wBGfN7xFX-tvB3",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with multiple Compliance",
+                      "description" : "Microservice with multiple compliance options",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-multiple-compliance",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-compliance/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-multiple-compliance"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with multiple Compliance"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Tj4vo3wBGfN7xFX-svDS",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with 1 Compliance",
+                      "description" : "Microservice with compliance options",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-1-compliance",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-1-compliance/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-1-compliance"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with 1 Compliance"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "Xj4vo3wBGfN7xFX-z_AS",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS Test Change Cetegory",
+                      "description" : "Auto MS testChange Cetegory",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-change-cetegory",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-change-cetegory/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-change-cetegory"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Change Cetegory"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "aT4vo3wBGfN7xFX-1vDU",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 1",
+                      "description" : "Test MS to test Innersource logic 1",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-1",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-1/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-1"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 1"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "cT4vo3wBGfN7xFX-2fDQ",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 2",
+                      "description" : "Test MS to test Innersource logic 2",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-2",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-2/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-2"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 2"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "az4vo3wBGfN7xFX-1_B6",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 4",
+                      "description" : "Test MS to test Innersource logic 4 etesuse only on the team",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-4",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-4/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-4"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 4"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "bT4vo3wBGfN7xFX-2PBa",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 5",
+                      "description" : "Test MS to test Innersource logic 5 etesuse only on the team without updates for microservice",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-5",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-5/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-5"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 5"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "bz4vo3wBGfN7xFX-2fBS",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 6",
+                      "description" : "Test MS to test Innersource logic 6 etesuse was removed on some date, snapshot was generated",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-6",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-6/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-6"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 6"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "ej4vo3wBGfN7xFX-3fDH",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Test 3PP",
+                      "name" : "Auto MS with Mock Artifactory",
+                      "description" : "This is a service containing Mock Artifactory Links for Integration Tests. Be careful with changes!",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-mock-artifactory",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-mock-artifactory/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-mock-artifactory"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Mock Artifactory"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "hT4vo3wBGfN7xFX-7vCb",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Test 3PP",
+                      "name" : "Auto MS with Real Artifactory",
+                      "description" : "This is a service containing Real Artifactory Links for Integration Tests. Be careful with changes!",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-real-artifactory",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-real-artifactory/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-real-artifactory"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Real Artifactory"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "cz4vo3wBGfN7xFX-2vBX",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "3PP",
+                      "name" : "Auto MS Test Innersource 3",
+                      "description" : "Test MS to test Innersource logic 3",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-test-innersource-3",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-test-innersource-3/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-test-innersource-3"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Test Innersource 3"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "iT4vo3wBGfN7xFX-9PDL",
+                    "_score" : 0.107565165,
+                    "_source" : {
+                      "based_on" : "Test 3PP",
+                      "name" : "Auto MS Real Artifactory Notification",
+                      "description" : "This is a service containing Real Artifactory Links for E2E tests. Be careful with changes!",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-real-artifactory-notification",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-real-artifactory-notification/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-real-artifactory-notification"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS Real Artifactory Notification"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "fj4vo3wBGfN7xFX-3_Cw",
+                    "_score" : 0.0989909,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with Multiple Doc Types",
+                      "description" : "Test Microservice with several documents of different types",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-multiple-doc-types"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Multiple Doc Types"
+                      ]
+                    }
+                  },
+                  {
+                    "_index" : "microservices",
+                    "_type" : "_doc",
+                    "_id" : "gD4vo3wBGfN7xFX-5_Du",
+                    "_score" : 0.09168269,
+                    "_source" : {
+                      "based_on" : "Ericsson Internal",
+                      "name" : "Auto MS with Multiple Doc Types AutoMode",
+                      "description" : "Microservice to test document auto mode with multiple file formats and locations",
+                      "denorm" : {
+                        "asset_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types-automode",
+                        "asset_document_fullurl" : "/marketplace/auto-ms-with-multiple-doc-types-automode/documentation"
+                      },
+                      "type" : "microservice",
+                      "slug" : "auto-ms-with-multiple-doc-types-automode"
+                    },
+                    "highlight" : {
+                      "name" : [
+                        "<strong>Auto</strong> MS with Multiple Doc Types AutoMode"
+                      ]
+                    }
+                  }
+            ]
+        }
+    },
+    "statusCode": 200,
+        "headers": {
+        "content-type": "application/json; charset=UTF-8",
+        "content-length": "14367"
+       },
+  "meta": {
+    "context": null,
+    "request": {
+      "params": {
+        "method": "POST",
+        "path": "/microservices/_search",
+        "body": "{\"query\":{\"bool\":{\"must\":{\"multi_match\":{\"query\":\"auto\",\"type\":\"best_fields\",\"fields\":[\"post_title\",\"post_content_filtered\"],\"tie_breaker\":0.3}},\"filter\":{\"ids\":{\"values\":[\"Uj4vo3wBGfN7xFX-ufBJ\",\"XD4vo3wBGfN7xFX-zfDB\",\"SD4vo3wBGfN7xFX-qfCC\",\"Sj4vo3wBGfN7xFX-rfA_\",\"Wj4vo3wBGfN7xFX-yPCs\",\"Vz4vo3wBGfN7xFX-wvDh\",\"Zz4vo3wBGfN7xFX-1PDI\",\"YD4vo3wBGfN7xFX-0PBB\",\"Yj4vo3wBGfN7xFX-0fCd\",\"ZT4vo3wBGfN7xFX-0vAs\",\"dT4vo3wBGfN7xFX-2_Aq\",\"dz4vo3wBGfN7xFX-3PDF\",\"hz4vo3wBGfN7xFX-7_Bb\",\"jD4vo3wBGfN7xFX-9vDI\",\"VT4vo3wBGfN7xFX-wfBh\",\"UD4vo3wBGfN7xFX-tvB3\",\"Tj4vo3wBGfN7xFX-svDS\",\"Xj4vo3wBGfN7xFX-z_AS\",\"aT4vo3wBGfN7xFX-1vDU\",\"cT4vo3wBGfN7xFX-2fDQ\",\"az4vo3wBGfN7xFX-1_B6\",\"bT4vo3wBGfN7xFX-2PBa\",\"bz4vo3wBGfN7xFX-2fBS\",\"ej4vo3wBGfN7xFX-3fDH\",\"hT4vo3wBGfN7xFX-7vCb\",\"cz4vo3wBGfN7xFX-2vBX\",\"iT4vo3wBGfN7xFX-9PDL\",\"fj4vo3wBGfN7xFX-3_Cw\",\"gD4vo3wBGfN7xFX-5_Du\"]}}}},\",_source\":[\"name\",\"type\",\"description\",\"slug\",\"denorm.asset_document_full\",\"denorm.asset_fullurl\",\"based_on\"],\"highlight\":{\"type\":\"unified\",\"number_of_fragments\":1,\"fragment_size\":300,\"no_match_size\":300,\"fields\":{\"name\":{}}},\"from\":0,\"size\":\"20\"}",
+        "querystring": "",
+        "headers": {
+          "user-agent": "elasticsearch-js/7.13.0 (linux 5.11.0-25-generic-x64; Node.js v14.17.4)",
+          "x-elastic-client-meta": "es=7.13.0,js=14.17.4,t=7.13.0,hc=14.17.4",
+          "content-type": "application/json",
+          "content-length": "1091"
+        },
+        "timeout": 30000
+      },
+      "options": {},
+      "id": 1
+    },
+    "name": "elasticsearch-js",
+    "connection": {
+      "url": "http://localhost:48200/",
+      "id": "http://localhost:48200/",
+      "headers": {},
+      "deadCount": 0,
+      "resurrectTimeout": 0,
+      "_openRequests": 0,
+      "status": "alive",
+      "roles": {
+        "master": true,
+        "data": true,
+        "ingest": true,
+        "ml": false
+      }
+    },
+    "attempts": 0,
+    "aborted": false
+  }
+}

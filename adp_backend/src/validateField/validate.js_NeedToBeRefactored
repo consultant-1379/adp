@@ -1,0 +1,59 @@
+// // ============================================================================================= //
+// /**
+// * [ validateField.validate ]
+// * @author Omkar Sadegaonkar [zsdgmkr]
+// */
+// // ============================================================================================= //
+// global.adp.docs.list.push(__filename);
+// // ============================================================================================= //
+// const packName = 'validateField.validate';
+// /**
+//  * This function is used to validate value of given field
+//  * @param {string} fieldName Name of the field to be validated
+//  * @param {object} object Data object which includes the field
+//  * @param {boolean} updateDb Should update in database or not
+//  * @returns {Promise} Promise object represents result of validation
+//  * @author Omkar [zsdgmkr]
+//  */
+// const validateField = (fieldName, object, updateDb) => new Promise((RESOLVE, REJECT) => {
+//   switch (fieldName) {
+//     case 'repo_urls': {
+//       const uniqueJobGroupObjective = `${object.slug}__${(new Date()).getTime()}`;
+//       return global.adp.integration.documentRefresh.update(object, uniqueJobGroupObjective)
+//         .then((afterDocumentRefresh) => {
+//           RESOLVE(afterDocumentRefresh);
+//           return true;
+//         })
+//         .catch((ERROR) => {
+//           REJECT(ERROR);
+//           const errorText = 'Error in [ adp.integration.documentRefresh.update ] at [ validateField ]';
+//           const errorOBJ = {
+//             error: ERROR,
+//             object,
+//             updateDb,
+//           };
+//           adp.echoLog(errorText, errorOBJ, 500, packName, true);
+//           return false;
+//         });
+//     }
+//     default: {
+//       break;
+//     }
+//   }
+//   const invalidFieldErrResp = {
+//     code: 404,
+//     message: 'Requested field can not be validated',
+//   };
+//   REJECT(invalidFieldErrResp);
+//   const errorText = 'Error in [ validateField ]';
+//   const errorOBJ = {
+//     error: invalidFieldErrResp,
+//     fieldName,
+//     object,
+//     updateDb,
+//   };
+//   adp.echoLog(errorText, errorOBJ, 500, packName, true);
+//   return true;
+// });
+
+// module.exports = { validateField };

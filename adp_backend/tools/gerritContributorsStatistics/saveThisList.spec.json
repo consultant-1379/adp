@@ -1,0 +1,93 @@
+{
+  "mock-microservice-id": {
+    "slug": "mock-microservice-001",
+    "esupuse": {
+      "name": "Super User",
+      "email": "super-user@mock.email",
+      "day": { 
+        "2020-10-04": {
+          "commits": 3,
+          "insertions": 15,
+          "deletions": 30,
+          "commit-id-list": [
+            { 
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59b2d",
+              "commits": 1,
+              "insertions": 5,
+              "deletions": 10
+            },
+            {
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59b2e",
+              "commits": 1,
+              "insertions": 5,
+              "deletions": 10
+            },
+            {
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59b2f",
+              "commits": 1,
+              "insertions": 5,
+              "deletions": 10
+            }
+          ]
+        },
+        "2020-10-03": {
+          "commits": 2,
+          "insertions": 16,
+          "deletions": 20,
+          "commit-id-list": [
+            { 
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59ba1",
+              "commits": 1,
+              "insertions": 15,
+              "deletions": 10
+            },
+            {
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59ba2",
+              "commits": 1,
+              "insertions": 1,
+              "deletions": 10
+            }
+          ]
+        }
+      }
+    },
+    "etesuse": {
+      "name": "Test User",
+      "email": "test-user@mock.email",
+      "day": { 
+        "2020-10-03": {
+          "commits": 2,
+          "insertions": 3,
+          "deletions": 2,
+          "commit-id-list": [
+            { 
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59ba1",
+              "commits": 1,
+              "insertions": 2,
+              "deletions": 1
+            },
+            {
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59ba2",
+              "commits": 1,
+              "insertions": 1,
+              "deletions": 1
+            }
+          ]
+        },
+        "2020-10-02": {
+          "commits": 1,
+          "insertions": 100,
+          "deletions": 50,
+          "commit-id-list": [
+            { 
+              "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59ba1",
+              "commits": 1,
+              "insertions": 100,
+              "deletions": 50
+            }
+          ]
+        }
+      }
+    }
+  }
+}

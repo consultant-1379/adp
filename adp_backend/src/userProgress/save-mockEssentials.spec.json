@@ -1,0 +1,58 @@
+{
+  "mockEssentials": [
+    {
+      "ID": 8754,
+      "menu_item_parent": "0",
+      "object_id": "8706",
+      "title": "Introduction"
+    },
+    {
+      "ID": 8755,
+      "menu_item_parent": "0",
+      "object_id": "96",
+      "title": "My First ADP Service"
+    },
+    {
+      "ID": 8756,
+      "menu_item_parent": "8755",
+      "object_id": "8722",
+      "title": "Overview"
+    },
+    {
+      "ID": 8757,
+      "menu_item_parent": "8755",
+      "object_id": "8720",
+      "title": "The FactFinder micro service"
+    },
+    {
+      "ID": 8758,
+      "menu_item_parent": "8755",
+      "object_id": "8716",
+      "title": "Bob"
+    },
+    {
+      "ID": 8759,
+      "menu_item_parent": "8755",
+      "object_id": "8714",
+      "title": "Helm"
+    },
+    {
+      "ID": 8760,
+      "menu_item_parent": "8755",
+      "object_id": "8712",
+      "title": "Kubernetes – A First look"
+    },
+    {
+      "ID": 8761,
+      "menu_item_parent": "8755",
+      "object_id": "8710",
+      "title": "Kubernetes – Controllers"
+    },
+    {
+      "ID": 8762,
+      "menu_item_parent": "8755",
+      "object_id": "8708",
+      "title": "Kubernetes – Services"
+    }
+  ]
+}

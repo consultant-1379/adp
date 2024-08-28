@@ -1,0 +1,480 @@
+{
+    "assetSchema": {
+        "definitions" : {
+            "refresh_error": {
+                "id" : "/refresh_error",
+                "type" : "object",
+                "properties" : {
+                }
+            },
+            "menu_type" : {
+                "id" : "/menu_type",
+                "type" : "object",
+                "properties" : {
+                    "development" : {
+                        "description": "The in development documents",
+                        "type": "array",
+                        "items" : {"$ref": "#/definitions/menu_item"},
+                        "mail_name": "In Development Documents",
+                        "mail_order": 1
+                    },
+                    "release" : {
+                        "description": "The list of releases",
+                        "type": "array",
+                        "items" : {"$ref": "#/definitions/version"},
+                        "mail_name": "Releases",
+                        "mail_order": 2
+                    },
+                    "date_modified": {
+                        "description": "Menu update date",
+                        "type": "string",
+                        "maxLength": "40"
+                    },
+                    "errors" : {
+                        "description": "The errors that were encountered during refresh.",
+                        "type": "object",
+                        "properties": {
+                            "development" : {
+                                "description" : "Development repo errors",
+                                "type" : "array",
+                                "items" : { "type" : "string" }
+                            },
+                            "release": {
+                                "description" : "Release repo errors",
+                                "type" : "array",
+                                "items" : { "type" : "string" }
+                            }
+                        }
+                    }
+                },
+                "required": ["development", "release", "date_modified"]
+            },
+            "version" : {
+                "id" : "/version",
+                "type" : "object",
+                "properties" : {
+                    "version" : {
+                        "description": "The Version number for this release",
+                        "type": "string",
+                        "maxLength": "40",
+                        "mail_name": "Version",
+                        "mail_order": 1
+                    },
+                    "is_cpi_updated": {
+                        "description": "If CPI is updated in version level",
+                        "type": "boolean",
+                        "default" : false,
+                        "mail_name": "CPI Updated",
+                        "mail_order": 2
+                    },
+                    "documents" : {
+                        "description": "The documents for this release version",
+                        "type": "array",
+                        "mail_name": "Documents",
+                        "items" : { "$ref": "#/definitions/menu_item"},
+                        "mail_order": 3
+                    }
+                },
+                "required" : ["version", "documents"]
+            },
+            "menu_item" : {
+                "id" : "/menu_item",
+                "type" : "object",
+                "properties": {
+                    "name" : {
+                        "description": "The Name of the document",
+                        "type": "string",
+                        "maxLength": "255",
+                        "mail_name": "Document Name",
+                        "mail_order": 1
+                    },
+                    "slug" : {
+                        "description": "The Slug of the document",
+                        "type": "string",
+                        "maxLength": "255"
+                    },
+                    "filepath" : {
+                        "description": "The relative path of the document",
+                        "type": "string",
+                        "mail_name": "Document path",
+                        "mail_order": 2
+                    },
+                    "external_link" : {
+                        "description": "The external link for this document",
+                        "type": "string",
+                        "mail_name": "Document Link",
+                        "mail_order": 3
+                    },
+                    "restricted" : {
+                        "description": "For external links, indicates restricted status.",
+                        "type": "boolean",
+                        "mail_name": "Restricted",
+                        "mail_order": 4
+                    },
+                    "default" : {
+                        "description": "The Name of the Document",
+                        "type": "boolean",
+                        "default" : false,
+                        "mail_name": "Default",
+                        "mail_order": 5
+                    }
+                },
+                "oneOf": [
+                    { "required" : ["name", "filepath"] },
+                    { "required" : ["name", "external_link"] }
+                ]
+            }
+        },
+        "id": "/asset",
+        "type": "object",
+        "properties": {
+            "name": {
+                "description": "Name of the Asset (Microservice / Assembly)",
+                "type": "string",
+                "minLength": "3",
+                "maxLength": "40",
+                "mail_name": "Name",
+                "mail_order": 1,
+                "report": "overview",
+                "searchIndexable": true,
+                "sortableKey": "name_lowercase"
+            },
+            "domain": {
+                "description": "Domain ID of an Asset (MicroService / Assembly)",
+                "type": "integer",
+                "mail_name": "Domain",
+                "mail_order": 3,
+                "permission_rules": true,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.domain"]
+            },
+            "report_service_bugs": {
+                "description": "URL for reporting service bugs",
+                "type": "string",
+                "mail_name": "Report Service Bugs",
+                "mail_order": 4,
+                "report": "overview"
+            },
+            "request_service_support": {
+                "description": "URL for requesting service",
+                "type": "string",
+                "mail_name": "Request Service Support",
+                "mail_order": 5,
+                "report": "overview"
+            },
+            "description": {
+                "description": "The description of an Asset (MicroService / Assembly)",
+                "type": "string",
+                "minLength": "1",
+                "maxLength": "9999",
+                "mail_name": "Description",
+                "mail_order": 8,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "tags": {
+                "description": "Tags of an Asset (MicroService / Assembly)",
+                "type": "array",
+                "mail_name": "Tags",
+                "mail_order": 9,
+                "report": "overview",
+                "searchableLookupKeys": ["tag"]
+            },
+            "additional_information": {
+                "description": "Array of Additional Information Objects",
+                "type": "array",
+                "mail_name": "Additional Information",
+                "mail_order": 10,
+                "report": "additionalInformation",
+                "searchableLookupKeys": ["tutorial", "demo"],
+                "items": {
+                    "type": "object",
+                    "properties" : {
+                        "category": {
+                            "description": "Additional Information Category",
+                            "type": "string",
+                            "mail_name": "Category",
+                            "mail_order": 1,
+                            "searchIndexable": true
+                        },
+                        "title": {
+                            "description": "Title of the link",
+                            "type": "string",
+                            "mail_name": "Title",
+                            "mail_order": 2
+                        },
+                        "link": {
+                            "description": "Link for the chosen category",
+                            "type": "string",
+                            "mail_name": "Link",
+                            "mail_order": 3
+                        }
+                    },
+                    "required":["category","title","link"]
+                }
+            },
+            "product_number": {
+                "description": "Product Number, free code input.",
+                "type": "string",
+                "maxLength": "40",
+                "mail_name": "Product Number",
+                "mail_order": 11,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "mimer_version_starter": {
+                "description": "Mimer Activation Version",
+                "type": "string",
+                "maxLength": "40",
+                "mail_name": "Mimer Activation Version",
+                "mail_order": 12,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "restricted": {
+                "description": "A number which indicate one option. One for 'Restricted for other reason' and two or more: Restricted for some reason.",
+                "type": "integer",
+                "mail_name": "Restricted",
+                "mail_order": 15,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.restricted"]
+            },
+            "restricted_description": {
+                "description": "If 'restricted' field === 1, this field is mandatory, otherwise, must be empty.",
+                "type": "string",
+                "maxLength": "140",
+                "mail_name": "Restricted Description",
+                "mail_order": 16,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "helm_chartname": {
+                "description": "The Chart Name (Optional if the Service Maturity is 'Idea' or 'Development Started')",
+                "type": "string",
+                "mail_name": "Helm Chart Name",
+                "mail_order": 17,
+                "report": "overview",
+                "searchIndexable": true
+            },
+            "helmurl": {
+                "description": "The URL for access the HELM (Optional if the Service Maturity is 'PRA' or 'Development Started')",
+                "type": "string",
+                "mail_name": "Helm URL",
+                "mail_order": 18,
+                "report": "overview"
+            },
+            "check_cpi": {
+                "description": "The CPI checkbox will show if the documentation is available in CPI or not",
+                "type": "boolean",
+                "default": false,
+                "mail_name": "CPI Documentation",
+                "mail_order": 19,
+                "report": "overview"
+            },
+            "giturl": {
+                "description": "The Git Repo URL (Optional if the Service Maturity is 'Idea')",
+                "type": "string",
+                "mail_name": "Git URL",
+                "mail_order": 20,
+                "report": "overview"
+            },
+            "discussion_forum_link": {
+                "description": "Field for the URL of the Discussion Forum about the Asset (Optional)",
+                "type": "string",
+                "mail_name": "Discussion Forum",
+                "mail_order": 21,
+                "report": "overview"
+            },
+            "backlog": {
+                "description": "URL for JIRA Backlog for the Asset (MicroService / Assembly)",
+                "type": "string",
+                "mail_name": "JIRA Backlog",
+                "mail_order": 22,
+                "report": "overview"
+            },
+            "menu_auto" : {
+                "description": "Determines whether to use the automated document management for this service.",
+                "type": "boolean",
+                "mail_name": "Documentation Mode",
+                "mail_order": 23,
+                "report": "documentation"
+            },
+            "repo_urls" : {
+                "type": "object",
+                "mail_order": 24,
+                "mail_name": "Repository Links",
+                "report": "documentation",
+                "properties" : {
+                    "development" : {
+                        "description": "The artifactory link for the development repo",
+                        "type": "string", 
+                        "mail_name": "Development Repository Link",
+                        "mail_order": 1
+                    },
+                    "release" : {
+                        "description": "The artifactory link for the release repo",
+                        "type": "string",
+                        "mail_name": "Release Repository Link",
+                        "mail_order": 2
+                    }
+                }
+            },
+            "menu" : {
+                "description": "Documentation menu",
+                "type": "object",
+                "mail_name": "Documentation",
+                "mail_order": 25,
+                "properties": {
+                    "manual": {
+                        "$ref": "#/definitions/menu_type",
+                        "description": "Manual documentation object",
+                        "type": "object",
+                        "mail_name": "",
+                        "mail_order": 1 
+                    },
+                    "auto": {
+                        "$ref": "#/definitions/menu_type",
+                        "description": "Automated documentation object",
+                        "type": "object"
+                    }
+                }
+            },
+            "adp_organization": {
+                "description": "Field for 'Representing Application / Organization' (Optional)",
+                "type": "string",
+                "mail_name": "Representing Application Or Organization",
+                "deprecated": true
+            },
+            "adp_strategy": {
+                "description": "Field for ADP Strategy Compliance (Optional)",
+                "type": "string",
+                "mail_name": "ADP Strategy Compliance",
+                "deprecated": true
+            },
+            "adp_realization": {
+                "description": "Field for 'Realization' (Optional)",
+                "type": "string",
+                "mail_name": "Realization",
+                "deprecated": true
+            },
+            "additional_info": {
+                "description": "Field for 'Needed By / Additional Information' (Optional)",
+                "type": "string",
+                "mail_name": "Additional Information",
+                "deprecated": true
+            },
+            "team": {
+                "description": "Array of Team Objects",
+                "type": "array",
+                "mail_name": "Team Members",
+                "mail_order": 26,
+                "minItems": "1",
+                "report": "team",
+                "searchableLookupKeys": ["name", "email"],
+                "items": {
+                    "type": "object",
+                    "properties" : {
+                        "signum": {
+                            "description": "Ericsson's ID",
+                            "type": "string",
+                            "mail_name": "Signum",
+                            "mail_order": 1,
+                            "searchIndexable": true
+                        },
+                        "team_role": {
+                            "description": "Relational ID from type 'teamMemberRole'",
+                            "type": "integer",
+                            "mail_name": "Team Role",
+                            "mail_order": 2
+                        },
+                        "serviceOwner": {
+                            "description": "If the user is the Owner of the MicroService",
+                            "type": "boolean",
+                            "default": false,
+                            "mail_name": "Service Owner",
+                            "mail_order": 3
+                        }
+                    },
+                    "required":["team_role","signum","serviceOwner"]
+                }
+            },
+            "team_mailers": {
+                "description": "Array of Team Mailers",
+                "type": "array",
+                "uniqueItems": true,
+                "mail_name": "Team Distribution List",
+                "items": {
+                    "description": "The email address",
+                    "type": "string",
+                    "format": "email",
+                    "searchIndexable": true
+                    },
+                "mail_order": 25,
+                "report": "overview"
+            },
+            "slug": {
+                "description": "Slug for the Asset (MicroService / Assembly)",
+                "type": "string"
+            },
+            "teamMails": {
+                "description": "Array with the Team mails",
+                "type": "array",
+                "minItems":"1",
+                "items": {
+                    "description": "The email address",
+                    "type": "string",
+                    "searchIndexable": true
+                    }
+                },
+            "owner": {
+                "description": "Old Style for indicate the Owner",
+                "type": "string",
+                "deprecated": true
+            },
+            "approval_comment": {
+                "description": "The comment in the Approve Admin Page (Optional)",
+                "type": "string",
+                "deprecated": true
+            },
+            "approval": {
+                "description": "Old Style for indicate if the MS is approved",
+                "type": "string",
+                "deprecated": true
+            },
+            "date_modified": {
+                "description": "Last modification full date",
+                "type": "string",
+                "maxLength": "40",
+                "mail_order": 28,
+                "sortableKey": "date_modified",
+                "report": "overview",
+                "mail_name": "Modified Date"
+            },
+            "date_created": {
+                "description": "Created full date",
+                "type": "string",
+                "mail_order": 29,
+                "maxLength": "40",
+                "sortableKey": "date_created",
+                "report": "overview",
+                "mail_name": "Created Date"
+            },
+            "check_pvi": {
+                "description": "PVI Documentation",
+                "type": "boolean",
+                "default": false,
+                "mail_name": "PVI Documentation",
+                "mail_order": 30,
+                "report": "overview"
+            },
+            "contributors": {
+                "description": "Contributors for the Asset (MicroService / Assembly)",
+                "type": "object",
+                "report": "contributors",
+                "mail_name": "Contributors"
+            }
+        },
+        "required":["name", "description", "team", "teamMails", "menu_auto", "menu", "repo_urls"]
+    }
+}

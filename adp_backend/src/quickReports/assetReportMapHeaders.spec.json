@@ -1,0 +1,166 @@
+{
+    "headers": {
+        "heading_overview": {
+          "name": "Service Name",
+          "description": "Description",
+          "tags": "Tags",
+          "restricted": "Restricted",
+          "restricted_description": "Restricted Description",
+          "product_number": "Product Number",
+          "reusability_level": "Reusability Level",
+          "service_category": "Service Category",
+          "report_service_bugs": "Report Service Bugs",
+          "request_service_support": "Request Service Support",
+          "domain": "Domain",
+          "based_on": "Based On 3PP",
+          "serviceArea": "Service Area",
+          "service_maturity": "Service Maturity",
+          "helm_chartname": "Helm Chart Name",
+          "helmurl": "Helm URL",
+          "giturl": "Git URL",
+          "discussion_forum_link": "Discussion Forum"
+
+        },
+        "heading_documentation": {
+          "service_name": "Service Name",
+          "version": "Version",
+          "category": "Category",
+          "name": "Document Name",
+          "url": "URL",
+          "restricted": "Restricted",
+          "default": "Default",
+          "menu_auto": "Documentation Mode",
+          "repo_urls_development": "Development Repository Link",
+          "repo_urls_release": "Release Repository Link",
+          "isCpiUpdated": "Is CPI Updated"
+        },
+        "heading_compliance": {
+          "service_name": "Service Name",
+          "group": "Group",
+          "name": "Name",
+          "description": "Description",
+          "status": "Status",
+          "comment": "Comment"
+
+        },
+        "heading_team": {
+          "service_name": "Service Name",
+          "name": "Full Name",
+          "email": "Email Address",
+          "signum": "Signum",
+          "team_role": "Team Role",
+          "serviceOwner": "Service Owner"
+        }
+    },
+
+    "asset1": {
+        "team": [
+            {
+                "team_role": 1,
+                "serviceOwner": false,
+                "signum": "testUser1",
+                "name": "Test User 1",
+                "email": "testEmail1"
+            },
+            {
+                "team_role": 2,
+                "serviceOwner": true,
+                "signum": "testUser2",
+                "name": "Test User 2",
+                "email": "testEmail2"
+            }
+        ],
+        "name": "test1Name",
+        "description": "test1Desc",
+        "tags": [
+            {"label": "tag1"}, 
+            {"label": "tag2"}
+        ],
+        "domain": 1,
+        "serviceArea": 1,
+        "service_maturity": 1,
+        "based_on": "3PP",
+        "reusability_level": 1,
+        "restricted_description": "restrictedDescTest",
+        "product_number": "testProd",
+        "report_service_bugs": "reportServiceBugsTest",
+        "request_service_support": "requestServiceSupport",
+        "helm_chartname": "helmChartnameTest",
+        "helmurl": "helmurlTest",
+        "giturl": "giturlTest",
+        "discussion_forum_link": "discussionForumLinkTest",
+        "service_category": 1,
+        "menu_auto": true,
+        "repo_urls": {
+          "development": "test1RepoDev",
+          "release": "test2RepoDev"
+        },
+        "restricted": 0,
+        "denorm": {
+          "team": [
+            { "team_role": "role1" },
+            { "team_role": "role2" }
+            ],
+          "domain": "domain1Test",
+          "serviceArea": "serviceArea1Test",
+          "service_maturity": "maturity1Test",
+          "reusability_level": "reusa1Test",
+          "service_category": "serviceCat1Test",
+          "menu_auto": "Automated",
+          "restricted": "restrict1Test",
+          "compliance": [{
+            "group": "testCompGroup",
+            "fields": [
+              {
+                "field": "compFieldName1",
+                "answer": "No",
+                "comment": "Test Comment 1"
+              },
+              {
+                "field": "compFieldName2",
+                "answer": "Yes",
+                "comment": "Test Comment 2"
+              }
+            ]
+          }]
+        },
+        "documentsForRendering": {
+          "development": {
+              "cat1test": [
+                {
+                    "name": "doc1Test",
+                    "filepath": "doc1FilePathTest",
+                    "category_name": "cat 1 test",
+                    "default": true
+                }
+              ]
+          },
+          "ver1Test": {
+            "versionLabel": "ver 1 Test",
+            "cat1test" : [
+                {
+                    "name": "doc2Test",
+                    "external_link": "doc2FilePathTest",
+                    "category_name": "cat 1 test",
+                    "restricted": true
+                }
+            ]
+          }
+        },
+        "compliance": [
+            {
+                "group": 1,
+                "fields": [
+                    {
+                        "field": "compFieldName1",
+                        "answer": 1
+                    }, 
+                    {
+                        "field": "compFieldName2",
+                        "answer": 2
+                    }
+                ]
+            }
+        ]
+    }
+}

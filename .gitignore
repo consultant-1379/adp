@@ -1,0 +1,7 @@
+node_modules/
+*.pem
+integration_reports/
+reports/
+unit-test-report/
+.vscode
+sprintreports

@@ -1,0 +1,64 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/dist-server
+/tmp
+/out-tsc
+/target
+*.pyc
+python-tests/.pytest_cache/
+# dependencies
+/node_modules
+backend/mode_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+
+/keys/adp/*.*
+/example.txt
+/logs/*
+/src/static
+/src/logs/*
+/reports/*
+/.nyc_output/*
+tools/performanceFeeders
+/src/mongoLock
+
+
+# template services
+*/node_modules/
+*/reports
+*/.nyc_output
+

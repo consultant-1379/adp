@@ -1,0 +1,122 @@
+{
+    "result": [
+      {
+        "_index": "microservice-documentation",
+        "_type": "_doc",
+        "_id": "mockedTEstId",
+        "_score": 4.9186816,
+        "_source": {
+          "asset_name": "Auto MS with Docs",
+          "restricted": false,
+          "asset_slug": "auto-ms-with-docs",
+          "title": "Application Developers Guide",
+          "category": "Developer Product Information",
+          "post_type" : "ms_documentation",
+          "post_new_tab" : false,
+          "version": "3.2.1",
+          "title_slug": "application-developers-guide",
+          "category_slug": "dpi",
+          "document_url": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;hb=b08b5195382360149009bd719b334453b7015229",
+          "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;hb=b08b5195382360149009bd719b334453b7015229"
+        },
+        "highlight": {
+          "raw_text": [
+            ". -- ERICSSON-ALARM-XPATH-MIB DEFINITIONS ::= BEGIN <strong>Testing</strong> include document on the branch IMPORTS MODULE-IDENTITY, OBJECT-TYPE, NOTIFICATION-TYPE, Unsigned32, Gauge32 FROM SNMPv2-SMI TruthValue, DateAndTime FROM SNMPv2-TC SnmpAdminString FROM SNMP-FRAMEWORK-MIB ericssonModules FROM ERICSSON-TOP-MIB"
+          ],
+          "title": [
+            "Application Developers Guide"
+          ]
+        },
+        "inner_hits" : {
+          "versions" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "bBZsan8BHWdqdxNnecgB",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index": "microservice-documentation",
+        "_type": "_doc",
+        "_id": "i96VbX4BgMWTOQko9XTL",
+        "_score": 4.9186816,
+        "_source": {
+          "asset_name": "Auto MS with Docs",
+          "restricted": false,
+          "asset_slug": "auto-ms-with-docs",
+          "title": "Service Overview",
+          "category": "Developer Product Information",
+          "post_type" : "ms_documentation",
+          "post_new_tab" : false,
+          "version": "3.2.1",
+          "title_slug": "service-overview",
+          "category_slug": "dpi",
+          "document_url": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;h=6d8da7d0fe80bb6b0c2ae5e103bb7405fd2180a1;hb=b08b5195382360149009bd719b334453b7015229",
+          "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;h=6d8da7d0fe80bb6b0c2ae5e103bb7405fd2180a1;hb=b08b5195382360149009bd719b334453b7015229"
+        },
+        "highlight": {
+          "raw_text": [
+            ". -- ERICSSON-ALARM-XPATH-MIB DEFINITIONS ::= BEGIN <strong>Testing</strong> include document on the branch IMPORTS MODULE-IDENTITY, OBJECT-TYPE, NOTIFICATION-TYPE, Unsigned32, Gauge32 FROM SNMPv2-SMI TruthValue, DateAndTime FROM SNMPv2-TC SnmpAdminString FROM SNMP-FRAMEWORK-MIB ericssonModules FROM ERICSSON-TOP-MIB"
+          ],
+          "title": [
+            "Service Overview"
+          ]
+        },
+        "inner_hits" : {
+          "versions" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "bBZsan8BHWdqdxNnecgB",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+
+      }
+    ],
+    "total": 2
+  }

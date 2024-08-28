@@ -1,0 +1,75 @@
+// // ============================================================================================= //
+// /**
+// * Unit test for [ validateField.validate ]
+// * @author Omkar [zsdgmkr]
+// */
+// // ============================================================================================= //
+// const mockResult = {
+//   status: 200,
+//   message: 'Test No Error',
+// };
+// let updateError = false;
+// let validate;
+// describe('Testing [ validateField.validate ] behavior.', () => {
+//   beforeEach(() => {
+//     global.adp = {};
+//     global.adp.docs = {};
+//     global.adp.docs.list = [];
+//     global.adp.echoLog = () => null;
+//     global.adp.getSizeInMemory = () => 1024;
+//     global.adp.integration = {};
+//     global.adp.integration.documentRefresh = {};
+//     global.adp.integration.documentRefresh.update = () => new Promise((RESOLVE, REJECT) => {
+//       if (updateError) {
+//         REJECT();
+//         return;
+//       }
+//       RESOLVE(mockResult);
+//     });
+//     updateError = false;
+//     // eslint-disable-next-line global-require
+//     validate = require('./validate');
+//   });
+
+//   afterEach(() => {
+//     global.adp = null;
+//   });
+
+//   it('Checking if is returning valid response in case of no errors.', (done) => {
+//     const [fieldName, object, updateDb] = ['repo_urls', {}, false];
+//     validate.validateField(fieldName, object, updateDb)
+//       .then((expectReturn) => {
+//         expect(expectReturn).toBeDefined();
+//         done();
+//       }).catch(() => {
+//         expect(true).toBeFalsy();
+//         done();
+//       });
+//   });
+
+//   it('Checking if is rejecting case of failure.', (done) => {
+//     const [fieldName, object, updateDb] = ['repo_urls', {}, false];
+//     updateError = true;
+//     validate.validateField(fieldName, object, updateDb)
+//       .then(() => {
+//         expect(true).toBeFalsy();
+//         done();
+//       }).catch(() => {
+//         expect(true).toBeTruthy();
+//         done();
+//       });
+//   });
+
+//   it('Checking if it reject in case of invalid field to be validated.', (done) => {
+//     const [fieldName, object, updateDb] = ['invalid', {}, false];
+//     validate.validateField(fieldName, object, updateDb)
+//       .then(() => {
+//         expect(true).toBeFalsy();
+//         done();
+//       }).catch(() => {
+//         expect(true).toBeTruthy();
+//         done();
+//       });
+//   });
+// });
+// // ============================================================================================= //

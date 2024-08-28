@@ -1,0 +1,525 @@
+// ============================================================================================= //
+/**
+* [ cs.getAllStats ]
+* @author Armando Dias [zdiaarm]
+*
+* Build a syncronous queue where retrieve from Gerrit Api the statistics of
+* each user from each microservice compatible.
+*/
+// ============================================================================================= //
+/* eslint-disable no-use-before-define */
+/* eslint-disable-line global-require */
+/* eslint-disable prefer-destructuring */
+// ============================================================================================= //
+const packName = 'cs.getAllStats';
+// ============================================================================================= //
+/**
+* Private [ buildTheURL ]
+* @param {string} AFTERDATE Year-Month-Day to request register after this date ( Start Date ).
+* @param {string} BEFOREDATE Year-Month-Day to request register before this date ( End Date ).
+* @param {string} PROJECT Name of the project. Should be recognizable by Gerrit Api.
+* @param {number} SKIP How many registers the API should skip. Can be null.
+* Returns a string with the URL of Gerrit API.
+* @author Armando Dias [zdiaarm]
+*
+* Build the URL for call the Gerrit API.
+*/
+// ============================================================================================= //
+const buildTheURL = (AFTERDATE, BEFOREDATE, PROJECT, SKIP = null) => {
+  let apiLink;
+  if (cs.mode === 'TAGMODE') {
+    apiLink = adp.config.contributorsStatistics.gerritPotentialTag;
+  } else {
+    apiLink = adp.config.contributorsStatistics.gerritApi;
+  }
+  apiLink = apiLink.replace('|||:AFTERDATE:|||', AFTERDATE);
+  apiLink = apiLink.replace('|||:BEFOREDATE:|||', BEFOREDATE);
+  apiLink = apiLink.replace('|||:PROJECTNAME:|||', `${encodeURIComponent(PROJECT)}`);
+  if (SKIP !== null) {
+    apiLink = `${apiLink}&S=${SKIP}`;
+  }
+  return apiLink;
+};
+// ============================================================================================= //
+/**
+* Private [ processThis ]
+* @param {string} MAIN Object which will accumulate processed information.
+* @param {string} ID Asset ID
+* @param {string} SLUG Asset Slug
+* @param {json} BODY JSON from Gerrit API.
+* @author Armando Dias [zdiaarm]
+*
+* Process the result of the Gerrit API for each Asset.
+* Returns an object with a compiled information to save in database.
+*
+*/
+// ============================================================================================= //
+const processThis = (MAIN, ID, SLUG, BODY) => {
+  const main = MAIN;
+  const id = ID;
+  const clearBody = [];
+  BODY.forEach((ITEM) => {
+    const date = (`${adp.dateLogSystemFormat(new Date(ITEM.submitted)).simple}`);
+    if (date < '2020-01-01') {
+      const obj = {
+        reason: `Commit date "${date}" is before than "2020-01-01"`,
+        item_ignored: ITEM,
+      };
+      cs.gitLog('Error on limit date', obj, 400, packName);
+    } else {
+      clearBody.push(ITEM);
+    }
+  });
+  clearBody.forEach((ITEM) => {
+    const user = ITEM.owner.username;
+    const userName = ITEM.owner.name;
+    const userEmail = ITEM.owner.email;
+    const date = (`${adp.dateLogSystemFormat(new Date(ITEM.submitted)).simple}`);
+    const revision = ITEM.current_revision;
+    const { subject } = ITEM;
+    const insertions = ITEM.insertions;
+    const deletions = ITEM.deletions;
+    if (main[id] === undefined) {
+      main[id] = {};
+      main[id].slug = SLUG;
+    }
+    if (main[id][user] === undefined) {
+      main[id][user] = {};
+      main[id][user].name = userName;
+      main[id][user].email = userEmail;
+    }
+    if (main[id][user].day === undefined) {
+      main[id][user].day = {};
+    }
+    if (main[id][user].day[date] === undefined) {
+      main[id][user].day[date] = {};
+      main[id][user].day[date].commits = 0;
+      main[id][user].day[date].insertions = 0;
+      main[id][user].day[date].deletions = 0;
+      main[id][user].day[date]['commit-id-list'] = [];
+    }
+    main[id][user].day[date].commits += 1;
+    main[id][user].day[date].insertions += insertions;
+    main[id][user].day[date].deletions += deletions;
+    const commitID = ITEM.id;
+    const commitOBJ = {
+      id: commitID,
+      revision,
+      subject,
+      commits: 1,
+      insertions,
+      deletions,
+    };
+    main[id][user].day[date]['commit-id-list'].push(commitOBJ);
+    const verificationCommit = typeof main[id][user].day[date].commits !== 'number';
+    const verificationInsertions = typeof main[id][user].day[date].insertions !== 'number';
+    const verificationDeletions = typeof main[id][user].day[date].deletions !== 'number';
+
+    if (verificationCommit || verificationInsertions || verificationDeletions) {
+      cs.gitLog('Error on retrieving data:', ITEM, 500, packName);
+    }
+  });
+};
+// ============================================================================================= //
+/**
+* Private [ validationOfGitURL ]
+* @param {object} LIST Object generated by [ cs.getAllAssets ].
+* @author Armando Dias [zdiaarm]
+*
+* Using a synchronous queue, this function request the statistics from Gerrit API,
+*
+*/
+// ============================================================================================= //
+const gerritStringA = 'https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/';
+const gerritStringB = 'https://gerrit-gamma.gic.ericsson.se/#/admin/projects/';
+const gerritStringC = 'https://gerrit-gamma.gic.ericsson.se/#/q/project:';
+const gerritStringD = new RegExp(/(https:\/\/gerrit-gamma.gic.ericsson.se:)([0-9]+)(\/)/gim);
+const gerritExtraRegExp = new RegExp(/\/\+\/([\s\S])+/gim);
+const gerritLastSlashExp = new RegExp(/(\/)$/);
+// ============================================================================================= //
+const validationOfGitURL = (URL, ID) => {
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  const url = URL;
+  const id = ID;
+  const situationA = url.match(gerritStringA);
+  const situationB = url.match(gerritStringB);
+  const situationC = url.match(gerritStringC);
+  const situationD = url.match(gerritStringD);
+  let newURL;
+  let mode;
+  if (situationA !== null) {
+    newURL = url.replace(gerritStringA, '');
+    mode = `"${gerritStringA}" detected and removed`;
+    // Assets with rule [ https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/ ]
+    cs.logDetails('Assetswithrulehttpsgerritericssonsepluginsgitiles', 'Rules', id);
+  } else if (situationB !== null) {
+    newURL = url.replace(gerritStringB, '');
+    mode = `"${gerritStringB}" detected and removed`;
+    // Assets with rule [ https://gerrit-gamma.gic.ericsson.se/#/admin/projects/ ]
+    cs.logDetails('Assetswithrulehttpsgerritericssonseadminprojects', 'Rules', id);
+  } else if (situationC !== null) {
+    newURL = url.replace(gerritStringC, '');
+    mode = `"${gerritStringC}" detected and removed`;
+    // Assets with rule [ https://gerrit-gamma.gic.ericsson.se/#/q/project: ]
+    cs.logDetails('Assetswithrulehttpsgerritericssonseqproject', 'Rules', id);
+  } else if (situationD !== null) {
+    newURL = url.replace(gerritStringD, '');
+    mode = `"${gerritStringD}" detected and removed`;
+    // Assets with rule [ https://gerrit-gamma.gic.ericsson.se:[PORT]/ ]
+    cs.logDetails('AssetswithrulehttpsgerritericssonsePORT', 'Rules', id);
+  } else {
+    newURL = url;
+    mode = 'Unknown link';
+    cs.logDetails('Assetswithnocoveredrule', 'Rules', id);
+    const result = {
+      newURL,
+      mode,
+      action: 'next',
+    };
+    return result;
+  }
+  if (newURL.match(gerritExtraRegExp) !== null) {
+    newURL = newURL.replace(gerritExtraRegExp, '');
+    mode = `${mode}. /+/ rule detected and removed.`;
+    // Assets with rule [ /+/ ]
+    cs.logDetails('Assetswithruleplussignal', 'Rules', id);
+  }
+  if (newURL.match(gerritLastSlashExp) !== null) {
+    newURL = newURL.replace(gerritLastSlashExp, '');
+    mode = `${mode}. Slash at the end rule detected and removed.`;
+  }
+  const result = {
+    newURL,
+    mode,
+    action: 'continue',
+  };
+  return result;
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+};
+// ============================================================================================= //
+/**
+* Public [ cs.getAllStats ]
+* @param {object} LIST Object generated by [ cs.getAllAssets ].
+* @author Armando Dias [zdiaarm]
+*
+* Using a synchronous queue, this function request the statistics from Gerrit API,
+* if valid, process these statistics and request to [ cs.saveThis ] consolidate
+* the result into database.
+*
+*/
+// ============================================================================================= //
+module.exports = LIST => new Promise((RESOLVE) => {
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  const authorizationString = `Basic ${Buffer.from(adp.config.eadpusersPassword).toString('base64')}`;
+  const headers = { Authorization: authorizationString };
+
+  const launchDate = (`${adp.config.innersourceLaunchDate}`).length === 10 ? (`${adp.config.innersourceLaunchDate}`) : '9999-12-31';
+  cs.gitLog('InnerSource Launch Date', { launchDate }, 200, packName);
+  adp.echoDivider();
+  const keys = [];
+  Object.keys(LIST).forEach((KEY) => {
+    keys.push(KEY);
+  });
+  let index = -1;
+  if (cs.cantChangeInitialDateIDs === undefined) {
+    cs.cantChangeInitialDateIDs = [];
+  }
+  const today = adp.dateLogSystemFormat();
+  let todayLessOneYear = (new Date((new Date()).setMonth((new Date()).getMonth() - 12)));
+  // RULE: Do not request commits before First of January of 2020!
+  if (todayLessOneYear < new Date('2020-01-01')) {
+    todayLessOneYear = new Date('2020-01-01');
+  }
+  const oneYearAgo = adp.dateLogSystemFormat(todayLessOneYear);
+  const endDate = `${today.y}-${today.m}-${today.d}`;
+  const startDateTemplate = `${oneYearAgo.y}-${oneYearAgo.m}-${oneYearAgo.d}`;
+  let startDate = startDateTemplate;
+  let lastFoundDate = null;
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  // Internal Synchronous Function: prepareStartDateAndGo
+  // Retrieve the last date which we have a register for a specific Asset,
+  // save this on shared variable "startDate" to avoid request all period every time.
+  // This function is called for the parent function just once for start the process
+  // and is called for [ getThis ] after everything, to process the next asset.
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  const prepareStartDateAndGo = (NEXT500 = null) => {
+    if (NEXT500 === null) {
+      const previousAsset = LIST[keys[index]];
+      if (previousAsset !== undefined) {
+        const previousSlug = previousAsset.slug;
+        const loopString = `[ ${index + 1}/${keys.length} ]`;
+        cs.gitLog(`[ ${previousSlug} ]${loopString} finished in ${cs.executionTimer()} (Total Time)`, null, 200, packName);
+        adp.echoDivider();
+      }
+      index += 1;
+    }
+    lastFoundDate = null;
+    startDate = startDateTemplate;
+    if (index < keys.length) {
+      const key = keys[index];
+      const validationToChangeTheDate = adp.firstRun !== true
+        && cs.cantChangeInitialDateIDs.includes(key) === false;
+      if (LIST[key] !== undefined && LIST[key] !== null && validationToChangeTheDate) {
+        const thisID = LIST[key]._id;
+        const urlSince = (LIST[key].urlSince !== undefined) ? LIST[key].urlSince : null;
+        const gitstatusModel = new adp.models.Gitstatus(cs.mode);
+        return gitstatusModel.getLatestCommitForAsset(thisID)
+          .then((PREVIOUS) => {
+            let havePreviousCommits = false;
+            if (PREVIOUS.docs.length === 0) {
+              cs.cantChangeInitialDateIDs.push(`${thisID}`);
+              startDate = startDateTemplate;
+            } else {
+              const dates = PREVIOUS.docs;
+              havePreviousCommits = true;
+              lastFoundDate = `${dates[0]}`;
+              if (typeof dates[0] !== 'string') {
+                if (typeof dates[0].date === 'string') {
+                  lastFoundDate = dates[0].date;
+                }
+              }
+              if (lastFoundDate === null) {
+                startDate = startDateTemplate;
+              } else {
+                startDate = lastFoundDate;
+              }
+            }
+            if (urlSince !== null) {
+              if (launchDate < urlSince) {
+                // After Launch
+                if (startDate < urlSince) {
+                  startDate = urlSince;
+                }
+              } else if (!havePreviousCommits) {
+                // Before Launch
+                startDate = startDateTemplate;
+              }
+            }
+            if ((`${startDate}`).trim() < startDateTemplate) {
+              startDate = startDateTemplate;
+            }
+            return getThis(NEXT500);
+          })
+          .catch((ERROR) => {
+            cs.gitLog('Error on [ gitstatusModel.getLatestCommitForAsset(thisID) @ adp.models.Gitstatus ] at [ prepareStartDateAndGo ]', { thisID, error: ERROR }, 500, packName);
+            return getThis(NEXT500);
+          });
+      }
+    }
+    return getThis(NEXT500);
+  };
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  // Internal Synchronous Function: logThisOnFullLog
+  // Save status in adp.fullLog to feed the final report with more information
+  // and echo the status in the terminal.
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  const logThisOnFullLog = (ID, SLUG, URL, NEWURL, MODE, APIURL, LOOPSTRING, TIMER, MSG) => {
+    const logError = {
+      asset_id: ID,
+      asset_slug: SLUG,
+      asset_giturl: URL,
+      extracted_name: NEWURL,
+      mode_detected: MODE,
+      api_url: APIURL,
+      log_date: (new Date()),
+      desc: MSG,
+    };
+    adp.fullLog.push(logError);
+    cs.logDetails(MSG);
+    const msg = `[ ${SLUG} ]${LOOPSTRING} ${MSG} in ${((new Date()).getTime() - TIMER)}ms`;
+    const obj = { error: logError };
+    cs.gitLog(msg, obj, 400, packName);
+  };
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  // Internal Synchronous Function: getThis
+  // Apply some rules on "giturl" to cover a bigger number of Assets.
+  // Request data from Gerrit API, call [ processThis ] and request
+  // to [ cs.saveThis ] save the final result. Then call [ prepareStartDateAndGo ]
+  // to repeat the process with the next Asset.
+  // After all assets, just RESOLVE the promise to put a finish on this queue.
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  const getThis = (NEXT500 = null) => {
+    if (index >= keys.length) {
+      RESOLVE();
+      return;
+    }
+
+    const main = {};
+    let apiURL;
+    let mode;
+    const key = keys[index];
+    if (LIST[key] === undefined || LIST[key] === null) {
+      prepareStartDateAndGo();
+      return;
+    }
+
+    const loopString = `[ ${index + 1}/${keys.length} ]`;
+    const id = LIST[key]._id;
+    const slug = LIST[key].slug;
+    const url = LIST[key].giturl;
+    mode = 'none.';
+    if (url === undefined || url === null) {
+      prepareStartDateAndGo();
+      return;
+    }
+
+    const validationResult = validationOfGitURL(url, id);
+    if (validationResult.action === 'next') {
+      logThisOnFullLog(
+        id,
+        slug,
+        url,
+        validationResult.newURL,
+        validationResult.mode,
+        validationResult.apiURL,
+        loopString,
+        (new Date()).getTime(),
+        'Can`t generated the api_url from unknown link',
+      );
+      prepareStartDateAndGo();
+      return;
+    }
+
+    apiURL = validationResult.apiURL;
+    const newURL = validationResult.newURL;
+    mode = validationResult.mode;
+    if (NEXT500 === null) {
+      apiURL = buildTheURL(startDate, endDate, newURL);
+    } else {
+      apiURL = buildTheURL(startDate, endDate, newURL, NEXT500);
+    }
+    let gitText = null;
+    let gitObject = null;
+    if (startDate === endDate) {
+      gitText = `[ ${slug} ]${loopString} requesting the date [ ${startDate} ] from the remote server...`;
+      gitObject = {
+        asset_slug: slug,
+        position: loopString,
+        requestingFrom: startDate,
+        totalTime: cs.executionTimer(),
+      };
+    } else {
+      gitText = `[ ${slug} ]${loopString} requesting from [ ${startDate} ] to [ ${endDate} ] from the remote server...`;
+      gitObject = {
+        asset_slug: slug,
+        position: loopString,
+        requestingFrom: startDate,
+        requestingTo: endDate,
+        totalTime: cs.executionTimer(),
+      };
+    }
+    cs.gitLog(gitText, gitObject, 200, packName);
+
+    const timer = (new Date()).getTime();
+
+    try {
+      global.request.get({ uri: apiURL, headers }, (ERR, RES, DATA) => {
+        if (DATA === undefined) {
+          logThisOnFullLog(id, slug, url, newURL, mode, apiURL, loopString, timer, 'DATA from Gerrit API is undefined');
+          prepareStartDateAndGo();
+          return;
+        }
+
+        const body = JSON.parse((`${DATA}`).substring(5));
+
+        if (!(Array.isArray(body))) {
+          if (NEXT500 === null) {
+            logThisOnFullLog(id, slug, url, newURL, mode, apiURL, loopString, timer, 'Body was empty');
+          }
+          prepareStartDateAndGo();
+          return;
+        }
+
+        const registers = body.length;
+        if (registers === 0) {
+          if (NEXT500 === null) {
+            logThisOnFullLog(id, slug, url, newURL, mode, apiURL, loopString, timer, 'Body was empty');
+          }
+          prepareStartDateAndGo();
+          return;
+        }
+
+        let extra = '';
+        if (NEXT500 !== null) {
+          extra = `(Skipping first ${NEXT500}) `;
+        }
+
+        gitObject = {
+          asset_slug: slug,
+          position: loopString,
+          requestingFrom: startDate,
+          requestingTo: endDate,
+          skip: extra,
+          totalRegisters: registers,
+          requestTime: `${((new Date()).getTime() - timer)}ms`,
+          totalTime: cs.executionTimer(),
+        };
+        gitText = `[ ${slug} ]${loopString} ${extra}${registers} registers from remote server in ${((new Date()).getTime() - timer)}ms`;
+        cs.gitLog(gitText, gitObject, 200, packName);
+
+        if (NEXT500 === null) {
+          const success = {
+            asset_id: id,
+            asset_slug: slug,
+            asset_giturl: url,
+            extracted_name: newURL,
+            mode_detected: mode,
+            api_url: apiURL,
+            log_date: new Date(),
+            desc: 'success',
+          };
+          adp.fullSuccessLog.push(success);
+        }
+
+        processThis(main, key, slug, body);
+        let saveThis = new cs.SaveThis(main, apiURL, headers);
+        saveThis.go()
+          .then(() => {
+            saveThis = null;
+            if (registers >= 500) {
+              let skipQuant = 0;
+              if (NEXT500 === null) {
+                skipQuant = 500;
+              } else {
+                skipQuant = (NEXT500 + 500);
+              }
+              prepareStartDateAndGo(skipQuant);
+            } else {
+              prepareStartDateAndGo();
+            }
+          })
+          .catch((ERROR) => {
+            gitObject = {
+              asset_slug: slug,
+              position: loopString,
+              requestingFrom: startDate,
+              requestingTo: endDate,
+              skip: extra,
+              totalRegisters: registers,
+              totalTime: cs.executionTimer(),
+              error: ERROR,
+              parameter: main,
+            };
+            cs.gitLog('Catch an error in [ go @ cs.SaveThis ]', gitObject, 500, packName);
+            prepareStartDateAndGo();
+          });
+      });
+    } catch (ERROR) {
+      gitObject = {
+        asset_slug: slug,
+        position: loopString,
+        requestingFrom: startDate,
+        requestingTo: endDate,
+        totalTime: cs.executionTimer(),
+        error: ERROR,
+        parameter: main,
+      };
+      cs.gitLog('Error on try/catch of [ global.request.get ] at [ getThis ]', gitObject, 500, packName);
+      prepareStartDateAndGo();
+    }
+  };
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+  prepareStartDateAndGo();
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - //
+});
+// ============================================================================================= //

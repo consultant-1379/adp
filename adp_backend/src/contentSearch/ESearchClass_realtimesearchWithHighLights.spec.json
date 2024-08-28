@@ -1,0 +1,346 @@
+[
+  {
+    "key":"microservice",
+    "doc_count":4,
+    "top":{
+      "hits":{
+        "total":{
+          "value":4,
+          "relation":"eq"
+        },
+        "max_score":2.8947737,
+        "hits":[
+          {
+            "_index" : "microservices",
+            "_type" : "_doc",
+            "_id" : "Uj4vo3wBGfN7xFX-ufBJ",
+            "_score" : 0.16849889,
+            "_source" : {
+              "name" : "Auto MS max",
+              "denorm" : {
+                "asset_fullurl" : "/marketplace/auto-ms-max",
+                "asset_document_fullurl" : "/marketplace/auto-ms-max/documentation/development/dpi/service-overview"
+              },
+              "type" : "microservice",
+              "slug" : "auto-ms-max"
+            },
+            "highlight" : {
+              "name" : [
+                "<strong>Auto</strong> MS max"
+              ]
+            }
+          },
+          {
+            "_index" : "microservices",
+            "_type" : "_doc",
+            "_id" : "SD4vo3wBGfN7xFX-qfCC",
+            "_score" : 0.16849889,
+            "_source" : {
+              "name" : "Auto MS Min",
+              "denorm" : {
+                "asset_fullurl" : "/marketplace/auto-ms-min",
+                "asset_document_fullurl" : null
+              },
+              "type" : "microservice",
+              "slug" : "auto-ms-min"
+            },
+            "highlight" : {
+              "name" : [
+                "<strong>Auto</strong> MS Min"
+              ]
+            }
+          },
+          {
+            "_index" : "microservices",
+            "_type" : "_doc",
+            "_id" : "XD4vo3wBGfN7xFX-zfDB",
+            "_score" : 0.16849889,
+            "_source" : {
+              "name" : "Auto MS Restricted",
+              "denorm" : {
+                "asset_fullurl" : "/marketplace/auto-ms-restricted",
+                "asset_document_fullurl" : "/marketplace/auto-ms-restricted/documentation/development/additional-documents/features"
+              },
+              "type" : "microservice",
+              "slug" : "auto-ms-restricted"
+            },
+            "highlight" : {
+              "name" : [
+                "<strong>Auto</strong> MS Restricted"
+              ]
+            }
+          },
+          {
+            "_index" : "microservices",
+            "_type" : "_doc",
+            "_id" : "Sj4vo3wBGfN7xFX-rfA_",
+            "_score" : 0.15277582,
+            "_source" : {
+              "name" : "Auto MS with Tags",
+              "denorm" : {
+                "asset_fullurl" : "/marketplace/auto-ms-with-tags",
+                "asset_document_fullurl" : "/marketplace/auto-ms-with-tags/documentation/development/additional-documents/troubleshooting-guide"
+              },
+              "type" : "microservice",
+              "slug" : "auto-ms-with-tags"
+            },
+            "highlight" : {
+              "name" : [
+                "<strong>Auto</strong> MS with Tags"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+    {
+        "key":"page",
+        "doc_count":42,
+        "top":{
+          "hits":{
+              "total":{
+                "value":42,
+                "relation":"eq"
+              },
+              "max_score":2.8947737,
+              "hits":[
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"3570",
+                    "_score":2.3939905,
+                    "_source":{
+                      "post_title":"ADP Architecture",
+                      "post_id":3570,
+                      "post_name":"adp_architecture",
+                      "terms":{
+                          "category":[
+                            {
+                                "parent":1,
+                                "name":"Discover",
+                                "term_taxonomy_id":91,
+                                "term_order":0,
+                                "term_id":91,
+                                "facet":"{\"term_id\":91,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":1,\"term_taxonomy_id\":91,\"term_order\":0}",
+                                "slug":"discover"
+                            },
+                            {
+                                "parent":0,
+                                "name":"Articles",
+                                "term_taxonomy_id":1,
+                                "term_order":0,
+                                "term_id":1,
+                                "facet":"{\"term_id\":1,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":1,\"term_order\":0}",
+                                "slug":"articles"
+                            }
+                          ]
+                      }
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "<strong>ADP</strong> Architecture"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"3630",
+                    "_score":2.1245406,
+                    "_source":{
+                      "post_title":"ADP meeting the applications",
+                      "post_id":3630,
+                      "post_name":"adp-meeting-the-applications",
+                      "terms":[
+                          
+                      ]
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "<strong>ADP</strong> meeting the applications"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"3344",
+                    "_score":2.0924704,
+                    "_source":{
+                      "post_title":"Benefits of ADP",
+                      "post_id":3344,
+                      "post_name":"adp_benefits",
+                      "terms":{
+                          "category":[
+                            {
+                                "parent":1,
+                                "name":"Discover",
+                                "term_taxonomy_id":91,
+                                "term_order":0,
+                                "term_id":91,
+                                "facet":"{\"term_id\":91,\"slug\":\"discover\",\"name\":\"Discover\",\"parent\":1,\"term_taxonomy_id\":91,\"term_order\":0}",
+                                "slug":"discover"
+                            },
+                            {
+                                "parent":0,
+                                "name":"Articles",
+                                "term_taxonomy_id":1,
+                                "term_order":0,
+                                "term_id":1,
+                                "facet":"{\"term_id\":1,\"slug\":\"articles\",\"name\":\"Articles\",\"parent\":0,\"term_taxonomy_id\":1,\"term_order\":0}",
+                                "slug":"articles"
+                            }
+                          ]
+                      }
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "Benefits of <strong>ADP</strong>"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"8863",
+                    "_score":1.9055771,
+                    "_source":{
+                      "post_title":"My First ADP Service",
+                      "post_id":8863,
+                      "post_name":"learning-path-my-first-adp-service",
+                      "terms":[
+                          
+                      ]
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "My First <strong>ADP</strong> Service"
+                      ]
+                    }
+                }
+              ]
+          }
+        }
+    },
+    {
+        "key":"tutorials",
+        "doc_count":7,
+        "top":{
+          "hits":{
+              "total":{
+                "value":7,
+                "relation":"eq"
+              },
+              "max_score":1.8243128,
+              "hits":[
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"8986",
+                    "_score":1.0315219,
+                    "_source":{
+                      "post_title":"Introduction <sup>new</sup>And<sub>sub</sub>",
+                      "post_id":8986,
+                      "post_name":"introduction",
+                      "terms":{
+                          "category":[
+                            {
+                                "parent":0,
+                                "name":"Tutorials",
+                                "term_taxonomy_id":95,
+                                "term_order":0,
+                                "term_id":95,
+                                "facet":"{\"term_id\":95,\"slug\":\"tutorials\",\"name\":\"Tutorials\",\"parent\":0,\"term_taxonomy_id\":95,\"term_order\":0}",
+                                "slug":"tutorials"
+                            }
+                          ]
+                      }
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "Introduction <sup>new</sup>And<sub>sub</sub>"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"8973",
+                    "_score":1.0138532,
+                    "_source":{
+                      "post_title":"The FactFinder micro service",
+                      "post_id":8973,
+                      "post_name":"the-factfinder-micro-service",
+                      "terms":{
+                          "category":[
+                            {
+                                "parent":95,
+                                "name":"My First ADP Service",
+                                "term_taxonomy_id":90,
+                                "term_order":0,
+                                "term_id":90,
+                                "facet":"{\"term_id\":90,\"slug\":\"my-first-adp-service\",\"name\":\"My First ADP Service\",\"parent\":95,\"term_taxonomy_id\":90,\"term_order\":0}",
+                                "slug":"my-first-adp-service"
+                            },
+                            {
+                                "parent":0,
+                                "name":"Tutorials",
+                                "term_taxonomy_id":95,
+                                "term_order":0,
+                                "term_id":95,
+                                "facet":"{\"term_id\":95,\"slug\":\"tutorials\",\"name\":\"Tutorials\",\"parent\":0,\"term_taxonomy_id\":95,\"term_order\":0}",
+                                "slug":"tutorials"
+                            }
+                          ]
+                      }
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "The FactFinder micro service"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"9269",
+                    "_score":0.92216146,
+                    "_source":{
+                      "post_title":"E2E TESTS Tutorial",
+                      "post_id":9269,
+                      "post_name":"e2e-tests-tutorial",
+                      "terms":[
+                          
+                      ]
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "E2E TESTS Tutorial"
+                      ]
+                    }
+                },
+                {
+                    "_index":"1921685610223309-post-1",
+                    "_type":"_doc",
+                    "_id":"9909",
+                    "_score":0.68813205,
+                    "_source":{
+                      "post_title":"E2E TESTS Tutorial 3",
+                      "post_id":9909,
+                      "post_name":"e2e-tests-tutorial-3",
+                      "terms":[
+                          
+                      ]
+                    },
+                    "highlight":{
+                      "post_title":[
+                          "E2E TESTS Tutorial 3"
+                      ]
+                    }
+                }
+              ]
+          }
+        }
+    }
+  ]

@@ -1,0 +1,658 @@
+// properties(
+//     [
+//         parameters(
+//         [string(defaultValue: 'FEM41s11_AIA_Docker_New', name: 'DOCKER_SLAVE'),
+//         string(defaultValue: 'master', name: 'branch_to_build'), // Any gerrit branch
+//         string(defaultValue: 'dev', name: 'ENVIRONMENT_TYPE'), // dev, test, stage, new_stage
+//         string(defaultValue: '4', name: 'ENVIRONMENT_NUMBER'), // 0-5
+//         string(defaultValue: '', name: 'force_build'), // 0-5
+//         booleanParam(defaultValue: true, name: 'SKIP_RESTORE'),
+//         booleanParam(defaultValue: false, name: 'SKIP_UNIT'),
+//         booleanParam(defaultValue: false, name: 'SKIP_TESTS'),
+//         booleanParam(defaultValue: true, name: 'USE_TEST_DATA'),
+//         booleanParam(defaultValue: false, name: 'SKIP_COLLECTION'),
+//         booleanParam(defaultValue: true, name: 'PRE_CODE_REVIEW'),
+//         ]
+//         )
+//     ]
+// )
+
+
+class Info{
+    public String hello(){
+        return 'World'
+    }
+}
+
+activeProjects=['adp_backend', 'integration-tests', 'asciidoctorService']
+
+changesInThisBuild=[]
+new_version=""
+
+node(params.get('DOCKER_SLAVE')) {
+    echo "test1"
+    echo env.GERRIT_BRANCH
+    echo env.GERRIT_NEWREV
+    echo env.GERRIT_REFSPEC
+    echo env.PRE_CODE_REVIEW
+    echo "test2"
+    if(params.PRE_CODE_REVIEW != null && params.PRE_CODE_REVIEW == true) {
+        stage('Configure Environments') {
+            dir('backend') {
+                
+                checkoutBackend(env.GERRIT_BRANCH, true)
+                changesInThisBuild = activeProjects
+                currentBuild.description = env.GERRIT_REFSPEC
+            }
+        }
+        unitTestStage()
+    } else {
+        stage('Configure Environments') {
+            dir('backend') {
+                checkoutBackend('refs/heads/'+params.get('branch_to_build'))
+                if (params.get('branch_to_build')=='master'){
+                    changesInThisBuild = activeProjects //changedThisCommit()    
+                } else {
+                    changesInThisBuild = activeProjects
+                }
+                
+                setCommitInfo()
+            }
+        }
+        stage('Load Environment Variables') {
+            dir('infra'){
+                checkoutInfra()
+                dir("portal-adp-deploy/portal-ui-deploy"){
+                    def x = getEnvInfo('adp_backend')
+                    sh "echo $x"
+                    loadEnvVariables(params.ENVIRONMENT_TYPE, params.ENVIRONMENT_NUMBER)
+            	    testEnvVariables()
+                }
+            }
+        }
+    
+        if(true){
+            unitTestStage()
+            stage('Build', anythingToBuild()) {
+                dir('backend') {
+                    echo "Backend version ${new_version}"
+                    for(int i=0; i<changesInThisBuild.size(); i++) {
+                        def affectedFolder = changesInThisBuild.get(i)
+                        dir(affectedFolder) {
+                            sh "./build.sh ${new_version}"
+                        }
+                    }
+                    for(int i=0; i<changesInThisBuild.size(); i++) {
+                        def affectedFolder = changesInThisBuild.get(i)
+                        dir(affectedFolder) {
+                            sh "./publish.sh ${new_version}"
+                        }
+                    }
+                }
+            }
+    
+            stage('Refresh Database', ( params.SKIP_RESTORE == null || params.SKIP_RESTORE == false ) && ( params.USE_TEST_DATA != null && params.USE_TEST_DATA == false )) {
+                dir("infra/portal-adp-deploy/portal-ui-deploy"){
+            	    refreshDatabase()
+            	}
+            }
+    
+        } // end if
+    
+        stage('Backend Deploy', anythingToDeploy() && ( params.SKIP_BUILD_AND_DEPLOY == null || params.SKIP_BUILD_AND_DEPLOY == false  )) {
+            backendDeploy()
+        }
+    
+        if(true){
+            stage('Generate Test Data', ( params.SKIP_RESTORE == null || params.SKIP_RESTORE == false ) && ( params.USE_TEST_DATA == null || params.USE_TEST_DATA == true )) {
+                dir("infra/portal-adp-deploy/portal-ui-deploy"){
+                    sh '''
+                        ./test_data_apply.sh -u ${ssh_user} -h ${target_host} -k ${key_file} -n ${container_name} -c ${compose_location} -p ${compose_filename} -s ${database_service_name}
+                    '''
+                }        
+            }
+    
+            stage('Pre Collection Setup', ( params.SKIP_TESTS == null || params.SKIP_TESTS == false )) {
+                // This step is used to setup any mocks needed globally for test execution
+                // including mocks needed for commands run during the "Run Collection Scripts" step
+                dir("backend") {
+                    apiSetupTests()
+                }
+            }
+            stage("Run Collection Scripts", ( params.SKIP_COLLECTION == null || params.SKIP_COLLECTION == false )) {
+                // Run commands on the server before executing tests
+                collectStatistics()
+            }
+            stage("API Tests", ( params.SKIP_TESTS == null || params.SKIP_TESTS == false  )) {
+                dir("backend") {
+                    apiTests()    
+                }
+            }
+            stage("Update Frontend", (params.branch_to_build == 'master' && params.ENVIRONMENT_NUMBER == '4' && currentBuild.result == null)) {
+                dir("frontend") {
+                    checkoutFrontend()
+                    dir("frontend-checkout"){
+                        dir('src/assets/config'){
+                            updateEnvFileVariables()    
+                        }
+                        updateFrontend()
+                    }
+                }
+            }
+            stage("Collect Reports") {
+                 dir('backend') {
+                    sh '''
+                    rm -rf report.zip sprintreports
+                    mkdir -p sprintreports
+                    '''
+                    def reportsCollected = 0
+                    for(int i=0; i<changesInThisBuild.size(); i++) {
+                        def affectedFolder = changesInThisBuild.get(i)
+                        if(reportable(affectedFolder)){
+                            reportsCollected+=1
+                            dir(affectedFolder) {
+                                sh "./collect-reports.sh || true"
+                            }
+                        }
+                    }
+                    if(reportsCollected > 0) {
+                        sh '''
+                        zip -r report.zip sprintreports
+                        '''
+                        archiveArtifacts "report.zip"
+                    }
+                }
+            }
+    
+        }// end if
+    }// end else
+}
+
+def unitTestStage(){
+    stage('Unit Test', (params.SKIP_UNIT == null || params.SKIP_UNIT == false) && anythingToUnitTest()) {
+        dir('backend') {
+            echo "Backend version ${new_version}"
+            def coverageReports = []
+            
+            for(int i=0; i<changesInThisBuild.size(); i++) {
+                def affectedFolder = changesInThisBuild.get(i)
+                if(unitTestable(affectedFolder)){
+                    dir(affectedFolder) {
+                        try{
+                            sh "./unit.sh ${new_version}"
+                        } finally {
+                            junit 'unit-test-report/results.xml'
+                            coverageReports.add(affectedFolder + '/unit-test-report/cobertura-coverage.xml')
+                            
+                            
+                        }
+                    }
+                }
+            }
+            if(coverageReports) {
+                cobertura coberturaReportFile: coverageReports.join(',')
+                //checkstyle pattern: '**/unit-test-report/lint*xml'
+            }
+        }
+    }
+}
+
+def apiTests(){
+    dir('integration-tests') {
+        try{
+            sh '''
+            backend_url="${baseurl}api/"
+            echo $backend_url
+            ./docker-unit.sh -u ${backend_url} -n ${env_number}
+            '''
+        } finally {
+            junit 'integration_reports/*.xml'
+        }
+    }
+}
+
+def checkoutFrontend() {
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+                    extensions: [[$class: 'RelativeTargetDirectory', 
+                        relativeTargetDir: 'frontend-checkout']], 
+                	userRemoteConfigs: [
+            		[name: 'gcm', url: '${GERRIT_MIRROR}/AIA/ui/adp'],
+            		[name: 'gcn', url: '${GERRIT_CENTRAL}/AIA/ui/adp']
+            		]
+            		])
+}
+
+def updateFrontend() {
+    
+    sh '''
+    oldv=$(cat ./src/assets/config/api.conf) 
+    if [ "$oldv" == "$new_version" ]; then
+        echo "$oldv equals ${new_version}, no commit required"
+    else
+        echo ${new_version} > ./src/assets/config/api.conf
+        git add src/assets/config/api.conf
+        git add src/assets/config/backend.env
+        git commit -m "Updated api version ${new_version}: ${commit_message}"
+        git push gcn HEAD:master
+    fi
+    
+    '''
+}
+
+def updateEnvFileVariables() {
+    def listOfEnvKeys = ""
+    def somethingToDeploy = false;
+    for(int i=0; i<changesInThisBuild.size(); i++) {
+        def affectedFolder = changesInThisBuild.get(i)
+        if(deployable(affectedFolder)){
+            somethingToDeploy=true;
+            listOfEnvKeys += getVersionKey(affectedFolder) + " "    
+        }
+    }
+    withEnv(["listOfEnvKeys=$listOfEnvKeys"]){
+        sh '''
+        touch backend.env
+        for key in ${listOfEnvKeys}; do 
+            grep -q "^${key}=" backend.env && sed -i "s/${key}=.*\$/${key}=${new_version}/" backend.env || echo ${key}=${new_version} >> backend.env
+        done
+        echo "-----------"
+        cat backend.env
+        '''
+    }
+}
+
+def collectStatistics() {
+    if(changes_in(['adp_backend', 'integration-tests'])){
+        sh '''
+        ssh $testenv "docker exec -d -i $container_name /bin/sh -c 'npm run gerritContributorsStatistics'"
+        '''    
+    }
+    
+}
+
+def apiSetupTests(){
+    if(changes_in(['adp_backend', 'integration-tests'])) {
+        dir('integration-tests') {
+            sh '''
+            backend_url="${baseurl}api/"
+            echo $backend_url
+            ./docker-unit.sh -u ${backend_url} -n ${env_number} -c collectionSetup.json
+            '''        
+        }
+    }
+    
+}
+
+
+
+
+/* List the directories with changes () -> []*/
+def changes(){
+    return changesInThisBuild
+}
+
+/* List the directories with changes excluding items in exclude list [] -> []*/
+def changes_except(exclude){
+    def tok = changes()
+    
+    for (int i = 0; i< exclude.size(); i++) {
+        def e = exclude.get(i)
+        tok -= e
+    }
+    return tok
+}
+/* List the directories with changes in the listed folders [] -> []*/
+def changes_in(include){
+    def tok = changes()
+    def inc = []
+    for (int i = 0; i< include.size(); i++) {
+        def e = include.get(i)
+        if (tok.contains(e)){
+            inc.add(e)
+        }
+    }
+    return inc
+}
+
+import org.jenkinsci.plugins.pipeline.modeldefinition.Utils
+
+def stage(name, execute, block) {
+    return stage(name, execute ? block : {
+        echo "skipped stage $name"
+        Utils.markStageSkippedForConditional(STAGE_NAME)
+    })
+}
+
+def checkoutBackend(branch='refs/heads/master', codeReview=false) {
+    def remoteConfigs = []
+    if(codeReview) {
+        echo "Code review checkout"
+        remoteConfigs = [
+        [name: 'gcm', refspec: "${GERRIT_REFSPEC}", url: '${GERRIT_MIRROR}/AIA/api/adp']
+        ]
+        checkout([$class: 'GitSCM', extensions: [[$class: 'BuildChooserSetting', buildChooser: [$class: 'GerritTriggerBuildChooser']]], branches: [[name: "${GERRIT_BRANCH}"]],
+            userRemoteConfigs: remoteConfigs
+            ])
+    } else {
+        remoteConfigs = [
+        [name: 'gcm', url: '${GERRIT_MIRROR}/AIA/api/adp']
+        ]
+        checkout([$class: 'GitSCM', branches: [[name: "$branch"]],
+        	userRemoteConfigs: remoteConfigs
+    		])
+    }
+}
+
+def checkoutInfra(){
+    checkout([$class: 'GitSCM',
+            branches: [[name: '*/master']],
+        	userRemoteConfigs: [
+    		[name: 'gcm', url: '${GERRIT_MIRROR}/AIA/CI/infra']
+    		]
+    		])
+        //sh '''
+        //rm -rf dsl
+        //du -sh ./*
+        //'''
+}
+
+def mysh(cmd) {
+    sh(script: '#!/bin/sh -e\n' + cmd, returnStdout: true).trim()
+}
+
+def loadEnvVariables(type, number){
+    script {
+        env.env_number=number
+        env.env_type=type
+        
+        env.baseurl = mysh ("export env_number=$number;. ./configs/$type; echo \$baseurl")
+        env.testenv = mysh ("export env_number=$number;. ./configs/$type; echo \$testenv")
+        env.compose_location = mysh ("export env_number=$number;. ./configs/$type; echo \$compose_location")
+        env.version_key = mysh ("export env_number=$number;. ./configs/$type; echo \$version_key")
+        env.env_file = mysh ("export env_number=$number;. ./configs/$type; echo \$env_file")
+        env.service_name = mysh ("export env_number=$number;. ./configs/$type; echo \$service_name")
+        env.container_name = mysh ("export env_number=$number;. ./configs/$type; echo \$container_name")
+        env.nginx_service = mysh ("export env_number=$number;. ./configs/$type; echo \$nginx_service")
+        env.ssh_user = mysh ("export env_number=$number;. ./configs/$type; echo \$user")
+        env.adp_user= mysh ("export env_number=$number;. ./configs/$type; echo \$adp_user")
+        env.adp_group= mysh ("export env_number=$number;. ./configs/$type; echo \$adp_group")
+        env.target_host= mysh ("export env_number=$number;. ./configs/$type; echo \$target_host")
+        env.key_file= mysh ("export env_number=$number;. ./configs/$type; echo \$key_file")
+        env.database_dir= mysh ("export env_number=$number;. ./configs/$type; echo \$database_dir")
+        env.backup_location= mysh ("export env_number=$number;. ./configs/$type; echo \$backup_location")
+        env.master_backup_location= mysh ("export env_number=$number;. ./configs/$type; echo \$master_backup_location")
+        env.mongo_master_backup_location= mysh ("export env_number=$number;. ./configs/$type; echo \$mongo_master_backup_location")
+        env.mongo_database_service_name= mysh ("export env_number=$number;. ./configs/$type; echo \$mongo_database_service_name")
+        env.compose_filename= mysh ("export env_number=$number;. ./configs/$type; echo \$compose_filename")
+        env.database_service_name= mysh ("export env_number=$number;. ./configs/$type; echo \$database_service_name")
+        env.database_address= mysh ("export env_number=$number;. ./configs/$type; echo \$database_address")
+        
+    }
+}
+
+def testEnvVariables() {
+    sh '''
+    echo "Show environment variables"
+    echo "new_version : ${new_version}"
+    echo "baseurl : ${baseurl}"
+    echo "testenv : ${testenv}"
+    echo "compose_location : ${compose_location}"
+    echo "version_key : ${version_key}"
+    echo "env_file : ${env_file}"
+    echo "service_name : ${service_name}"
+    echo "container_name : ${container_name}"
+    echo "nginx_service : ${nginx_service}"
+    echo "ssh_user: $ssh_user"
+    echo "adp_user: $adp_user"
+    echo "adp_group: $adp_group"
+    echo "target_host: $target_host"
+    echo "key_file: $key_file"
+    echo "database_dir: $database_dir"
+    echo "backup_location: $backup_location"
+    echo "master_backup_location: $master_backup_location"
+    echo "mongo_master_backup_location: $mongo_master_backup_location"
+    echo "mongo_database_service_name: $mongo_database_service_name"
+    echo "compose_filename: $compose_filename"
+    echo "database_service_name: $database_service_name"
+    '''
+}
+
+// The folders that changed between this commit and its parent
+def changedThisCommit(commit='HEAD') {
+    def command = $/git diff $commit~1^..$commit --dirstat | sed 's/^[ 0-9.]\+% //g' | sed 's/\/.*//g' | sort | uniq/$
+    def out = sh (script: command, returnStdout: true).trim().tokenize()
+    def inc = []
+    def always = params.force_build.trim().tokenize()
+    def include = activeProjects;
+    for (int i = 0; i< include.size(); i++) {
+        def e = include.get(i)
+        if (out.contains(e) || always.contains(e)){
+            inc.add(e)
+        }
+    }
+    return inc
+    
+}
+
+def changedBetweenAncestor(commit='HEAD', compareTo='origin/master') {
+    def command = $/git diff $compareTo...$commit --dirstat | sed 's/^[ 0-9.]\+% //g' | sed 's/\/.*//g' | sort | uniq/$
+    def out = sh (script: command, returnStdout: true).trim().tokenize()
+    echo "Changes: $out"
+    def inc = []
+    def always = params.force_build.trim().tokenize()
+    def include = activeProjects;
+    for (int i = 0; i< include.size(); i++) {
+        def e = include.get(i)
+        if (out.contains(e) || always.contains(e)){
+            inc.add(e)
+        }
+    }
+    return inc
+}
+
+def getEnvInfo(serviceName) {
+    def envType = params.get('ENVIRONMENT_TYPE')
+    def number = params.get('ENVIRONMENT_NUMBER')
+    def environments = [
+        dev:[
+            adp_backend : "dupe${number}adpbackend dupe${number}adpbackendworker",
+            asciidoctorService : "dupe${number}asciidoctorservice"
+            ],
+        test:[
+            adp_backend : "dupe${number}adpbackend dupe${number}adpbackendworker",
+            asciidoctorService : "dupe${number}asciidoctorservice"
+            ],
+        stage:[
+            adp_backend : "adpbackend adpbackendworker",
+            asciidoctorService : "asciidoctorservice"
+            ],
+        new_stage:[
+            adp_backend : "adp_backend adpbackendworker", 
+            asciidoctorService : "asciidoctorservice"
+            ]
+    ]
+    return environments[envType][serviceName]
+}
+def getImageInfo(serviceName) {
+    def environments = [
+        adp_backend : "armdocker.rnd.ericsson.se/aia/adp/adp-backend",
+        asciidoctorService : "armdocker.rnd.ericsson.se/aia/adp/asciidoctorservice"
+    ]
+    return environments[serviceName]
+}
+def getEnvKey(serviceName) {
+    def envType = params.get('ENVIRONMENT_TYPE')
+    def number = params.get('ENVIRONMENT_NUMBER')
+    def environments = [
+        dev:[
+            adp_backend : "BACKEND_VERSION${number}",
+            asciidoctorService : "ASCIIDOCTOR_SERVICE_VERSION${number}"
+            ],
+        test:[
+            adp_backend : "BACKEND_VERSION${number}",
+            asciidoctorService : "ASCIIDOCTOR_SERVICE_VERSION${number}"
+            ],
+        stage:[
+            adp_backend : "BACKEND_VERSION",
+            asciidoctorService : "ASCIIDOCTOR_SERVICE_VERSION"
+            ],
+        new_stage:[
+            adp_backend : "BACKEND_VERSION",
+            asciidoctorService : "ASCIIDOCTOR_SERVICE_VERSION"
+            ]
+    ]
+    return environments[envType][serviceName]
+}
+
+def getVersionKey(serviceName) {
+    def keys = [
+        adp_backend : "BACKEND_VERSION",
+        asciidoctorService : "ASCIIDOCTOR_SERVICE_VERSION"
+        ]
+    return keys[serviceName];
+}
+
+/*
+Depends on:
+params.branch_to_build  : If it exists, this becomes a branch build, otherwise uses master.
+GERRIT_NEWREV   : If set use it, otherwise use the latest on master.
+
+Sets the following environment variables
+commit          : The truncated commit id of the current commit
+new_version     : For release builds: <commidDate>.<commitId>, for branch builds env<env_number>
+commit_message  : The commit message of the current commit
+*/
+def setCommitInfo(){
+    
+    if (params.branch_to_build != 'master' && params.ENVIRONMENT_NUMBER != '4') {
+        echo "branch defined using branch with environment specific versioning: " + params.branch_to_build + " " + "env" + params.ENVIRONMENT_NUMBER
+        new_version="env"+params.ENVIRONMENT_NUMBER
+        nameData = sh (script: 'name_string=$(git log -n1 --format="%an");echo $name_string', returnStdout: true).trim()
+        msgData = sh (script: 'message_string=$(git log -n1 --pretty=oneline --abbrev-commit); echo $message_string', returnStdout: true).trim()
+        currentBuild.description = new_version + "<br>" + nameData + " <b>[" + msgData +"]</b>" + "<br>" + changesInThisBuild
+    } else {
+        echo "no branch... using master with commit versioning"
+        if (env.GERRIT_NEWREV) {
+            env.commit=env.GERRIT_NEWREV
+        } else {
+            com = sh(returnStdout: true, script: "git rev-parse HEAD").trim()
+            echo com
+            env.commit=com
+        }
+        tempversion = sh (script: 'tag=$(echo ${commit} | cut -c1-7);new_version=$(date -d @$(git log -n1 --format="%at") +%Y.%m.%d.%H%M).${tag};echo $new_version',
+            returnStdout: true).trim()
+        new_version=tempversion
+        nameData = sh (script: 'name_string=$(git log -n1 --format="%an");echo $name_string', returnStdout: true).trim()
+        msgData = sh (script: 'message_string=$(git log -n1 --pretty=oneline --abbrev-commit); echo $message_string', returnStdout: true).trim()
+        currentBuild.description = new_version + "<br>" + nameData + " <b>[" + msgData +"]</b>" + "<br>" + changesInThisBuild
+        env.commit_message=msgData
+    }                
+    
+}
+
+def refreshDatabase() {
+    sh '''
+        ./mongo_update.sh -u ${ssh_user} -a ${adp_user} -g ${adp_group} -h ${target_host} -k ${key_file} -t ${mongo_master_backup_location} -s ${mongo_database_service_name} -q ""
+        '''
+}
+
+def anythingToDeploy() {
+    def somethingToDeploy = false;
+    for(int i=0; i<changesInThisBuild.size(); i++) {
+        def affectedFolder = changesInThisBuild.get(i)
+        if(deployable(affectedFolder)){
+            somethingToDeploy=true;
+        }
+    }
+    return somethingToDeploy
+}
+def anythingToUnitTest() {
+    def somethingToRun = false;
+    for(int i=0; i<changesInThisBuild.size(); i++) {
+        def affectedFolder = changesInThisBuild.get(i)
+        if(unitTestable(affectedFolder)){
+            somethingToRun=true;
+        }
+    }
+    return somethingToRun
+}
+def anythingToBuild() {
+    def somethingToRun = false;
+    for(int i=0; i<changesInThisBuild.size(); i++) {
+        def affectedFolder = changesInThisBuild.get(i)
+        if(buildable(affectedFolder)){
+            somethingToRun=true;
+        }
+    }
+    return somethingToRun
+}
+def buildable(folderName) {
+    needsBuild = ['adp_backend', 'asciidoctorService']
+    return needsBuild.contains(folderName)
+}
+def unitTestable(folderName) {
+    hasUnitTests = ['adp_backend', 'asciidoctorService']
+    return hasUnitTests.contains(folderName)
+}
+def deployable(folderName) {
+    deployments = ['adp_backend', 'asciidoctorService']
+    return deployments.contains(folderName)
+}
+def reportable(folderName) {
+    deployments = ['adp_backend', 'asciidoctorService', 'integration-tests']
+    return deployments.contains(folderName)
+}
+
+def backendDeploy() {
+    // For each affected application:
+    // inject env vars
+    // pull updated image
+    // Take down affected services and force recreate them
+    // Have to be able to sed in the modified one too for CI/env4
+    def listOfImages = ""
+    def listOfServices = ""
+    def listOfEnvKeys = ""
+    def somethingToDeploy = false;
+    for(int i=0; i<changesInThisBuild.size(); i++) {
+        def affectedFolder = changesInThisBuild.get(i)
+        if(deployable(affectedFolder)){
+            somethingToDeploy=true;
+            listOfImages += getImageInfo(affectedFolder) +":"+new_version+" "
+            listOfServices += getEnvInfo(affectedFolder) + " "
+            listOfEnvKeys += getEnvKey(affectedFolder) + " "    
+        }
+    }
+    echo "$listOfServices"
+    echo "$listOfEnvKeys"
+    echo "$listOfImages"
+    env.listOfServices=listOfServices.trim()
+    env.listOfEnvKeys=listOfEnvKeys.trim()
+    env.listOfImages=listOfImages.trim()
+    env.new_version=new_version
+    env.client_id = "42b0a05a-2867-4dbd-8eb3-451d9eca5059"
+    
+    if(somethingToDeploy){
+    withCredentials([string(credentialsId: 'adp_portal_test_azure_secret', variable: 'azure_secret'),
+    		usernamePassword(credentialsId: 'eadphub-psw', passwordVariable: 'portal_functional_pass', usernameVariable: 'portal_functional_user')]) {
+        sh '''
+        vact="source /local/dock-env/bin/activate; export AZURE_CLIENT_SECRET=${azure_secret}; export AZURE_CLIENT_ID=${client_id}; export PORTAL_FUNC_USER=${portal_functional_user}; export PORTAL_FUNC_USER_PASSWORD=${portal_functional_pass}; export JWT_SECRET=${jwt_secret}; export JWT_INTEGRATION=${jwt_integration_secret} "
+        
+
+        echo $listOfEnvKeys
+        echo $env_file
+        echo $new_version
+        echo "for key in ${listOfEnvKeys}; do sed -i \"s/${key}=.*\$/${key}=${new_version}/\" $env_file ; done"
+        
+        for key in ${listOfEnvKeys}; do ssh $testenv "grep -q \"^${key}\" ${env_file} && sed -i \"s/${key}=.*\$/${key}=${new_version}/\" $env_file || echo ${key}=${new_version} >> ${env_file}";done
+        ssh $testenv "${vact}; cd $compose_location;docker-compose pull $listOfServices"
+        ssh $testenv "${vact}; cd $compose_location;docker-compose stop $listOfServices"
+        ssh $testenv "${vact}; cd $compose_location;docker-compose rm -f $listOfServices"
+        ssh $testenv "${vact}; cd $compose_location;docker-compose up -d $listOfServices"
+        ssh $testenv "${vact}; cd $compose_location;docker-compose restart $nginx_service"
+        ssh $testenv "docker container prune -f; docker image prune -f"
+        '''
+    }
+    } else {
+        echo "Nothing to deploy"
+    }
+}

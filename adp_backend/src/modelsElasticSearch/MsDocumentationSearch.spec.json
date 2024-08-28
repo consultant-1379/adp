@@ -1,0 +1,1602 @@
+{
+    "body" : {
+      
+  "took" : 16,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 33,
+      "relation" : "eq"
+    },
+    "max_score" : null,
+    "hits" : [
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "VBZsan8BHWdqdxNnd8i-",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test 3",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e50160e5_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e50160e5",
+          "asset_slug" : "auto-ms-test-3",
+          "title" : "Sample 2",
+          "version" : "development",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e50160e5_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 2,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "VBZsan8BHWdqdxNnd8i-",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "VxZsan8BHWdqdxNnd8i-",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "bBZsan8BHWdqdxNnecgB",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001094_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001094",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory",
+          "title" : "Sample 2",
+          "version" : "1.0.1",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001094_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "bBZsan8BHWdqdxNnecgB",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "dRZsan8BHWdqdxNnecjE",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory Del",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001098_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001098",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory-del",
+          "title" : "Sample 2",
+          "version" : "1.0.1",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001098_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "dRZsan8BHWdqdxNnecjE",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "YBZsan8BHWdqdxNneMhW",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test 4",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e50171e2_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e50171e2",
+          "asset_slug" : "auto-ms-test-4",
+          "title" : "Sample 2",
+          "version" : "3.2.1",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e50171e2_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "YBZsan8BHWdqdxNneMhW",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "3.2.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "3.2.1"
+                    ]
+                  },
+                  "sort" : [
+                    2
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "QxZsan8BHWdqdxNnd8gk",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Sample 2",
+          "version" : "3.2.1",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 2,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "QxZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "3.2.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "3.2.1"
+                    ]
+                  },
+                  "sort" : [
+                    2
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "RxZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "RhZsan8BHWdqdxNnd8gk",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_test-specification",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Test Specification",
+          "version" : "1.1.1",
+          "title_slug" : "test-specification",
+          "category_slug" : "release-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_test-specification"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Test Specification"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 3,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "ThZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    3
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "RhZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.1.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.1.1"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "ShZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "TRZsan8BHWdqdxNnd8gk",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_api-documentation",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "API documentation",
+          "version" : "1.1.1",
+          "title_slug" : "api-documentation",
+          "category_slug" : "dpi",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_api-documentation"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "API documentation"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 3,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "RRZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    3
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "TRZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.1.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.1.1"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "SRZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "6BZsan8BHWdqdxNnfcgZ",
+        "_score" : 0.29564,
+        "_source" : {
+          "asset_name" : "Auto MS Test Innersource",
+          "post_new_tab" : false,
+          "post_name" : "419b7f75c7ab2427937eec161d0ea844_sample-2",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "419b7f75c7ab2427937eec161d0ea844",
+          "asset_slug" : "auto-ms-test-innersource",
+          "title" : "Sample 2",
+          "version" : "development",
+          "title_slug" : "sample-2",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/test.html"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "419b7f75c7ab2427937eec161d0ea844_sample-2"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "Just testing the render of <strong>ADP</strong> Portal from pure HTML file in Artifact Repository. Before Update"
+          ],
+          "title" : [
+            "Sample 2"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 2,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "6BZsan8BHWdqdxNnfcgZ",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "6RZsan8BHWdqdxNnfcgZ",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "VRZsan8BHWdqdxNnd8i-",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 3",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e50160e5_service-overview",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e50160e5",
+          "asset_slug" : "auto-ms-test-3",
+          "title" : "Service Overview",
+          "version" : "1.0.1",
+          "title_slug" : "service-overview",
+          "category_slug" : "dpi",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e50160e5_service-overview"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Service Overview"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "VRZsan8BHWdqdxNnd8i-",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "VhZsan8BHWdqdxNnd8i-",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 3",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e50160e5_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e50160e5",
+          "asset_slug" : "auto-ms-test-3",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e50160e5_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "VhZsan8BHWdqdxNnd8i-",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "ahZsan8BHWdqdxNnecgB",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001094_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001094",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001094_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "ahZsan8BHWdqdxNnecgB",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "axZsan8BHWdqdxNnecgB",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001094_sample-10",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001094",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory",
+          "title" : "Sample 10",
+          "version" : "development",
+          "title_slug" : "sample-10",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001094_sample-10"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 10"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "axZsan8BHWdqdxNnecgB",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    3
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "dBZsan8BHWdqdxNnecjE",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory Del",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001098_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001098",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory-del",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001098_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "dBZsan8BHWdqdxNnecjE",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "cBZsan8BHWdqdxNnechX",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory 2",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001077_sample-10",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001077",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory-2",
+          "title" : "Sample 10",
+          "version" : "development",
+          "title_slug" : "sample-10",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001077_sample-10"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 10"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "cBZsan8BHWdqdxNnechX",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "XxZsan8BHWdqdxNneMhW",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 4",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e50171e2_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e50171e2",
+          "asset_slug" : "auto-ms-test-4",
+          "title" : "Sample 1",
+          "version" : "3.2.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e50171e2_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "XxZsan8BHWdqdxNneMhW",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "3.2.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "3.2.1"
+                    ]
+                  },
+                  "sort" : [
+                    2
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "QRZsan8BHWdqdxNnd8gk",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_service-deployment-guide",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Service Deployment Guide",
+          "version" : "development",
+          "title_slug" : "service-deployment-guide",
+          "category_slug" : "dpi",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_service-deployment-guide"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Service Deployment Guide"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 3,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "QRZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    3
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "TBZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.1.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.1.1"
+                    ]
+                  },
+                  "sort" : [
+                    1
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "SBZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "QhZsan8BHWdqdxNnd8gk",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 2,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "UBZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "3.2.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "3.2.1"
+                    ]
+                  },
+                  "sort" : [
+                    2
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "QhZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "RBZsan8BHWdqdxNnd8gk",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_product-revision-information-pri",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Product Revision Information (PRI)",
+          "version" : "development",
+          "title_slug" : "product-revision-information-pri",
+          "category_slug" : "release-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_product-revision-information-pri"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Product Revision Information (PRI)"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "RBZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "development"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "development"
+                    ]
+                  },
+                  "sort" : [
+                    3
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "SxZsan8BHWdqdxNnd8gk",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test 2",
+          "post_new_tab" : false,
+          "post_name" : "45e7f4f992afe7bbb62a3391e5014a41_service-overview",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "45e7f4f992afe7bbb62a3391e5014a41",
+          "asset_slug" : "auto-ms-test-2",
+          "title" : "Service Overview",
+          "version" : "3.2.1",
+          "title_slug" : "service-overview",
+          "category_slug" : "dpi",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "45e7f4f992afe7bbb62a3391e5014a41_service-overview"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Service Overview"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 2,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "SxZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "3.2.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "3.2.1"
+                    ]
+                  },
+                  "sort" : [
+                    2
+                  ]
+                },
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "TxZsan8BHWdqdxNnd8gk",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "eBZsan8BHWdqdxNnecj5",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Doc Sync Mock Artifactory Create",
+          "post_new_tab" : false,
+          "post_name" : "4befcc82eebf81c3e1b5242b49001055_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "4befcc82eebf81c3e1b5242b49001055",
+          "asset_slug" : "auto-ms-doc-sync-mock-artifactory-create",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "4befcc82eebf81c3e1b5242b49001055_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "eBZsan8BHWdqdxNnecj5",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "6hZsan8BHWdqdxNnfcgZ",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test Innersource",
+          "post_new_tab" : false,
+          "post_name" : "419b7f75c7ab2427937eec161d0ea844_sample-1",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "419b7f75c7ab2427937eec161d0ea844",
+          "asset_slug" : "auto-ms-test-innersource",
+          "title" : "Sample 1",
+          "version" : "1.0.1",
+          "title_slug" : "sample-1",
+          "category_slug" : "additional-documents",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "419b7f75c7ab2427937eec161d0ea844_sample-1"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Sample 1"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "6hZsan8BHWdqdxNnfcgZ",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "_index" : "microservice-documentation",
+        "_type" : "_doc",
+        "_id" : "6xZsan8BHWdqdxNnfcgZ",
+        "_score" : 0.1422465,
+        "_source" : {
+          "asset_name" : "Auto MS Test Innersource",
+          "post_new_tab" : false,
+          "post_name" : "419b7f75c7ab2427937eec161d0ea844_service-overview",
+          "restricted" : false,
+          "post_type" : "ms_documentation",
+          "asset_id" : "419b7f75c7ab2427937eec161d0ea844",
+          "asset_slug" : "auto-ms-test-innersource",
+          "title" : "Service Overview",
+          "version" : "1.0.1",
+          "title_slug" : "service-overview",
+          "category_slug" : "dpi",
+          "document_url" : "https://localhost/notify/mockartifactory/local/dynamic/1.0.1/CAS_Deployment_Guide.zip"
+        },
+        "fields" : {
+          "post_name.keyword" : [
+            "419b7f75c7ab2427937eec161d0ea844_service-overview"
+          ]
+        },
+        "highlight" : {
+          "raw_text" : [
+            "the Helm chart in following link for installation: https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-<strong>adp</strong>-wide-column-database-cd-released-helm"
+          ],
+          "title" : [
+            "Service Overview"
+          ]
+        },
+        "inner_hits" : {
+          "by_version" : {
+            "hits" : {
+              "total" : {
+                "value" : 1,
+                "relation" : "eq"
+              },
+              "max_score" : null,
+              "hits" : [
+                {
+                  "_index" : "microservice-documentation",
+                  "_type" : "_doc",
+                  "_id" : "6xZsan8BHWdqdxNnfcgZ",
+                  "_score" : null,
+                  "_source" : {
+                    "version" : "1.0.1"
+                  },
+                  "fields" : {
+                    "version.keyword" : [
+                      "1.0.1"
+                    ]
+                  },
+                  "sort" : [
+                    0
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      }
+    ]
+  },
+  "aggregations" : {
+    "total_results" : {
+      "value" : 22
+    }
+  }
+
+    }
+    
+}

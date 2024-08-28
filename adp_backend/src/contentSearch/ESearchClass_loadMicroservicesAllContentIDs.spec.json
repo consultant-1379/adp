@@ -1,0 +1,56 @@
+{
+    "a1": {
+      "object_id": "a1",
+      "slug": "community",
+      "title": "Community",
+      "url": [
+        "https://192.168.56.102:23309/community/",
+        "/community"
+      ]
+    },
+    "b2": {
+        "object_id": "b2",
+        "slug": "community",
+        "title": "Community",
+        "url": [
+          "https://192.168.56.102:23309/community/",
+          "/community"
+        ]
+      },
+      "c3": {
+        "object_id": "c3",
+        "slug": "community",
+        "title": "Community",
+        "url": [
+          "https://192.168.56.102:23309/community/",
+          "/community"
+        ]
+      },
+      "d4": {
+        "object_id": "d4",
+        "slug": "community",
+        "title": "Community",
+        "url": [
+          "https://192.168.56.102:23309/community/",
+          "/community"
+        ]
+      },
+      "e5": {
+        "object_id": "e5",
+        "slug": "community",
+        "title": "Community",
+        "url": [
+          "https://192.168.56.102:23309/community/",
+          "/community"
+        ]
+      },
+      "f6": {
+        "object_id": "f6",
+        "slug": "community",
+        "title": "Community",
+        "url": [
+          "https://192.168.56.102:23309/community/",
+          "/community"
+        ]
+      }
+}

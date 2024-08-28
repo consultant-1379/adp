@@ -1,0 +1,146 @@
+{
+    "siteAddress": "https://localhost:9999",
+    "environmentID": "localhost",
+    "httpPort": 8888,
+    "httpsPort": 9999,
+    "showPerformanceConsoleLogs": false,
+    "elasticSearch": {
+        "address": "http://localhost:48200",
+        "indexes": {
+            "wordpress": "localhost23309-post-1",
+            "microservices": "microservices",
+            "msDocumentation": "microservice-documentation"
+        }
+    },
+    "asciidoctorService": "http://localhost:9901/",
+    "masterQueueBetweenJobsTime": 1,
+    "masterCacheTimeOutInSeconds": {
+        "JWTStrategyHandler": 60,
+        "listOptions": 86400,
+        "listOptionsNormalised": 86400,
+        "listOptionsAdminOnly": 86400,
+        "allAssets": 86400,
+        "allAssetsNormalised": 60,
+        "msAnalytics": 60,
+        "PRAVersion": 60,
+        "marketPlaceSearch": 0.5,
+        "innersourceContribsSearch": 0.5,
+        "innersourceContribs": 0.5,
+        "msListByOwner": 0.5,
+        "searchLDAPUser": 60,
+        "tagsReload": 86400,
+        "thisUserShouldBeInDatabase": 86400,
+        "documents": 60,
+        "minimumGarbageCollectorCall": 60,
+        "userProgressTutorials": 0.5,
+        "complianceOptions": 86400,
+        "allusers": 30,
+        "rbacPermissionIds": 60,
+        "releaseSettings":30
+    },
+    "innersourceLaunchDate": "2020-12-12",
+    "contributorsStatistics": {
+        "gerritApi": "http://localhost:1080/a/changes/?o=DETAILED_ACCOUNTS&q=status:merged+branch:\"master\"+after:\"|||:AFTERDATE:|||+00:00:00\"+before:\"|||:BEFOREDATE:|||+23:59:59\"+project:\"|||:PROJECTNAME:|||\"",
+        "gerritPotentialTag": "http://localhost:1080/b/changes/?o=DETAILED_ACCOUNTS&o=CURRENT_REVISION&q=status:merged+branch:\"master\"+after:\"|||:AFTERDATE:|||+00:00:00\"+before:\"|||:BEFOREDATE:|||+23:59:59\"+message:\"innersource\"+project:\"|||:PROJECTNAME:|||\"",
+        "gerritApiRevisionDetail": "http://localhost:1080/c/changes/|||:COMMITID:|||/revisions/|||:COMMITREVISION:|||/commit/"
+       },
+    "wordpress": {
+        "url": "https://localhost:23309/wp-json/wp/v2/",
+        "tutorials": {
+            "link": "https://localhost:23309/wp-json/wp/v2/menu/tutorials",
+            "requestTimeOutInSeconds": 3,
+            "cacheTimeOutInSeconds": 0.5
+        },
+        "menus": {
+            "cacheTimeOutInSeconds": 86400,
+            "cacheOfModifiedDateTimeOutInSeconds": 10
+        }
+    },
+    "TESTSERVER_wordpress": {
+        "url": "https://seliius18473.seli.gic.ericsson.se:58081/wordpress/wp-json/wp/v2/",
+        "tutorials": {
+            "link": "https://seliius18473.seli.gic.ericsson.se:58081/wordpress/wp-json/wp/v2/menu/tutorials",
+            "requestTimeOutInSeconds": 3,
+            "cacheTimeOutInSeconds": 1.5
+        },
+        "menus": {
+          "cacheTimeOutInSeconds": 86400,
+          "cacheOfModifiedDateTimeOutInSeconds": 10
+      }
+    },
+    "requestTimeoutsInSeconds": {
+        "artifactoryRepo": 3
+    },
+    "artifactoryDiskCacheTimeOutInSeconds": 60,
+    "artifactoryCheckDiskCacheTimeOutInSeconds": 120,
+    "playgroundAddress": "https://playground-server.hoff061.rnd.gic.ericsson.se/playground",
+    "holdDocumentCacheInMemoryForXSeconds": 30,
+    "holdCacheFromDatabaseForXSeconds": 10,
+    "displayPackagesSizeOnLoad": true,
+    "saveConsoleLogInFile": false,
+    "MAIL_OPTIONS": {
+        "devMode": false
+    },
+    "nodeMailer": "https://localhost/notify/send-email/",
+    "81__nodeMailer": "https://seliius18473.seli.gic.ericsson.se:58081/notify/env1/send-email",
+    "REAL_ldap": {
+        "url": "ldap://ecd.ericsson.se:389",
+        "bindDN": "uid=eadpusers,ou=Users,ou=Internal,o=ericsson",
+        "searchBase": "o=ericsson",
+        "searchFilter": "(cn={{username}})",
+        "timeout": 5000,
+        "connectTimeout": 10000,
+        "reconnect": true
+    },
+    "ldap":{
+		"url": "ldap://localhost:38900",
+	    "bindDN": "cn=admin,dc=example,dc=org",
+	    "bindCredentials": "admin",
+	    "searchBase": "dc=example,dc=org",
+	    "searchFilter": "(cn={{username}})",
+		"timeout": 5000,
+		"connectTimeout": 10000,
+		"reconnect": true
+    },
+    "ldapSearchConstraints": [
+        "cn",
+        "uid"
+    ],
+	"jwt": {
+        "secret": "test_secret"
+    },
+	"jwtIntegration": {
+        "secret": "gXC_rzM7V@5a5v?*"
+    },
+    "mssqlDB": {
+        "user": "ADP_User",
+        "password": "ADP_User123$",
+        "server": "pemdbsrvssp.internal.ericsson.com",
+        "encrypt": true,
+        "database": "BICP",
+        "trustServerCertificate": true
+    },
+    "azure": {
+        "url": "http://localhost:1080/token",
+        "grant_type": "client_credentials",
+        "resource": "10f79a15-f4e9-40f5-9a6c-44916a0e8338"
+    },
+    "peopleFinderApiUrl" : "http://localhost:1080/people-finder/",
+    "adpHelmDataFile": "https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-adp-gs-all-helm/index.yaml",
+    "mockArtifactoryAddress": "https://localhost/notify/mockartifactory/",
+    "81__mockArtifactoryAddress": "https://seliius18473.seli.gic.ericsson.se:58081/notify/mockartifactory/",
+    "mongoDB": "mongodb://admin:mysecretpassword@localhost:27017",
+    "mockServerAddress": "localhost",
+    "mockServerPort": 1080,
+    "REAL__mimerServer": "https://mimer.internal.ericsson.com/",
+    "REAL__muninServer": "https://munin.internal.ericsson.com/",
+    "REAL__eridocServer": "https://erid2rest.internal.ericsson.com/",
+    "REAL__eridocPublicServer": "https://document.internal.ericsson.com/",
+    "REAL__primDDServer": "https://rsb.internal.ericsson.com/REST/G3/CICD/Document/M/",
+    "mimerServer": "http://localhost:1080/mimerserver/",
+    "muninServer": "http://localhost:1080/muninserver/",
+    "eridocServer": "http://localhost:1080/eridocserver/",
+    "eridocPublicServer": "http://localhost:1080/eridocpublicserver/",
+    "primDDServer": "http://localhost:1080/primddserver/REST/G3/CICD/Document/M/",
+    "mockServer": "http://localhost:1080"
+}

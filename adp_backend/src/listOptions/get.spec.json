@@ -1,0 +1,230 @@
+{
+  "mock1ToCompare": [
+    {
+      "id":10,
+      "group":"Documentation Categories Auto",
+      "slug":"documentation-categories-auto",
+      "testID":"group-documentation-categories-auto",
+      "items": [
+        {
+          "id":1,"documentationCategories":0,
+          "name":"DPI",
+          "code":"",
+          "desc":"",
+          "color":"",
+          "testID":"filter-dpi",
+          "acceptancePercentage":0,
+          "iconFileName":"",
+          "order":0,
+          "adminOnly":false,
+          "slug":"dpi",
+          "default":false
+        },
+        {
+          "id":2,
+          "documentationCategories":0,
+          "name":"Inner Source",
+          "code":"",
+          "desc":"",
+          "color":"",
+          "testID":"filter-inner-source",
+          "acceptancePercentage":0,
+          "iconFileName":"",
+          "order":1,
+          "adminOnly":false,
+          "slug":"inner-source",
+          "default":false
+        }
+      ],
+      "order":10,
+      "showAsFilter":false
+    },
+    {
+      "id":11,
+      "group":"Documentation Titles Auto",
+      "slug":"documentation-titles-auto",
+      "testID":"group-documentation-titles-auto",
+      "items":[
+        {
+          "id":1,
+          "documentationCategories":1,
+          "name":"Service Overview",
+          "code":"",
+          "desc":"",
+          "color":"",
+          "testID":"filter-service-overview",
+          "acceptancePercentage":0,
+          "iconFileName":"",
+          "order":0,
+          "adminOnly":false,
+          "slug":"service-overview",
+          "default":false
+        },
+        {
+          "id":2,
+          "documentationCategories":1,
+          "name":"Service Deployment Guide",
+          "code":"",
+          "desc":"",
+          "color":"",
+          "testID":"filter-service-deployment-guide",
+          "acceptancePercentage":0,
+          "iconFileName":"",
+          "order":1,
+          "adminOnly":false,
+          "slug":"service-deployment-guide",
+          "default":false
+        }
+      ],
+      "order":11,
+      "showAsFilter":false
+    }
+  ],
+  "mock2ToCompare": [
+    {
+      "id":10,
+      "group":"Documentation Categories Auto",
+      "slug":"documentation-categories-auto",
+      "testID":"group-documentation-categories-auto",
+      "items": [
+        {
+          "id":1,
+          "name":"DPI",
+          "testID":"filter-dpi",
+          "order":0,
+          "slug":"dpi"
+        },
+        {
+          "id":2,
+          "name":"Inner Source",
+          "testID":"filter-inner-source",
+          "order":1,
+          "slug":"inner-source"
+        }
+      ],
+      "order":10,
+      "showAsFilter":false
+    },
+    {
+      "id":11,
+      "group":"Documentation Titles Auto",
+      "slug":"documentation-titles-auto",
+      "testID":"group-documentation-titles-auto",
+      "items": [
+        {
+          "id":1,
+          "documentationCategories":1,
+          "name":"Service Overview",
+          "testID":"filter-service-overview",
+          "order":0,
+          "slug":"service-overview"
+        },
+        {
+          "id":2,
+          "documentationCategories":1,
+          "name":"Service Deployment Guide",
+          "testID":"filter-service-deployment-guide",
+          "order":1,
+          "slug":"service-deployment-guide"
+        }
+      ],
+      "order":11,
+      "showAsFilter":false
+    }
+  ],
+  "groups": {
+    "resultsReturned": 11,
+    "limitOfThisResult": 9999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "18.276 ms",
+    "docs": [
+      {
+        "_id": "3e40f822bab762133a9c3b9688009e82",
+        "_rev": "1-db754e7cb2ec7f613cc717cadac06578",
+        "group-id": 10,
+        "group": "Documentation Categories Auto",
+        "slug": "documentation-categories-auto",
+        "type": "group",
+        "test-id": "group-documentation-categories-auto",
+        "order": 10,
+        "show-as-filter": false
+      },
+      {
+        "_id": "3e40f822bab762133a9c3b968800db56",
+        "_rev": "1-b51514b22d182366787c19a6c5b43686",
+        "group-id": 11,
+        "group": "Documentation Titles Auto",
+        "slug": "documentation-titles-auto",
+        "type": "group",
+        "test-id": "group-documentation-titles-auto",
+        "order": 11,
+        "show-as-filter": false
+      }
+    ]
+  },
+  "itemsfromgroup10": {
+    "resultsReturned": 4,
+    "limitOfThisResult": 9999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "83.563 ms",
+    "docs": [
+      {
+        "_id": "3e40f822bab762133a9c3b968800c09e",
+        "_rev": "1-20c5791d9eb215c4b8a96ddbee0e4eef",
+        "select-id": 1,
+        "type": "item",
+        "name": "DPI",
+        "group-id": 10,
+        "test-id": "filter-dpi",
+        "order": 0,
+        "slug": "dpi"
+      },
+      {
+        "_id": "3e40f822bab762133a9c3b9688013c00",
+        "_rev": "1-a3bb803546e7310f09cfda5408265dbe",
+        "select-id": 2,
+        "type": "item",
+        "name": "Inner Source",
+        "group-id": 10,
+        "test-id": "filter-inner-source",
+        "order": 1,
+        "slug": "inner-source"
+      }
+    ]
+  },
+  "itemsfromgroup11": {
+    "resultsReturned": 15,
+    "limitOfThisResult": 9999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "85.545 ms",
+    "docs": [
+      {
+        "_id": "3e40f822bab762133a9c3b968800b23b",
+        "_rev": "1-ab12b741e3cd85dfe5d810a418303ea4",
+        "select-id": 1,
+        "documentation-categories": 1,
+        "type": "item",
+        "name": "Service Overview",
+        "group-id": 11,
+        "test-id": "filter-service-overview",
+        "order": 0,
+        "slug": "service-overview"
+      },
+      {
+        "_id": "3e40f822bab762133a9c3b968800ede3",
+        "_rev": "1-5bd9073c73f8f468a930a6fa2233054e",
+        "select-id": 2,
+        "documentation-categories": 1,
+        "type": "item",
+        "name": "Service Deployment Guide",
+        "group-id": 11,
+        "test-id": "filter-service-deployment-guide",
+        "order": 1,
+        "slug": "service-deployment-guide"
+      }
+    ]
+  } 
+}

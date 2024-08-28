@@ -1,0 +1,52 @@
+{
+  "s0": {
+    "docs": [],
+    "bookmark": "g1AAAAC2eJzLYWBgYMpgSmHgKy5JLCrJTq2MT8lPzkzJBYo7RysYGCeaJRslpukam6Uk6poYG6TpWpgYJQMJQ3OztBRTk2SDNIVYhWiFquSMvKS8dDDbyMDIQNfAUtfIQiEWZDQHzGhqGZoFAD-EMBk",
+    "execution_stats": {
+      "total_keys_examined": 0,
+      "total_docs_examined": 1,
+      "total_quorum_docs_examined": 0,
+      "results_returned": 0,
+      "execution_time_ms": 1
+    }
+  },
+  "s1": {
+    "docs": [
+      {
+        "_id": "[ 03a6c2af-36da-430f-842c-84176fd54c0f ] [ esupuse ] [ 2020-10-04 ]",
+        "_rev": "1-01e7b01d778e483a7ecccee47e896c04",
+        "asset_id": "03a6c2af-36da-430f-842c-84176fd54c0f",
+        "asset_slug": "mock-asset-1",
+        "user_id": "esupuse",
+        "user_name": "Super User",
+        "user_email": "super.user@mock.email",
+        "date": "2020-10-04",
+        "commits": 2,
+        "insertions": 10,
+        "deletions": 20,
+        "commit-id-list": [
+          {
+            "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59b2d",
+            "commits": 1,
+            "insertions": 5,
+            "deletions": 10
+          },
+          {
+            "id": "adp-gs%2Fadp-gs-cntrreg~master~I6113f3d2f4f2ade16527213b4990e743e6b59b2e",
+            "commits": 1,
+            "insertions": 5,
+            "deletions": 10
+          }
+        ]
+      }
+    ],
+    "bookmark": "g1AAAAC2eJzLYWBgYMpgSmHgKy5JLCrJTq2MT8lPzkzJBYo7RysYGCeaJRslpukam6Uk6poYG6TpWpgYJQMJQ3OztBRTk2SDNIVYhWiFquSMvKS8dDDbyMDIQNfAUtfIQiEWZDQHzGhqGZoFAD-EMBk",
+    "execution_stats": {
+      "total_keys_examined": 0,
+      "total_docs_examined": 1,
+      "total_quorum_docs_examined": 0,
+      "results_returned": 1,
+      "execution_time_ms": 5
+    }
+  }
+}

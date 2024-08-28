@@ -1,0 +1,23 @@
+{
+  "resultsReturned": 3,
+  "limitOfThisResult": 9999999,
+  "offsetOfThisResult": 0,
+  "message": "Search Successful",
+  "time": "266.517 ms",
+  "docs": [
+    {
+      "_id": "mock-id-1",
+      "slug": "mock-asset-1",
+      "giturl": "https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/adp-gs/adp-gs-cntrreg/"
+    },
+    {
+      "_id": "mock-id-2",
+      "slug": "mock-asset-2",
+      "giturl": "https://gerrit-gamma.gic.ericsson.se/plugins/gitiles/adp-sec/sec-vault"
+    },
+    {
+      "_id": "mock-id-3",
+      "slug": "mock-asset-3"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+    "dataBase": [
+        { "_id": "a1", "_rev": "shouldBeRemoved", "name": "testStandard" }
+    ],
+    "dataBaseLog": [
+        { 
+            "_id": "punctuationSpaceTest",
+            "info": {
+                "Rules": {
+                    "remove, punctuation. and spaces": true,
+                    "similar. key": true,
+                    "similarkey": true,
+                    ". ,": true,
+                    "correct": true
+                } 
+            }
+        }, 
+        {
+            "_id": "queryTest",
+            "object": {
+                "query": {
+                    "and": "$and",
+                    "or": "$or"
+                }
+            }
+        }
+    ],
+    "dataBaseMigrationScripts": [
+        { "commandName": "scriptFromCouchToMongo", "runOnce": false }
+    ]
+}

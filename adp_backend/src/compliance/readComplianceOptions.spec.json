@@ -1,0 +1,117 @@
+{
+   "groups": [
+      {
+         "_id": "36faa3f38deab95a43191578450087d9",
+         "type": "group",
+         "name": "Group 1",
+         "desc": "",
+         "group-id": 1,
+         "test-id": "group-1",
+         "order": 1,
+         "slug": "group-1"
+     }
+   ],
+   "fields": [
+      {
+         "_id": "36faa3f38deab95a431915784501d34c",
+         "field-id": 1,
+         "type": "field",
+         "name": "Field 1",
+         "desc": "This is mock field 1",
+         "group-id": 2,
+         "test-id": "field-1",
+         "order": 1,
+         "slug": "field-1"
+       },
+       {
+         "_id": "36faa3f38deab95a431915784501f13b",
+         "field-id": 2,
+         "type": "field",
+         "name": "Field 2",
+         "desc": "This is mock field 2",
+         "group-id": 2,
+         "test-id": "field-2",
+         "order": 1,
+         "slug": "field-2"
+       }
+   ],
+   "answers": [
+      {
+         "_id": "36faa3f38deab95a43191578450201a9",
+         "select-id": 0,
+         "type": "answer",
+         "name": "Test 1",
+         "desc": "",
+         "test-id": "compliance-answer-not-selected",
+         "order": 1,
+         "slug": "test-1"
+       },
+       {
+         "_id": "36faa3f38deab95a43191578450217c5",
+         "select-id": 1,
+         "type": "answer",
+         "name": "Test 2",
+         "desc": "",
+         "test-id": "compliance-answer-yes",
+         "order": 2,
+         "slug": "test-2"
+       }
+   ],
+   "settings": [],
+   "complianceOptions": {
+      "groups":[
+         {
+            "id":1,
+            "slug":"group-1",
+            "testID":"group-1",
+            "order":1,
+            "group":"Group 1",
+            "fields":[
+               {
+                  "id": 1,
+                  "name":"Test 1",
+                  "desc":"",
+                  "slug":"test-1",
+                  "testID":"compliance-answer-not-selected",
+                  "order":1
+               },
+               {
+                  "id": 2,
+                  "name":"Test 2",
+                  "desc":"",
+                  "slug":"test-2",
+                  "testID":"compliance-answer-yes",
+                  "order":2
+               }
+            ]
+         }
+      ],
+      "answers":[
+         {
+            "id":0,
+            "name":"Test 1",
+            "slug":"test-1",
+            "testID":"compliance-answer-test-1",
+            "order":1,
+            "commentRequired":false
+         },
+         {
+            "id":1,
+            "name":"Test 2",
+            "slug":"test-2",
+            "testID":"compliance-answer-test-2",
+            "order":2,
+            "commentRequired":false
+         },
+         {
+            "id":2,
+            "name":"Test 3",
+            "slug":"test-3",
+            "testID":"compliance-answer-test-3",
+            "order":3,
+            "commentRequired":true
+         }
+      ],
+      "settings": []
+   }
+}

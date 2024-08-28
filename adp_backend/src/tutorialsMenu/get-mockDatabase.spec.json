@@ -1,0 +1,64 @@
+{
+  "find_success_1": {
+    "resultsReturned": 3,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "2.387 ms",
+    "docs": [
+      {
+        "_id": "7fb3fc7564a2afbb786b1f802a01694b",
+        "_rev": "4-290257ffae42ac5cc20525e5d33d5e80",
+        "signum": "etesuse",
+        "wid": "4787",
+        "date_progress": "2020-06-23T09:45:48.721Z",
+        "type": "progress"
+      },
+      {
+        "_id": "a09b884ed3ce77599cb83924ab0031d7",
+        "_rev": "1-57c0d399c435ebb0be9afdfa914cf817",
+        "signum": "etesuse",
+        "wid": "4789",
+        "date_progress": "2020-06-19T09:20:06.445Z",
+        "type": "progress"
+      },
+      {
+        "_id": "a09b884ed3ce77599cb83924ab0031d7",
+        "_rev": "1-57c0d399c435ebb0be9afdfa914cf817",
+        "signum": "etesuse",
+        "wid": "4791",
+        "date_progress": "2020-06-19T09:20:06.445Z",
+        "type": "progress"
+      }
+    ]    
+  },
+  "find_empty_1": {
+    "resultsReturned": 0,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "2.387 ms",
+    "docs": []
+  },
+  "find_invalid_1": {
+    "MockInvalidAnswer": true
+  },
+  "find_readagain_1": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "2.387 ms",
+    "docs": [
+      {
+        "_id": "7fb3fc7564a2afbb786b1f802a01694b",
+        "_rev": "4-290257ffae42ac5cc20525e5d33d5e80",
+        "signum": "etesuse",
+        "wid": "7872",
+        "date_content": "2020-06-23T09:45:48.721Z",
+        "date_progress": "2020-06-23T09:45:48.721Z",
+        "type": "progress"
+      }
+    ]    
+  }
+}

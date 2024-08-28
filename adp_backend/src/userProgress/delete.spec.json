@@ -1,0 +1,81 @@
+{
+  "progress_success_find": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "44.015 ms",
+    "docs": [
+      {
+        "_id": "020369d99e8d62a35a8d6a6f241fdb6f",
+        "_rev": "984-4035220143815c4ea10dcee46a24ccc5",
+        "signum": "mockuser",
+        "wid": "3129A",
+        "url": "https://adp.ericsson.se/tutorials/test1",
+        "date_content": "2020-05-27T11:00:11.672Z",
+        "date_progress": "2020-05-27T11:00:11.672Z",
+        "type": "progress"
+      }
+    ]
+  },
+  "progress_success_destroy": {
+    "ok": true,
+    "id": "020369d99e8d62a35a8d6a6f241fdb6f",
+    "rev": "984-4035220143815c4ea10dcee46a24ccc5"
+  },
+  "progress_destroyfail_find": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "44.015 ms",
+    "docs": [
+      {
+        "_id": "020369d99e8d62a35a8d6a6f241fdb6f",
+        "_rev": "984-4035220143815c4ea10dcee46a24ccc5",
+        "signum": "mockuser",
+        "wid": "3129A",
+        "url": "https://adp.ericsson.se/tutorials/test1",
+        "date_content": "2020-05-27T11:00:11.672Z",
+        "date_progress": "2020-05-27T11:00:11.672Z",
+        "type": "progress"
+      }
+    ]
+  },
+  "progress_destroyfail_destroy": {
+    "ok": false
+  },
+  "progress_destroycrash_find": {
+    "resultsReturned": 1,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "44.015 ms",
+    "docs": [
+      {
+        "_id": "020369d99e8d62a35a8d6a6f241fdb6f",
+        "_rev": "984-4035220143815c4ea10dcee46a24ccc5",
+        "signum": "mockuser",
+        "wid": "3129A",
+        "url": "https://adp.ericsson.se/tutorials/test1",
+        "date_content": "2020-05-27T11:00:11.672Z",
+        "date_progress": "2020-05-27T11:00:11.672Z",
+        "type": "progress"
+      }
+    ]
+  },
+  "progress_destroycrash_destroy": {
+    "crash": true
+  },
+  "progress_findfail_find": {
+    "resultsReturned": 0,
+    "limitOfThisResult": 999999,
+    "offsetOfThisResult": 0,
+    "message": "Search Successful",
+    "time": "44.015 ms",
+    "docs": []
+  },
+  "progress_findcrash_find": {
+    "crash": true
+  }
+}

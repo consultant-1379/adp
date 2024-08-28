@@ -1,0 +1,224 @@
+[
+  {
+    "_id": "17e57f6cea1b5a673f8775e6cf023344",
+    "date_modified": "2020-03-04T10:50:11.942Z",
+    "approval": "approved",
+    "owner": "esupuse",
+    "name": "Document Refresh Warnings Test",
+    "description": "Integration Test MS for the document refresh Warning checks",
+    "domain": 1,
+    "serviceArea": 5,
+    "service_maturity": 1,
+    "type": "microservice",
+    "slug": "document-refresh-warnings-test",
+    "reusability_level": 4,
+    "service_category": 1,
+    "inval_secret": "abcdef",
+    "menu_auto": false,
+    "repo_urls": {
+      "development": "",
+      "release": ""
+    },
+    "denorm": {},
+    "menu": {
+      "auto": {
+        "development": [],
+        "release": [],
+        "date_modified": "",
+        "errors": {
+          "development": [],
+          "release": []
+        }
+      },
+      "manual": {
+        "development": [
+          {
+            "name": "Service Overview",
+            "slug": "service-overview",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/Troubleshooting_Guide/WCDCD_Troubleshooting_Guide.txt;hb=HEAD",
+            "default": true,
+            "doc_route": [
+              "/marketplace",
+              "mock-microservice-slug",
+              "documentation",
+              "1.0.1",
+              "additional-documents",
+              "sample-1"
+            ]
+          },
+          {
+            "name": "Service Deployment Guide",
+            "slug": "service-deployment-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=adp-gs/adp-gs-ah.git;a=blob_plain;f=doc/AH_Service_Deployment_Guide/AH_Service_Deployment_Guide.txt;hb=HEAD"
+          },
+          {
+            "name": "Application Developers Guide",
+            "slug": "application-developers-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;hb=HEAD"
+          },
+          {
+            "name": "Troubleshooting Guide",
+            "slug": "troubleshooting-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/Troubleshooting_Guide/WCDCD_Troubleshooting_Guide.txt;hb=HEAD"
+          }
+        ],
+        "release": [],
+        "date_modified": ""
+      }
+    }
+  },
+  {
+    "_id": "17e57f6cea1b5a673f8775e6cf023344",
+    "approval": "approved",
+    "owner": "esupuse",
+    "name": "Document Refresh Warnings Test",
+    "description": "Integration Test MS for the document refresh Warning checks",
+    "domain": 1,
+    "serviceArea": 5,
+    "service_maturity": 1,
+    "type": "microservice",
+    "slug": "document-refresh-warnings-test",
+    "reusability_level": 4,
+    "service_category": 1,
+    "inval_secret": "abcdef",
+    "compliance": [
+      {
+          "group": 1,
+          "fields": [
+              {
+                  "field": 1,
+                  "answer": 1,
+                  "comment": "Test comment 1"
+              }
+          ]
+      }
+    ],
+    "menu_auto": true,
+    "repo_urls": {
+      "development": "",
+      "release": ""
+    },
+    "menu": {
+      "auto": {
+        "date_modified": "2020-03-04T10:50:11.942Z",
+        "development": [
+          {
+            "name": "Service Deployment Guide",
+            "filepath": "1.0.1/CAS_Deployment_Guide.zip",
+            "slug": "service-deployment-guide",
+            "doc_route": [
+              "/marketplace",
+              "mock-microservice-slug",
+              "documentation",
+              "1.0.1",
+              "additional-documents",
+              "sample-1"
+            ]
+          },
+          {
+            "name": "API documentation",
+            "filepath": "1.0.1/CAS_Deployment_Guide.zip",
+            "slug": "api-documentation"
+            }
+        ],
+        "release": [
+            {
+                "version": "3.2.1",
+                "documents": [
+                    {
+                        "name": "Sample 1",
+                        "filepath": "1.0.1/CAS_Deployment_Guide.zip",
+                        "default": true,
+                        "slug": "sample-1",
+                        "doc_route": [
+                          "/marketplace",
+                          "mock-microservice-slug",
+                          "documentation",
+                          "1.0.1",
+                          "additional-documents",
+                          "sample-1"
+                        ]
+                    },
+                    {
+                        "name": "Sample 2",
+                        "filepath": "1.0.1/test.html",
+                        "slug": "sample-2"
+                    }
+                ]
+            },
+            {
+              "version": "3.2.0",
+              "documents": [
+                  {
+                      "name": "Sample 1",
+                      "filepath": "1.0.1/CAS_Deployment_Guide.zip",
+                      "default": true,
+                      "slug": "sample-1"
+                  },
+                  {
+                      "name": "Sample 2",
+                      "filepath": "1.0.1/test.html",
+                      "slug": "sample-2"
+                  }
+              ]
+          }
+        ]
+      },
+      "manual": {
+        "development": [
+          {
+            "name": "Service Overview",
+            "slug": "service-overview",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/Troubleshooting_Guide/WCDCD_Troubleshooting_Guide.txt;hb=HEAD",
+            "default": true
+          },
+          {
+            "name": "Service Deployment Guide",
+            "slug": "service-deployment-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=adp-gs/adp-gs-ah.git;a=blob_plain;f=doc/AH_Service_Deployment_Guide/AH_Service_Deployment_Guide.txt;hb=HEAD"
+          },
+          {
+            "name": "Application Developers Guide",
+            "slug": "application-developers-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/SNMP_Service_Developers_Guide/SNMP_Service_Developers_Guide.adoc;hb=HEAD"
+          },
+          {
+            "name": "Troubleshooting Guide",
+            "slug": "troubleshooting-guide",
+            "external_link": "https://gerrit-gamma.gic.ericsson.se/gitweb?p=PROTO-AIA/com.ericsson.aia/aia-prototype.git;a=blob_plain;f=ADP/doc/Troubleshooting_Guide/WCDCD_Troubleshooting_Guide.txt;hb=HEAD"
+          }
+        ],
+        "release": [],
+        "date_modified": ""
+      }
+    }
+  },
+  {
+    "_id": "17e57f6cea1b5a673f8775e6cf023344",
+    "approval": "approved",
+    "owner": "esupuse",
+    "name": "Document Refresh Warnings Test",
+    "description": "Integration Test MS for the document refresh Warning checks",
+    "domain": 1,
+    "serviceArea": 5,
+    "service_maturity": 1,
+    "type": "microservice",
+    "slug": "document-refresh-warnings-test",
+    "reusability_level": 4,
+    "service_category": 1,
+    "inval_secret": "abcdef",
+    "compliance": [
+      {
+          "group": 1,
+          "fields": [
+              {
+                  "field": 1,
+                  "answer": 1,
+                  "comment": "Test comment 1"
+              }
+          ]
+      }
+    ],
+    "menu_auto": true
+  }
+]

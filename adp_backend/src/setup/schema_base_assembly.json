@@ -1,0 +1,39 @@
+{
+    "assetSchema": {
+        "id": "/assembly",
+        "type": "object",
+        "properties": {
+            "assembly_category": {
+                "description": "The ID of the assembly Category of the assembly",
+                "type": "integer",
+                "mail_name": "Assembly Category",
+                "mail_order": 2,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.assembly_category"],
+                "sortableKey": "assembly_category_order",
+                "groupable": true
+            },
+            "assembly_maturity": {
+                "description": "The ID of a Assembly's assembly Maturity",
+                "type": "integer",
+                "mail_name": "Assembly Maturity",
+                "mail_order": 13,
+                "notify_admin_on_change": true,
+                "report": "overview",
+                "searchableLookupKeys": ["denorm.assembly_maturity"],
+                "sortableKey": "assembly_maturity_order",
+                "groupable": true
+            },
+            "component_service": {
+                "description": "Component Service",
+                "type": "array",
+                "uniqueItems": true,
+                "mail_name": "Component Service",
+                "mail_order": 14,
+                "report": "overview"
+            }
+        },
+        "required":["assembly_maturity", "assembly_category"]
+    }
+}

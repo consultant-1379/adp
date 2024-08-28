@@ -1,0 +1,95 @@
+{
+    "listOptionsSchema": {
+        "id": "/listOptions",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "id is the ID of this item, inside of this group",
+                "type": "integer",
+                "readOnly": true,
+                "requiredFromDB": true
+            },
+            "name": {
+                "description": "name of this item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": true
+            },
+            "slug": {
+                "description": "slug of this item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": ""
+            },
+            "desc": {
+                "description": "description of this item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": ""
+            },
+            "testID": {
+                "description": "testID of this item",
+                "type": "string",
+                "readOnly": true,
+                "requiredFromDB": true
+            },
+            "order": {
+                "description": "order of the item inside the group",
+                "type": "integer",
+                "readOnly": false,
+                "requiredFromDBFromDB": true
+            },
+            "color": {
+                "description": "color of the item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": ""
+            },
+            "acceptancePercentage": {
+                "description": "acceptancePercentage of the item",
+                "type": "integer",
+                "readOnly": false,
+                "requiredFromDBFromDB": false,
+                "default": 0
+            },
+            "iconFileName": {
+                "description": "iconFileName of the item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": ""
+            },
+            "code": {
+                "description": "code of the item",
+                "type": "string",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": ""
+            },
+            "documentationCategories": {
+                "description": "documentationCategories of the item",
+                "type": "integer",
+                "readOnly": false,
+                "requiredFromDBFromDB": false,
+                "default": 0
+            },
+            "adminOnly": {
+                "description": "True if only Admin can see this option",
+                "type": "boolean",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": false
+            },
+            "default": {
+                "description": "True if is default document category",
+                "type": "boolean",
+                "readOnly": false,
+                "requiredFromDB": false,
+                "default": false  
+            }
+        }
+    }
+}

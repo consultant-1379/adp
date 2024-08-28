@@ -1,0 +1,458 @@
+[
+    {
+      "object_id": 3365,
+      "title": "ADP CI/CD",
+      "slug": "adp_ci",
+      "_source" : { "post_type" : "page" },
+      "category": [
+        {
+          "category_id": 94,
+          "category_name": "Get Started",
+          "category_slug": "getstarted"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> CI/CD"
+        ],
+        "post_content_filtered": [
+          "CI/CD Flow The <em>ADP</em> CI/CD flow and philosophy, originally created by <em>ADP</em> together with lead applications, and now evolved by the <em>ADP</em> CI/CD governance group, is based on four driving forces: A key enabler for BDGS-wide reuse <em>“As easy to use services from other"
+        ]
+      },
+
+      "url": [
+        "/overview/adp_ci"
+      ]
+    },
+    {
+      "object_id": 3570,
+      "title": "ADP Architecture",
+      "slug": "adp-architecture",
+      "_source" : { "post_type" : "page" },
+      "category": [
+        {
+          "category_id": 93,
+          "category_name": "Discover",
+          "category_slug": "discover"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> Architecture"
+        ],
+        "post_content_filtered": [
+          "Stack view Figure 1 depicts the stack view of <em>ADP</em> entities. This view describes, on very high level, the entire <em>ADP</em> ecosystem and how different layers are positioned in the stack."
+        ]
+      },
+      "url": [
+        "/overview/adp-architecture"
+      ]
+    },
+    {
+      "object_id": 3630,
+      "title": "ADP meeting the applications",
+      "slug": "adp-meeting-the-applications",
+      "_source" : { "post_type" : "page" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> meeting the applications"
+        ],
+        "post_content_filtered": [
+          "Over the last couple of months the <em>ADP</em> program team have visited most of the major application sites. We continue to work to explain what <em>ADP</em> is and what our ambition is. There is a video of one of these sessions with the UDM developers which might be of interest."
+        ]
+      },
+      "url": [
+        "/adp-meeting-the-applications"
+      ]
+    },
+    {
+      "object_id": 9463,
+      "title": "Editing a ADP Portal page",
+      "slug": "editing-a-adp-portal-page",
+      "_source" : { "post_type" : "page" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Editing a <em>ADP</em> Portal page"
+        ],
+        "post_content_filtered": [
+          "Click Update button to publish the changes on the live <em>ADP</em> Portal."
+        ]
+      },
+      "url": [
+        "/wordpress-create-edit-pages-guide/editing-a-adp-portal-page"
+      ]
+    },
+    {
+      "object_id": 9915,
+      "title": "Editing the ADP Portal Footer",
+      "slug": "editing-the-adp-portal-footer",
+      "_source" : { "post_type" : "page" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Editing the <em>ADP</em> Portal Footer"
+        ],
+        "post_content_filtered": [
+          "The Save Menu button will update the live <em>ADP</em> Portal with the newly structured menu. Note: The Footer only supports a maximum of four columns and eight rows per column."
+        ]
+      },
+      "url": [
+        "/editing-the-adp-portal-footer"
+      ]
+    },
+    {
+      "object_id": 9457,
+      "title": "Accessing ADP Portal's WordPress instance",
+      "slug": "accessing-adp-portals-wordpress-instance",
+      "_source" : { "post_type" : "page" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Accessing <em>ADP</em> Portal's WordPress instance"
+        ],
+        "post_content_filtered": [
+          "Login to WordPress(Please note this links directly to the live <em>ADP</em> Portal).If you need login access, please contact <em>ADP</em> Portal team."
+        ]
+      },
+      "url": [
+        "/side-menu-test/stayconnected/accessing-adp-portals-wordpress-instance"
+      ]
+    },
+    {
+      "object_id": 9623,
+      "title": "ADP Enablers",
+      "slug": "adp-enablers",
+      "_source" : { "post_type" : "page" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> Enablers"
+        ],
+        "post_content_filtered": [
+          "Other Support <em>ADP</em> Booster: A team provided by <em>ADP</em> program to help people outside the program to start develop their first microservice with <em>ADP</em> standard!"
+        ]
+      },
+      "url": [
+        "/workinginadpframework/adp-enablers",
+        "/adp-enablers"
+      ]
+    },
+    {
+      "object_id": 3483,
+      "title": "ADP Roamaps",
+      "slug": "adp_roadmaps",
+      "_source" : { "post_type" : "page" },
+      "category": [
+        {
+          "category_id": 93,
+          "category_name": "Discover",
+          "category_slug": "discover"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> Roamaps"
+        ],
+        "post_content_filtered": [
+          "<em>ADP</em> Roadmaps <em>ADP</em> has roadmaps for the three main areas of the framework, Generic Services, Cloud Orchestration Platform and Application Manager. Details of each can be found from the information below."
+        ]
+      },
+      "url": [
+        "/adp_roadmaps"
+      ]
+    },
+    {
+      "object_id": 3346,
+      "title": "What is ADP?",
+      "slug": "what_is_adp",
+      "_source" : { "post_type" : "page" },
+      "category": [
+        {
+          "category_id": 93,
+          "category_name": "Discover",
+          "category_slug": "discover"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "What is <em>ADP</em>?"
+        ],
+        "post_content_filtered": [
+          "<em>ADP</em> is the Application Development Platform which provides support to develop cloud native applications."
+        ]
+      },
+      "url": [
+        "/overview/what_is_adp",
+        "/marketplace"
+      ]
+    },
+    {
+      "object_id": 3501,
+      "title": "ADP Meet the team",
+      "slug": "meettheteam",
+      "_source" : { "post_type" : "page" },
+      "category": [
+        {
+          "category_id": 91,
+          "category_name": "Community",
+          "category_slug": "community"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> Meet the team"
+        ],
+        "post_content_filtered": [
+          "Hub Leads Several <em>ADP</em> hubs are established to do <em>ADP</em> Generic Service development."
+        ]
+      },
+      "url": [
+        "/community/meettheteam"
+      ]
+    },
+    {
+      "object_id": 9800,
+      "title": "Connect to ADP CI/CD",
+      "slug": "ci-cd-connection",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [
+        {
+          "category_id": 117,
+          "category_name": "Share a Microservice",
+          "category_slug": "share-a-microservice"
+        },
+        {
+          "category_id": 106,
+          "category_name": "Working in ADP Framework",
+          "category_slug": "workinginadpframework"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "Connect to <em>ADP</em> CI/CD"
+        ],
+        "post_content_filtered": [
+          "To share a microservice for any application to pick up and reuse, the microservice&#8217;s CI pipeline needs to be connected to the <em>ADP</em> CI/CD flow."
+        ]
+      },
+      "url": [
+        "/ci-cd-connection"
+      ]
+    },
+    {
+      "object_id": 3506,
+      "title": "ADP Raise a trouble ticket",
+      "slug": "raiseaticket",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "<em>ADP</em> Raise a trouble ticket"
+        ],
+        "post_content_filtered": [
+          "<em>ADP</em> Trouble tickets All TRs on <em>ADP</em> needs to be filled in JIRA, below is a short step-by-step instruction on how to Report a JIRA ticket in <em>ADP</em> Create a JIRA bug issue in the <em>ADP</em> JIRA project https://cc-jira.rnd.ki.sw.ericsson.se"
+        ]
+      },
+      "url": [
+        "/raiseaticket"
+      ]
+    },
+    {
+      "object_id": 8722,
+      "title": "My First ADP Service",
+      "slug": "overview-my-first-adp-service",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [
+        {
+          "category_id": 96,
+          "category_name": "My First Microservice",
+          "category_slug": "my-first-adp-service"
+        },
+        {
+          "category_id": 95,
+          "category_name": "Tutorials",
+          "category_slug": "tutorials"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "My First <em>ADP</em> Service"
+        ],
+        "post_content_filtered": [
+          "To get familiar with the basics of <em>ADP</em>, you are now going to work with your first <em>ADP</em> microservice. You will use a pre-defined microservice called FactFinder. This is a very simple microservice providing facts about cats."
+        ]
+      },
+      "url": [
+        "/overview-my-first-adp-service"
+      ]
+    },
+    {
+      "object_id": 9909,
+      "title": "Wordpress Footer Guide",
+      "slug": "wordpress-footer-guide",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Wordpress Footer Guide"
+        ],
+        "post_content_filtered": [
+          "<em>ADP</em> Portal content is managed using WordPress. This is a guide on how to edit the existing <em>ADP</em> Portal footer."
+        ]
+      },
+      "url": [
+        "/wordpress-footer-guide"
+      ]
+    },
+    {
+      "object_id": 9461,
+      "title": "Create a page on the portal",
+      "slug": "create-a-page-on-the-portal",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Create a page on the portal"
+        ],
+        "post_content_filtered": [
+          "This field is related to <em>ADP</em> Portal’s menu title."
+        ]
+      },
+      "url": [
+        "/wordpress-create-edit-pages-guide/create-a-page-on-the-portal"
+      ]
+    },
+    {
+      "object_id": 9632,
+      "title": "Test Formatting",
+      "slug": "test-formatting",
+      "_source" : { "post_type" : "tutorials" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Test Formatting"
+        ],
+        "post_content_filtered": [
+          "new Promise(async (RESOLVE) => { const startedAt = new Date(); const returnClass = new global.<em>adp</em>.Answers(); const packageName = 'global.<em>adp</em>.auditlogs.read';"
+        ]
+      },
+      "url": [
+        "/test-formatting"
+      ]
+    },
+    {
+      "object_id": 9151,
+      "title": "Glossary",
+      "slug": "glossary",
+      "_source" : { "post_type" : "post" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Glossary"
+        ],
+        "post_content_filtered": [
+          "Non-<em>ADP</em>&nbsp;Services: Microservices&nbsp;which&nbsp;provide&nbsp;common&nbsp;functions&nbsp;but&nbsp;do&nbsp;NOT&nbsp;adhere&nbsp;to&nbsp;<em>ADP</em>&nbsp;architecture&nbsp;and&nbsp;framework."
+        ]
+      },
+      "url": [
+        "/resources/glossary"
+      ]
+    },
+    {
+      "object_id": 3485,
+      "title": "Configuration Management Developers Guide for ADP Generic Services",
+      "slug": "configuration-management-developers-guide-for-adp-generic-services",
+      "_source" : { "post_type" : "post" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "Configuration Management Developers Guide for <em>ADP</em> Generic Services"
+        ],
+        "post_content_filtered": [
+          "You need to be added to Gerrit group <em>adp</em>-gs-developer in order to be able to clone the <em>adp</em>-gs/<em>adp</em>-gs-cm project. Ask a team member to add you. https://gerrit-gamma.gic.ericsson.se/#/admin/groups/17385,members 2."
+        ]
+      },
+      "url": [
+        "/configuration-management-developers-guide-for-adp-generic-services"
+      ]
+    },
+    {
+      "object_id": 9471,
+      "title": "WordPress Updating the Tutorial Side Menu",
+      "slug": "wordpress-updating-the-tutorial-side-menu",
+      "_source" : { "post_type" : "post" },
+      "category": [],
+      "highlight": {
+        "post_title": [
+          "WordPress Updating the Tutorial Side Menu"
+        ],
+        "post_content_filtered": [
+          "<em>ADP</em> Portal Tutorial content is managed using&nbsp;WordPress. This is a guide on how to add tutorial pages to the <em>ADP</em> Portal Tutorial side menu."
+        ]
+      },
+      "url": [
+        "/wordpress-updating-the-tutorial-side-menu"
+      ]
+    },
+    {
+      "object_id": 8990,
+      "title": "Generic Services",
+      "slug": "adp-generic-services",
+      "_source" : { "post_type" : "post" },
+      "category": [
+        {
+          "category_id": 93,
+          "category_name": "Discover",
+          "category_slug": "discover"
+        },
+        {
+          "category_id": 90,
+          "category_name": "Articles",
+          "category_slug": "articles"
+        }
+      ],
+      "highlight": {
+        "post_title": [
+          "Generic Services"
+        ],
+        "post_content_filtered": [
+          "The <em>ADP</em> architecture is based on a set of microservices using network-based, technology independent interfaces between them."
+        ]
+      },
+      "url": [
+        "/products/adp-generic-services"
+      ]
+    }
+]
